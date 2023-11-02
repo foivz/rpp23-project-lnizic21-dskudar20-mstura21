@@ -23,7 +23,7 @@ David Škudar | dskudar20@foi.hr | 0016147892 | dskudar20
 Marino Štura | mstura21@student.foi.hr | 0016153181 | mstura21-FOI
 
 ## Opis domene
-Domena aplikacije za posudbu knjiga Scriptify obuhvaća stvaranje digitalne platforme koja omogućuje knjižničarima lakši i pojednostavljeni rad sa svojom virtualnom knjižnicom. Ova aplikacija treba biti korisniku prijateljska, sigurna i pouzdana, istovremeno pružajući autenticiranu i raznovrsnu kolekciju knjiga. Glavni problem koji se rješava ovom aplikacijom je olakšavanje procesa pronalaženja te posudbe knjiga za kupca.
+Domena aplikacije za posudbu knjiga Scriptify obuhvaća stvaranje digitalne platforme koja omogućuje korisnicima posudbu knjiga od strane knjižnica. Ova aplikacija treba biti korisniku prijateljska, sigurna i pouzdana, istovremeno pružajući autenticiranu i raznovrsnu kolekciju knjiga. Glavni problem koji se rješava ovom aplikacijom je olakšavanje procesa pronalaženja te posudbe knjiga za kupca.
 
 ## Specifikacija projekta
 
@@ -32,11 +32,11 @@ Oznaka | Naziv | Kratki opis | Odgovorni član tima
 F01 | Registracija | Knjižnićari mogu registrirati knjižnicu pri čemu unose naziv, adresu, email, porezni broj, OIB vlasnika, kontakt vlasnika knjižnice te lozinku. Nakon registracije uneseni podaci se zapisuju u bazu podataka. | Luka Krševan Nižić
 F02 | Login | Knjižnice tj. knjižničari se prijavljuju koristeći svoje korisničke podatke, email i lozinku.| Marino Štura
 F03 | Menadžment | Knjižnice imaju mogućnost dodavanja knjiga pri ćemu dodaju sliku knjige, naziv knjige, kratki opis, žanr te prosječno vrijeme čitanja. Knjižnice mogu naknadno mijenjati podatke o pojedinoj knjizi te se sve promjene automatski pohranjuju i ažuriraju u bazi podataka. | Marino Štura
-F04 | Pregled dostupnih knjiga | Korisnici mogu u aplikaciji pregledati sve dostupne knjige svake registrirane knjižnice te klikom na pojedinu knjigu pregledati sve detaljne informacije o pojedinoj knjizi. | David Škudar
-F05 | Posudba knjige | Korisnici mogu putem aplikacije posuditi neku od dostupnih knjiga pri čemu je rok posudbe mjesec dana.  | Luka Krševan Nižić
+F04 | Pregled  knjiga | Knjižnićari mogu u aplikaciji pregledati sve dostupne knjige svake registrirane knjižnice te klikom na pojedinu knjigu pregledati sve detaljne informacije o pojedinoj knjizi. | David Škudar
+F05 |Popis rezervacija |  Pregled rezervacija korisnika za pojedine resurse koji nisu trenutačno dostupni te  obavještavanje o potrebi za nabavkom novih primjeraka knjiga koje su često posuđivane | Luka Krševan Nižić
 F06 | Pregled posudbi | Kada se knjižnićar prijavi može vidjetu popis svih knjiga koje su posuđene te koji korisnik je posudio koju knjigu. | Luka Krševan Nižić
 F07 | Obavijest o isteku posudbe | Knjižnica prima obavijest kada se rok za vraćanje knjiga približava ili kada je istekao kako bi poduzeli određene radnje. | David Škudar
 F08 | Ocjena i recenzija knjiga | Korisnici mogu ocjenjivati i recenzirati knjige koje su posudili kako bi podijelili svoje iskustvo s drugim korisnicima. | Marino Štura
-F09 | Povrat knjige | Nakon isteka roka za vraćanje knjige, korisnici trebaju imati mogućnost označiti povrat knjige kako bi označili da su je vratili knjižnici. | David Škudar
+F09 | Izvještaji i statistika| Generiranje izvještaja o aktivnostima knjižnice, uključujući statistiku posudbe, popularnost resursa i druge relevantne informacije. | David Škudar
 ## Tehnologije i oprema
 Implementaciju naše aplikacije radit ćemo u programskom jeziku C# te koristiti Microsoft Visual Studio razvojno okruženje. Za verzioniranje programskog koda koristit ćemo Git i GitHub. Kako bi pratili razvoj naše aplikacije pisat ćemo jednostavnu dokumentaciju u Github Wiki, a projektne zadatke ćemo planirati i pratiti u alatu GitHub projects. Za Backend koristimo lokalni Express.js i MySql bazu podataka za oba projekta. Express će komunicirati sa bazom dok će naše aplikacije hitati Express servis api-e i tako dobavljati podatke.
