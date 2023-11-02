@@ -18,7 +18,7 @@ Nakon vaše prijave bit će vam dodijeljen mentor s kojim ćete tijekom semestra
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
-Luka Nižić | lnizic21@foi.hr | 0016155331 | lnizic21
+Luka Krševan Nižić | lnizic21@foi.hr | 0016155331 | lnizic21
 David Škudar | dskudar20@foi.hr | 0016147892 | dskudar20
 Marino Štura | mstura21@student.foi.hr | 0016153181 | mstura21-FOI
 
@@ -29,12 +29,12 @@ Domena aplikacije za posudbu knjiga Scriptify obuhvaća stvaranje digitalne plat
 
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
-F01 | Registracija | Knjižnićari mogu registrirati knjižnicu pri čemu unose naziv, adresu, email, porezni broj, OIB vlasnika, kontakt vlasnika knjižnice te lozinku. Nakon registracije uneseni podaci se zapisuju u bazu podataka. | Luka Nižić
+F01 | Registracija | Knjižnićari mogu registrirati knjižnicu pri čemu unose naziv, adresu, email, porezni broj, OIB vlasnika, kontakt vlasnika knjižnice te lozinku. Nakon registracije uneseni podaci se zapisuju u bazu podataka. | Luka Krševan Nižić
 F02 | Login | Knjižnice tj. knjižničari se prijavljuju koristeći svoje korisničke podatke, email i lozinku.| Marino Štura
 F03 | Menadžment | Knjižnice imaju mogućnost dodavanja knjiga pri ćemu dodaju sliku knjige, naziv knjige, kratki opis, žanr te prosječno vrijeme čitanja. Knjižnice mogu naknadno mijenjati podatke o pojedinoj knjizi te se sve promjene automatski pohranjuju i ažuriraju u bazi podataka. | Marino Štura
 F04 | Pregled dostupnih knjiga | Korisnici mogu u aplikaciji pregledati sve dostupne knjige svake registrirane knjižnice te klikom na pojedinu knjigu pregledati sve detaljne informacije o pojedinoj knjizi. | David Škudar
-F05 | Posudba knjige | Korisnici mogu putem aplikacije posuditi neku od dostupnih knjiga pri čemu je rok posudbe mjesec dana.  | Luka Nižić
-F06 | Pregled posudbi | Kada se knjižnićar prijavi može vidjetu popis svih knjiga koje su posuđene te koji korisnik je posudio koju knjigu. | Luka Nižić
+F05 | Posudba knjige | Korisnici mogu putem aplikacije posuditi neku od dostupnih knjiga pri čemu je rok posudbe mjesec dana.  | Luka Krševan Nižić
+F06 | Pregled posudbi | Kada se knjižnićar prijavi može vidjetu popis svih knjiga koje su posuđene te koji korisnik je posudio koju knjigu. | Luka Krševan Nižić
 F07 | Obavijest o isteku posudbe | Knjižnica prima obavijest kada se rok za vraćanje knjiga približava ili kada je istekao kako bi poduzeli određene radnje. | David Škudar
 F08 | Ocjena i recenzija knjiga | Korisnici mogu ocjenjivati i recenzirati knjige koje su posudili kako bi podijelili svoje iskustvo s drugim korisnicima. | Marino Štura
 F09 | Povrat knjige | Nakon isteka roka za vraćanje knjige, korisnici trebaju imati mogućnost označiti povrat knjige kako bi označili da su je vratili knjižnici. | David Škudar
