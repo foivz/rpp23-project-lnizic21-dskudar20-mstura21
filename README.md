@@ -23,7 +23,7 @@ David Škudar | dskudar20@foi.hr | 0016147892 | dskudar20
 Marino Štura | mstura21@student.foi.hr | 0016153181 | mstura21-FOI
 
 ## Opis domene
-Domena aplikacije za posudbu knjiga Scriptify obuhvaća stvaranje digitalne platforme koja omogućuje korisnicima posudbu knjiga od strane knjižnica. Ova aplikacija treba biti korisniku prijateljska, sigurna i pouzdana, istovremeno pružajući autenticiranu i raznovrsnu kolekciju knjiga. Glavni problem koji se rješava ovom aplikacijom je olakšavanje procesa pronalaženja te posudbe knjiga za kupca.
+Domena aplikacije za posudbu knjiga Scriptify obuhvaća stvaranje digitalne platforme koja omogućuje knjižničarima lakši i pojednostavljeni rad sa svojom virtualnom knjižnicom. Ova aplikacija treba biti korisniku prijateljska, sigurna i pouzdana, istovremeno pružajući autenticiranu i raznovrsnu kolekciju knjiga. Glavni problem koji se rješava ovom aplikacijom je olakšavanje procesa pronalaženja te posudbe knjiga za kupca.
 
 ## Specifikacija projekta
 
