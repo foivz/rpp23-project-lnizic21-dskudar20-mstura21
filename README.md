@@ -36,7 +36,7 @@ F04 | Pregled  knjiga | Knjižnićari mogu u aplikaciji pregledati sve dostupne 
 F05 |Popis rezervacija |  Pregled rezervacija korisnika za pojedine resurse koji nisu trenutačno dostupni te  obavještavanje o potrebi za nabavkom novih primjeraka knjiga koje su često posuđivane | Luka Krševan Nižić
 F06 | Pregled posudbi | Kada se knjižnićar prijavi može vidjetu popis svih knjiga koje su posuđene te koji korisnik je posudio koju knjigu. | Luka Krševan Nižić
 F07 | Obavijest o isteku posudbe | Knjižnica prima obavijest kada se rok za vraćanje knjiga približava ili kada je istekao kako bi poduzeli određene radnje. | David Škudar
-F08 | Ocjena i recenzija knjiga | Korisnici mogu ocjenjivati i recenzirati knjige koje su posudili kako bi podijelili svoje iskustvo s drugim korisnicima. | Marino Štura
+F08 | Povijest posudbi | Praćenje povijesti posudbe korisnika i sankcija za kašnjenje s vraćanjem resursa. | Marino Štura
 F09 | Izvještaji i statistika| Generiranje izvještaja o aktivnostima knjižnice, uključujući statistiku posudbe, popularnost resursa i druge relevantne informacije. | David Škudar
 ## Tehnologije i oprema
 Implementaciju naše aplikacije radit ćemo u programskom jeziku C# te koristiti Microsoft Visual Studio razvojno okruženje. Za verzioniranje programskog koda koristit ćemo Git i GitHub. Kako bi pratili razvoj naše aplikacije pisat ćemo jednostavnu dokumentaciju u Github Wiki, a projektne zadatke ćemo planirati i pratiti u alatu GitHub projects. Za Backend koristimo lokalni Express.js i MySql bazu podataka za oba projekta. Express će komunicirati sa bazom dok će naše aplikacije hitati Express servis api-e i tako dobavljati podatke.
