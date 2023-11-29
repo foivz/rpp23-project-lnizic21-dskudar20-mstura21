@@ -29,14 +29,13 @@ Domena aplikacije za posudbu knjiga Scriptify obuhvaća stvaranje digitalne plat
 
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
-F01 | Registracija | Knjižnićari mogu registrirati knjižnicu pri čemu unose naziv, adresu, email, porezni broj, OIB vlasnika, kontakt vlasnika knjižnice te lozinku. Nakon registracije uneseni podaci se zapisuju u bazu podataka. | Luka Krševan Nižić
-F02 | Login | Knjižnice tj. knjižničari se prijavljuju koristeći svoje korisničke podatke, email i lozinku.| Marino Štura
-F03 | Upravljanje katalogom knjiga | Knjižnice imaju mogućnost dodavanja knjiga pri ćemu dodaju sliku knjige, naziv knjige, kratki opis, žanr te prosječno vrijeme čitanja. Knjižnice mogu naknadno mijenjati podatke o pojedinoj knjizi te se sve promjene automatski pohranjuju i ažuriraju u bazi podataka. | Marino Štura
-F04 | Pregled  knjiga | Knjižnićari mogu u aplikaciji pregledati sve dostupne knjige svake registrirane knjižnice te klikom na pojedinu knjigu pregledati sve detaljne informacije o pojedinoj knjizi. | David Škudar
-F05 |Popis rezervacija |  Pregled rezervacija korisnika za pojedine resurse koji nisu trenutačno dostupni te  obavještavanje o potrebi za nabavkom novih primjeraka knjiga koje su često posuđivane | Luka Krševan Nižić
-F06 | Pregled posudbi | Kada se knjižnićar prijavi može vidjetu popis svih knjiga koje su posuđene te koji korisnik je posudio koju knjigu. | Luka Krševan Nižić
-F07 | Obavijest o isteku posudbe | Knjižnica prima obavijest kada se rok za vraćanje knjiga približava ili kada je istekao kako bi poduzeli određene radnje. | David Škudar
-F08 | Povijest posudbi | Praćenje povijesti posudbe korisnika i sankcija za kašnjenje s vraćanjem resursa. | Marino Štura
-F09 | Izvještaji i statistika| Generiranje izvještaja o aktivnostima knjižnice, uključujući statistiku posudbe, popularnost resursa i druge relevantne informacije. | David Škudar
+F01 | Autentikacija | Knjižnice se registriraju, a zatim knjižničari koriste svoje podatke za prijavu.| Luka Krševan Nižić
+F02 | Upravljanje katalogom knjiga | Knjižnice dodaju, ažuriraju i brišu knjige s informacijama o slici, nazivu, opisu, žanru i vremenu čitanja. | Marino Štura
+F03 | Napredno filtriranje i pretraživanje knjiga | Knjižnićari mogu koristiti napredno filtriranje i pretraživanje kako bi brže pronašli knjige. | David Škudar
+F04 |Popis rezervacija | Prikazuje rezervacije za nedostupne resurse i obavještava o potrebi za novim primjercima često posuđivanih knjiga. | Luka Krševan Nižić
+F05 | Pregled posudbi | Knjižničari mogu vidjeti popis posuđenih knjiga i informacije o posuđivaču. | Marino Štura
+F06 | Upravljanje posudbama i sankcijama | Prima obavijest o isteku posudbe, prati povijest posudbi i primjenjuje sankcije za kašnjenje s vraćanjem resursa. | David Škudar
+F07 | Izvještaji i statistika | Generira izvještaje o aktivnostima knjižnice, uključujući statistiku posudbe i popularnost resursa. | David Škudar
+F08 | Posuđivanje/vraćanje knjige | Knjižničari evidentiraju posudbu i vraćanje knjiga. | Luka Krševan Nižić
 ## Tehnologije i oprema
 Implementaciju naše aplikacije radit ćemo u programskom jeziku C# te koristiti Microsoft Visual Studio razvojno okruženje. Za verzioniranje programskog koda koristit ćemo Git i GitHub. Kako bi pratili razvoj naše aplikacije pisat ćemo jednostavnu dokumentaciju u Github Wiki, a projektne zadatke ćemo planirati i pratiti u alatu GitHub projects. Za Backend koristimo lokalni Express.js i MySql bazu podataka za oba projekta. Express će komunicirati sa bazom dok će naše aplikacije hitati Express servis api-e i tako dobavljati podatke.
