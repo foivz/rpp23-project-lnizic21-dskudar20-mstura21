@@ -37,5 +37,6 @@ F05 | Pregled posudbi | Knjižničari mogu vidjeti popis posuđenih knjiga i inf
 F06 | Upravljanje posudbama i sankcijama | Prima obavijest o isteku posudbe, prati povijest posudbi i primjenjuje sankcije za kašnjenje s vraćanjem resursa. | David Škudar
 F07 | Izvještaji i statistika | Generira izvještaje o aktivnostima knjižnice, uključujući statistiku posudbe i popularnost resursa. | David Škudar
 F08 | Posuđivanje/vraćanje knjige | Knjižničari evidentiraju posudbu i vraćanje knjiga. | Luka Krševan Nižić
+F09 | Scriptify Aproved program | Knjižnica koja ima više od 30 posudbi ulazi u Scriptify Aproved program te se pojavljuje kao prva na listi knjižnica. | Marino Štura 
 ## Tehnologije i oprema
 Implementaciju naše aplikacije radit ćemo u programskom jeziku C# te koristiti Microsoft Visual Studio razvojno okruženje. Za verzioniranje programskog koda koristit ćemo Git i GitHub. Kako bi pratili razvoj naše aplikacije pisat ćemo jednostavnu dokumentaciju u Github Wiki, a projektne zadatke ćemo planirati i pratiti u alatu GitHub projects. Za Backend koristimo lokalni Express.js i MySql bazu podataka za oba projekta. Express će komunicirati sa bazom dok će naše aplikacije hitati Express servis api-e i tako dobavljati podatke.
