@@ -13,6 +13,7 @@ namespace EntityLayer
         public Knjige()
         {
             Knjizara_has_Knjige = new HashSet<Knjizara_has_Knjige>();
+            User = new HashSet<User>();
         }
 
         [Key]
@@ -34,5 +35,8 @@ namespace EntityLayer
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Knjizara_has_Knjige> Knjizara_has_Knjige { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User> User { get; set; }
     }
 }

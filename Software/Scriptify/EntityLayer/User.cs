@@ -12,7 +12,9 @@ namespace EntityLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
+            Rezervacija = new HashSet<Rezervacija>();
             user_has_Knjizara_has_Knjige = new HashSet<user_has_Knjizara_has_Knjige>();
+            Knjige = new HashSet<Knjige>();
         }
 
         [Key]
@@ -40,6 +42,12 @@ namespace EntityLayer
         public string Prezime { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Rezervacija> Rezervacija { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<user_has_Knjizara_has_Knjige> user_has_Knjizara_has_Knjige { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Knjige> Knjige { get; set; }
     }
 }
