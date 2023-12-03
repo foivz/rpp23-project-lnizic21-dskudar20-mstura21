@@ -42,5 +42,19 @@ namespace Scriptify
 
             }
         }
+
+        private void btnRegister_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Invalid Username od Password, Please Try Again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            txtUserame.Text = "";
+            txtPassword.Text = "";
+            txtUserame.Focus();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            new frmRegister().Show();
+            this.Hide();
+        }
     }
 }

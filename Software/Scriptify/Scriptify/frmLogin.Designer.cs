@@ -57,6 +57,7 @@ namespace Scriptify
             this.label6.Size = new System.Drawing.Size(132, 23);
             this.label6.TabIndex = 23;
             this.label6.Text = "Create Account";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -95,6 +96,7 @@ namespace Scriptify
             this.btnRegister.TabIndex = 20;
             this.btnRegister.Text = "LOGIN";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click_1);
             // 
             // checkbxShowPass
             // 
