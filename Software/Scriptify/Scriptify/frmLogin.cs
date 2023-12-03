@@ -16,5 +16,31 @@ namespace Scriptify
         {
             InitializeComponent();
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            txtUserame.Text = "";
+            txtPassword.Text = "";
+            txtUserame.Focus();
+        }
+
+        private void checkbxShowPass_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (checkbxShowPass.Checked)
+            {
+                txtPassword.PasswordChar = '\0';
+
+            } else
+            {
+                txtPassword.PasswordChar = '•';
+
+            }
+        }
     }
 }
