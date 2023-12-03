@@ -25,8 +25,12 @@ namespace Scriptify
             }else
             {
                 MessageBox.Show("Password does not math, Please re-enter", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUserame.Text = "";
                 txtPassword.Text = "";
                 txtComPassword.Text = "";
+                txtIme.Text = "";
+                txtPrezime.Text = "";
+                txtEmail.Text = "";
                 txtPassword.Focus();
             }
 
@@ -37,6 +41,9 @@ namespace Scriptify
             txtUserame.Text = "";
             txtPassword.Text = "";
             txtComPassword.Text = "";
+            txtIme.Text = "";
+            txtPrezime.Text = "";
+            txtEmail.Text = "";
             txtUserame.Focus();
 
         }
@@ -60,6 +67,13 @@ namespace Scriptify
                 txtComPassword.PasswordChar = '•';
 
             }
+        }
+
+   
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
