@@ -53,7 +53,7 @@ namespace Scriptify
                 MessageBox.Show("Invalid Username od Password, Please Try Again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtUserame.Text = "";
                 txtPassword.Text = "";
-                txtUserame.Focus(); 
+                txtUserame.Focus();  
             }
            
         }
