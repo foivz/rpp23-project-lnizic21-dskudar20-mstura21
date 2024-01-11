@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "pJdXCoNGOD6lnQdaFd6b6I9PeWAEY3KqQNG7t8JgWuKpJmQGjcP6QuXvRNOc3NJuCRjjrBFSfjSMfgFHtEk9qQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\David\\Source\\Repos\\rpp23-project-lnizic21-dskudar20-mstura21\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\David\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512"
+  ],
+  "logs": []
+}
