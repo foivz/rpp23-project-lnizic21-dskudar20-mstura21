@@ -30,7 +30,8 @@ namespace Scriptify
 
         private void btnCatalogOfBooks_Click(object sender, EventArgs e)
         {
-
+            UcCatalogOfBooks ucCatalogOfBooks = new UcCatalogOfBooks();
+            panelControls.Controls.Add(ucCatalogOfBooks);
         }
     }
 }
