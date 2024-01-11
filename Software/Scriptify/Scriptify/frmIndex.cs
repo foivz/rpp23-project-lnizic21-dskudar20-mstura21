@@ -22,9 +22,15 @@ namespace Scriptify
              
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void btnLoans_Click(object sender, EventArgs e)
         {
-             
+            UcLoans ucLoans = new UcLoans();
+            panelControls.Controls.Add(ucLoans);
+        }
+
+        private void btnCatalogOfBooks_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
