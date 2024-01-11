@@ -23,13 +23,6 @@ namespace Scriptify
         }
 
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            txtUserame.Text = "";
-            txtPassword.Text = "";
-            txtUserame.Focus();
-        }
-
         private void checkbxShowPass_CheckedChanged_1(object sender, EventArgs e)
         {
             if (checkbxShowPass.Checked)
@@ -43,7 +36,7 @@ namespace Scriptify
             }
         }
 
-        private void btnRegister_Click_1(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Invalid Username od Password, Please Try Again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             txtUserame.Text = "";
@@ -51,10 +44,17 @@ namespace Scriptify
             txtUserame.Focus();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void labelCreateAccount_Click(object sender, EventArgs e)
         {
             new frmRegister().Show();
             this.Hide();
+        }
+
+        private void btnClearLoginForm_Click(object sender, EventArgs e)
+        {
+            txtUserame.Text = "";
+            txtPassword.Text = "";
+            txtUserame.Focus();
         }
     }
 }

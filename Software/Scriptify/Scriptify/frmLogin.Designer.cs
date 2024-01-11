@@ -35,10 +35,10 @@ namespace Scriptify
         /// </summary>
         private void InitializeComponent()
         {
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelCreateAccount = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnRegister = new System.Windows.Forms.Button();
+            this.btnClearLoginForm = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.checkbxShowPass = new System.Windows.Forms.CheckBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,17 +47,17 @@ namespace Scriptify
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label6
+            // labelCreateAccount
             // 
-            this.label6.AutoSize = true;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.label6.Location = new System.Drawing.Point(74, 432);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(132, 23);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Create Account";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.labelCreateAccount.AutoSize = true;
+            this.labelCreateAccount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelCreateAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.labelCreateAccount.Location = new System.Drawing.Point(74, 432);
+            this.labelCreateAccount.Name = "labelCreateAccount";
+            this.labelCreateAccount.Size = new System.Drawing.Size(132, 23);
+            this.labelCreateAccount.TabIndex = 23;
+            this.labelCreateAccount.Text = "Create Account";
+            this.labelCreateAccount.Click += new System.EventHandler(this.labelCreateAccount_Click);
             // 
             // label5
             // 
@@ -69,34 +69,34 @@ namespace Scriptify
             this.label5.TabIndex = 22;
             this.label5.Text = "Don\'t Have An Account";
             // 
-            // button1
+            // btnClearLoginForm
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.button1.Location = new System.Drawing.Point(28, 344);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(216, 35);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "CLEAR";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnClearLoginForm.BackColor = System.Drawing.Color.White;
+            this.btnClearLoginForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearLoginForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearLoginForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btnClearLoginForm.Location = new System.Drawing.Point(28, 344);
+            this.btnClearLoginForm.Name = "btnClearLoginForm";
+            this.btnClearLoginForm.Size = new System.Drawing.Size(216, 35);
+            this.btnClearLoginForm.TabIndex = 21;
+            this.btnClearLoginForm.Text = "CLEAR";
+            this.btnClearLoginForm.UseVisualStyleBackColor = false;
+            this.btnClearLoginForm.Click += new System.EventHandler(this.btnClearLoginForm_Click);
             // 
-            // btnRegister
+            // btnLogin
             // 
-            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegister.FlatAppearance.BorderSize = 0;
-            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(28, 294);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(216, 35);
-            this.btnRegister.TabIndex = 20;
-            this.btnRegister.Text = "LOGIN";
-            this.btnRegister.UseVisualStyleBackColor = false;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click_1);
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(28, 294);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(216, 35);
+            this.btnLogin.TabIndex = 20;
+            this.btnLogin.Text = "LOGIN";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // checkbxShowPass
             // 
@@ -169,10 +169,10 @@ namespace Scriptify
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(289, 489);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.labelCreateAccount);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnRegister);
+            this.Controls.Add(this.btnClearLoginForm);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.checkbxShowPass);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label3);
@@ -202,10 +202,10 @@ namespace Scriptify
 
         #endregion
 
-        private Label label6;
+        private Label labelCreateAccount;
         private Label label5;
-        private Button button1;
-        private Button btnRegister;
+        private Button btnClearLoginForm;
+        private Button btnLogin;
         private CheckBox checkbxShowPass;
         private TextBox txtPassword;
         private Label label3;
