@@ -19,7 +19,7 @@ namespace Scriptify
 
         private void frmIndex_Load(object sender, EventArgs e)
         {
-            
+             
         }
     }
 }
