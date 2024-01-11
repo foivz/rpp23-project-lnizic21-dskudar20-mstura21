@@ -28,6 +28,20 @@ namespace DataAccessLayer.Repositories
             return Entities.SingleOrDefault(u => u.username == username && u.password == password);
         }
 
+        public int CreateNewUser(User user, bool saveChanges = true)
+        {
+
+            Entities.Add(user);
+
+            if(saveChanges)
+            {
+                return SaveChanges();
+            }
+            else
+            {
+                return 0;
+            }
+        }
 
         public void Dispose()
         {

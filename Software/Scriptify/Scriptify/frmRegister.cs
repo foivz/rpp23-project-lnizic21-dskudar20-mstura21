@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLogicLayer;
+using EntityLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,39 +21,31 @@ namespace Scriptify
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            
             if (txtUserame.Text == "" && txtPassword.Text == "" && txtComPassword.Text == "")
             {
                 MessageBox.Show("username and Password field are empty", "Registration failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }else
+            }
+            else
             {
-                MessageBox.Show("Password does not math, Please re-enter", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtUserame.Text = "";
-                txtPassword.Text = "";
-                txtComPassword.Text = "";
-                txtIme.Text = "";
-                txtPrezime.Text = "";
-                txtEmail.Text = "";
-                txtPassword.Focus();
+                User user = new User()
+                {
+                    username = txtUserame.Text,
+                    email = txtEmail.Text,
+                    password = txtPassword.Text,
+                    create_time = DateTime.Now,
+                    First_Name = txtIme.Text,
+                    Last_Name = txtPrezime.Text,
+                };
+
+                AuthenticationService service = new AuthenticationService();
+                service.CreateUser(user);
+                MessageBox.Show("Registration succeeded!");
+
+                new frmLogin().Show();
+                this.Hide();
             }
 
-            }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            txtUserame.Text = "";
-            txtPassword.Text = "";
-            txtComPassword.Text = "";
-            txtIme.Text = "";
-            txtPrezime.Text = "";
-            txtEmail.Text = "";
-            txtUserame.Focus();
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-            new frmLogin().Show();
-            this.Hide();
         }
 
         private void checkbxShowPass_CheckedChanged(object sender, EventArgs e)
@@ -68,12 +62,31 @@ namespace Scriptify
 
             }
         }
-
-   
-
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtUserame.Text = "";
+            txtPassword.Text = "";
+            txtComPassword.Text = "";
+            txtIme.Text = "";
+            txtPrezime.Text = "";
+            txtEmail.Text = "";
+            txtUserame.Focus();
+        }
+        private void labelBackToLogin_Click(object sender, EventArgs e)
+        {
+            new frmLogin().Show();
+            this.Hide();
+        }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void frmRegister_Load(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

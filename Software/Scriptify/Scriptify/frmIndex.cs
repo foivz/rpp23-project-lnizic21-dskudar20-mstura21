@@ -61,5 +61,11 @@ namespace Scriptify
             UcHomePage ucHomePage = new UcHomePage();
             panelControls.Controls.Add(ucHomePage);
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new frmLogin().Show();
+        }
     }
 }

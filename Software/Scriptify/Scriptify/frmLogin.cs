@@ -13,11 +13,9 @@ namespace Scriptify
 {
     public partial class frmLogin : Form
     {
-        private AuthenticationService _authenticationService;
-        public frmLogin(AuthenticationService authenticationService)
+        public frmLogin()
         {
             InitializeComponent();
-            _authenticationService = authenticationService;
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -41,26 +39,40 @@ namespace Scriptify
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-      
-            bool userIsExists = _authenticationService.AuthenticateUser(txtUserame.Text, txtPassword.Text);
+            AuthenticationService _authenticationService = new AuthenticationService();
 
-            if (userIsExists)
+            if (txtUserame.Text == "" && txtPassword.Text == "")
             {
-                //ulaz u aplikaciju
+                MessageBox.Show("username and Password field are empty", "Login failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUserame.Focus();
             }
             else
-            {
-                MessageBox.Show("Invalid Username od Password, Please Try Again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtUserame.Text = "";
-                txtPassword.Text = "";
-                txtUserame.Focus();  
-            }
-           
-        }
 
+            {
+                bool userIsExists = _authenticationService.AuthenticateUser(txtUserame.Text, txtPassword.Text);
+
+                if (userIsExists)
+                {
+                    //ulaz u aplikaciju
+                    frmIndex frm = new frmIndex(txtUserame.Text);
+                    this.Hide();
+                    frm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Username or Password, Please Try Again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtUserame.Text = "";
+                    txtPassword.Text = "";
+                    txtUserame.Focus();
+                }
+            
+            }
+
+
+        }
         private void labelCreateAccount_Click(object sender, EventArgs e)
         {
-            new frmRegister().Show();
+            new frmRegister().Show(); 
             this.Hide();
         }
 
@@ -69,6 +81,11 @@ namespace Scriptify
             txtUserame.Text = "";
             txtPassword.Text = "";
             txtUserame.Focus();
+        }
+
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

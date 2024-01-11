@@ -45,6 +45,7 @@ namespace Scriptify
             this.txtUserame = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.labelClose = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelCreateAccount
@@ -52,7 +53,7 @@ namespace Scriptify
             this.labelCreateAccount.AutoSize = true;
             this.labelCreateAccount.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelCreateAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.labelCreateAccount.Location = new System.Drawing.Point(74, 432);
+            this.labelCreateAccount.Location = new System.Drawing.Point(116, 409);
             this.labelCreateAccount.Name = "labelCreateAccount";
             this.labelCreateAccount.Size = new System.Drawing.Size(132, 23);
             this.labelCreateAccount.TabIndex = 23;
@@ -63,7 +64,7 @@ namespace Scriptify
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(48, 398);
+            this.label5.Location = new System.Drawing.Point(90, 375);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(196, 23);
             this.label5.TabIndex = 22;
@@ -75,7 +76,7 @@ namespace Scriptify
             this.btnClearLoginForm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClearLoginForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearLoginForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.btnClearLoginForm.Location = new System.Drawing.Point(28, 344);
+            this.btnClearLoginForm.Location = new System.Drawing.Point(70, 322);
             this.btnClearLoginForm.Name = "btnClearLoginForm";
             this.btnClearLoginForm.Size = new System.Drawing.Size(216, 35);
             this.btnClearLoginForm.TabIndex = 21;
@@ -90,7 +91,7 @@ namespace Scriptify
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(28, 294);
+            this.btnLogin.Location = new System.Drawing.Point(70, 272);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(216, 35);
             this.btnLogin.TabIndex = 20;
@@ -103,7 +104,7 @@ namespace Scriptify
             this.checkbxShowPass.AutoSize = true;
             this.checkbxShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkbxShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkbxShowPass.Location = new System.Drawing.Point(93, 247);
+            this.checkbxShowPass.Location = new System.Drawing.Point(135, 225);
             this.checkbxShowPass.Name = "checkbxShowPass";
             this.checkbxShowPass.Size = new System.Drawing.Size(151, 27);
             this.checkbxShowPass.TabIndex = 19;
@@ -116,17 +117,17 @@ namespace Scriptify
             this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("MS UI Gothic", 16.2F);
-            this.txtPassword.Location = new System.Drawing.Point(28, 213);
+            this.txtPassword.Location = new System.Drawing.Point(44, 188);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '•';
-            this.txtPassword.Size = new System.Drawing.Size(216, 28);
+            this.txtPassword.Size = new System.Drawing.Size(281, 28);
             this.txtPassword.TabIndex = 16;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 187);
+            this.label3.Location = new System.Drawing.Point(44, 162);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 23);
             this.label3.TabIndex = 15;
@@ -137,16 +138,16 @@ namespace Scriptify
             this.txtUserame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtUserame.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUserame.Font = new System.Drawing.Font("MS UI Gothic", 16.2F);
-            this.txtUserame.Location = new System.Drawing.Point(28, 147);
+            this.txtUserame.Location = new System.Drawing.Point(44, 122);
             this.txtUserame.Multiline = true;
             this.txtUserame.Name = "txtUserame";
-            this.txtUserame.Size = new System.Drawing.Size(216, 28);
+            this.txtUserame.Size = new System.Drawing.Size(281, 28);
             this.txtUserame.TabIndex = 14;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 121);
+            this.label2.Location = new System.Drawing.Point(44, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 23);
             this.label2.TabIndex = 13;
@@ -157,18 +158,31 @@ namespace Scriptify
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 19.8F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.label1.Location = new System.Drawing.Point(28, 68);
+            this.label1.Location = new System.Drawing.Point(88, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(191, 33);
             this.label1.TabIndex = 12;
             this.label1.Text = "Get Started";
+            // 
+            // labelClose
+            // 
+            this.labelClose.AutoSize = true;
+            this.labelClose.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold);
+            this.labelClose.ForeColor = System.Drawing.Color.Red;
+            this.labelClose.Location = new System.Drawing.Point(144, 458);
+            this.labelClose.Name = "labelClose";
+            this.labelClose.Size = new System.Drawing.Size(59, 35);
+            this.labelClose.TabIndex = 24;
+            this.labelClose.Text = "Exit";
+            this.labelClose.Click += new System.EventHandler(this.labelClose_Click);
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(289, 489);
+            this.ClientSize = new System.Drawing.Size(366, 509);
+            this.Controls.Add(this.labelClose);
             this.Controls.Add(this.labelCreateAccount);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnClearLoginForm);
@@ -212,5 +226,6 @@ namespace Scriptify
         private TextBox txtUserame;
         private Label label2;
         private Label label1;
+        private Label labelClose;
     }
 }

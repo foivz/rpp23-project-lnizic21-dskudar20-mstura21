@@ -1,6 +1,6 @@
 ﻿namespace Scriptify
 {
-    partial class UcCatalogOfBooks
+    partial class UcLoans
     {
         /// <summary> 
         /// Required designer variable.
@@ -35,20 +35,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(293, 11);
+            this.label1.Location = new System.Drawing.Point(353, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 29);
+            this.label1.Size = new System.Drawing.Size(87, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Catalog of books";
+            this.label1.Text = "Loans";
             // 
-            // UcCatalogOfBooks
+            // UcLoans
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
-            this.Name = "UcCatalogOfBooks";
+            this.Name = "UcLoans";
             this.Size = new System.Drawing.Size(806, 525);
-            this.Load += new System.EventHandler(this.UcCatalogOfBooks_Load);
+            this.Load += new System.EventHandler(this.UcLoans_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
