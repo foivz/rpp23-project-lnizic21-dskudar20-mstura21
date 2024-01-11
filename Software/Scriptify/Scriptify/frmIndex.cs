@@ -12,9 +12,10 @@ namespace Scriptify
 {
     public partial class frmIndex : Form
     {
-        public frmIndex()
+        public frmIndex(string user)
         {
             InitializeComponent();
+            labelUser.Text = user;
         }
 
         private void frmIndex_Load(object sender, EventArgs e)
@@ -24,14 +25,26 @@ namespace Scriptify
 
         private void btnLoans_Click(object sender, EventArgs e)
         {
+            panelControls.Controls.Clear();
             UcLoans ucLoans = new UcLoans();
             panelControls.Controls.Add(ucLoans);
         }
 
         private void btnCatalogOfBooks_Click(object sender, EventArgs e)
         {
+            panelControls.Controls.Clear();
             UcCatalogOfBooks ucCatalogOfBooks = new UcCatalogOfBooks();
             panelControls.Controls.Add(ucCatalogOfBooks);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
