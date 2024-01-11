@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogicLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace Scriptify
 {
     public partial class frmLogin : Form
     {
-        public frmLogin()
+        private AuthenticationService _authenticationService;
+        public frmLogin(AuthenticationService authenticationService)
         {
             InitializeComponent();
+            _authenticationService = authenticationService;
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -38,10 +41,21 @@ namespace Scriptify
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Invalid Username od Password, Please Try Again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            txtUserame.Text = "";
-            txtPassword.Text = "";
-            txtUserame.Focus();
+      
+            bool userIsExists = _authenticationService.AuthenticateUser(txtUserame.Text, txtPassword.Text);
+
+            if (userIsExists)
+            {
+                //ulaz u aplikaciju
+            }
+            else
+            {
+                MessageBox.Show("Invalid Username od Password, Please Try Again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUserame.Text = "";
+                txtPassword.Text = "";
+                txtUserame.Focus(); 
+            }
+           
         }
 
         private void labelCreateAccount_Click(object sender, EventArgs e)
