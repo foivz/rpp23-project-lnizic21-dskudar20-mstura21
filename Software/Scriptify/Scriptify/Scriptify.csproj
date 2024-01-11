@@ -88,6 +88,12 @@
     <Compile Include="UcCatalogOfBooks.Designer.cs">
       <DependentUpon>UcCatalogOfBooks.cs</DependentUpon>
     </Compile>
+    <Compile Include="UcHomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcHomePage.Designer.cs">
+      <DependentUpon>UcHomePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="UcLoans.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </Compile>
     <EmbeddedResource Include="UcCatalogOfBooks.resx">
       <DependentUpon>UcCatalogOfBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcHomePage.resx">
+      <DependentUpon>UcHomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UcLoans.resx">
       <DependentUpon>UcLoans.cs</DependentUpon>
