@@ -40,27 +40,36 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControls
             // 
             this.panelControls.ForeColor = System.Drawing.Color.Black;
-            this.panelControls.Location = new System.Drawing.Point(189, 65);
+            this.panelControls.Location = new System.Drawing.Point(200, 65);
             this.panelControls.Name = "panelControls";
-            this.panelControls.Size = new System.Drawing.Size(1159, 652);
+            this.panelControls.Size = new System.Drawing.Size(1148, 652);
             this.panelControls.TabIndex = 1;
             this.panelControls.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControls_Paint);
             // 
             // btnLoans
             // 
             this.btnLoans.FlatAppearance.BorderSize = 0;
+            this.btnLoans.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnLoans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoans.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnLoans.Location = new System.Drawing.Point(12, 125);
+            this.btnLoans.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnLoans.Location = new System.Drawing.Point(55, 138);
             this.btnLoans.Name = "btnLoans";
-            this.btnLoans.Size = new System.Drawing.Size(147, 30);
+            this.btnLoans.Size = new System.Drawing.Size(104, 30);
             this.btnLoans.TabIndex = 2;
             this.btnLoans.Text = "Loans";
             this.btnLoans.UseVisualStyleBackColor = true;
@@ -69,11 +78,12 @@
             // btnCatalogOfBooks
             // 
             this.btnCatalogOfBooks.FlatAppearance.BorderSize = 0;
+            this.btnCatalogOfBooks.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnCatalogOfBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCatalogOfBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnCatalogOfBooks.Location = new System.Drawing.Point(11, 161);
+            this.btnCatalogOfBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnCatalogOfBooks.Location = new System.Drawing.Point(56, 176);
             this.btnCatalogOfBooks.Name = "btnCatalogOfBooks";
-            this.btnCatalogOfBooks.Size = new System.Drawing.Size(147, 60);
+            this.btnCatalogOfBooks.Size = new System.Drawing.Size(99, 48);
             this.btnCatalogOfBooks.TabIndex = 3;
             this.btnCatalogOfBooks.Text = "Catalog of books";
             this.btnCatalogOfBooks.UseVisualStyleBackColor = true;
@@ -93,12 +103,12 @@
             this.btnHomePage.BackColor = System.Drawing.Color.White;
             this.btnHomePage.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnHomePage.FlatAppearance.BorderSize = 0;
-            this.btnHomePage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnHomePage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnHomePage.Location = new System.Drawing.Point(12, 82);
+            this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnHomePage.Location = new System.Drawing.Point(55, 90);
             this.btnHomePage.Name = "btnHomePage";
-            this.btnHomePage.Size = new System.Drawing.Size(147, 42);
+            this.btnHomePage.Size = new System.Drawing.Size(110, 42);
             this.btnHomePage.TabIndex = 6;
             this.btnHomePage.Text = "Home page";
             this.btnHomePage.UseVisualStyleBackColor = false;
@@ -107,11 +117,12 @@
             // btnLogOut
             // 
             this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnLogOut.Location = new System.Drawing.Point(12, 256);
+            this.btnLogOut.Location = new System.Drawing.Point(56, 281);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(147, 38);
+            this.btnLogOut.Size = new System.Drawing.Size(103, 34);
             this.btnLogOut.TabIndex = 7;
             this.btnLogOut.Text = "Log out";
             this.btnLogOut.UseVisualStyleBackColor = true;
@@ -132,11 +143,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 224);
+            this.label4.Location = new System.Drawing.Point(12, 237);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 29);
+            this.label4.Size = new System.Drawing.Size(195, 29);
             this.label4.TabIndex = 11;
-            this.label4.Text = "__________";
+            this.label4.Text = "_____________";
             // 
             // pictureBox1
             // 
@@ -169,12 +180,57 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Scriptify";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(17, 90);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(28, 34);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(17, 138);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 31);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 16;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(17, 186);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(33, 38);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 17;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(17, 281);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(33, 34);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 18;
+            this.pictureBox6.TabStop = false;
+            // 
             // frmIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1350, 720);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -194,6 +250,10 @@
             this.Load += new System.EventHandler(this.frmIndex_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,5 +271,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

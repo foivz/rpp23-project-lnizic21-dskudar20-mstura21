@@ -22,9 +22,9 @@ namespace Scriptify
         private void btnRegister_Click(object sender, EventArgs e)
         {
             
-            if (txtUserame.Text == "" && txtPassword.Text == "" && txtComPassword.Text == "")
+            if (txtUserame.Text == "" || txtPassword.Text == "" || txtComPassword.Text == "")
             {
-                MessageBox.Show("username and Password field are empty", "Registration failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Username and Password fields are required", "Registration failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

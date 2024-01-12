@@ -171,6 +171,11 @@
   <ItemGroup>
     <Content Include="Images\book.png" />
     <Content Include="Images\bookicon.png" />
+    <Content Include="Images\bookloans.jpg" />
+    <Content Include="Images\homepageicon.png" />
+    <Content Include="Images\loansbook.png" />
+    <Content Include="Images\loansicon.png" />
+    <Content Include="Images\logouticon.png" />
     <Content Include="Images\usericon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

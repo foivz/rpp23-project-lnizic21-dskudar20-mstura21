@@ -41,9 +41,9 @@ namespace Scriptify
         {
             AuthenticationService _authenticationService = new AuthenticationService();
 
-            if (txtUserame.Text == "" && txtPassword.Text == "")
+            if (txtUserame.Text == "" || txtPassword.Text == "")
             {
-                MessageBox.Show("username and Password field are empty", "Login failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Username and Password fields are required", "Login failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtUserame.Focus();
             }
             else
