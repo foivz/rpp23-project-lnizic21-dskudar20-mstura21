@@ -30,10 +30,16 @@ namespace DataAccessLayer.Repositories
 
         public int CreateNewUser(User user, bool saveChanges = true)
         {
+            if(Entities.Count(u => u.username == user.username) > 0)
+            {
 
-            Entities.Add(user);
+            }
+            else
+            {
+                Entities.Add(user);
+            }
 
-            if(saveChanges)
+            if (saveChanges)
             {
                 return SaveChanges();
             }
