@@ -1,4 +1,5 @@
-﻿using EntityLayer;
+﻿using DataAccessLayer.Iznimke;
+using EntityLayer;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -32,7 +33,7 @@ namespace DataAccessLayer.Repositories
         {
             if(Entities.Count(u => u.username == user.username) > 0)
             {
-
+                throw new RegistrationException("User with username " + user.username + " is already exists!");
             }
             else
             {
