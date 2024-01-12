@@ -22,15 +22,23 @@ namespace Scriptify
         private void btnRegister_Click(object sender, EventArgs e)
         {
             
-            if (txtUserame.Text == "" || txtPassword.Text == "" || txtComPassword.Text == "")
+            if (txtUsername.Text == "" || txtPassword.Text == "" || txtComPassword.Text == "")
             {
-                MessageBox.Show("Username and Password fields are required", "Registration failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if(txtUsername.Text != "" && txtPassword.Text != "" && txtComPassword.Text == "")
+                {
+                    MessageBox.Show("Confirm Password field is required", "Registration failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Username and Password fields are required", "Registration failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
             else
             {
                 User user = new User()
                 {
-                    username = txtUserame.Text,
+                    username = txtUsername.Text,
                     email = txtEmail.Text,
                     password = txtPassword.Text,
                     create_time = DateTime.Now,
@@ -64,13 +72,13 @@ namespace Scriptify
         }
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtUserame.Text = "";
+            txtUsername.Text = "";
             txtPassword.Text = "";
             txtComPassword.Text = "";
             txtIme.Text = "";
             txtPrezime.Text = "";
             txtEmail.Text = "";
-            txtUserame.Focus();
+            txtUsername.Focus();
         }
         private void labelBackToLogin_Click(object sender, EventArgs e)
         {

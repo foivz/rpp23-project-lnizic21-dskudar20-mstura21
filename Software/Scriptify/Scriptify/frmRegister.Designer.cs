@@ -37,7 +37,7 @@ namespace Scriptify
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegister));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtUserame = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtComPassword = new System.Windows.Forms.TextBox();
@@ -79,16 +79,16 @@ namespace Scriptify
             this.label2.TabIndex = 1;
             this.label2.Text = "Username";
             // 
-            // txtUserame
+            // txtUsername
             // 
-            this.txtUserame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.txtUserame.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUserame.Font = new System.Drawing.Font("MS UI Gothic", 16.2F);
-            this.txtUserame.Location = new System.Drawing.Point(74, 249);
-            this.txtUserame.Multiline = true;
-            this.txtUserame.Name = "txtUserame";
-            this.txtUserame.Size = new System.Drawing.Size(259, 28);
-            this.txtUserame.TabIndex = 2;
+            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("MS UI Gothic", 16.2F);
+            this.txtUsername.Location = new System.Drawing.Point(74, 249);
+            this.txtUsername.Multiline = true;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(259, 28);
+            this.txtUsername.TabIndex = 2;
             // 
             // txtPassword
             // 
@@ -313,7 +313,7 @@ namespace Scriptify
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtUserame);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
@@ -334,7 +334,7 @@ namespace Scriptify
 
         private Label label1;
         private Label label2;
-        private TextBox txtUserame;
+        private TextBox txtUsername;
         private TextBox txtPassword;
         private Label label3;
         private TextBox txtComPassword;
