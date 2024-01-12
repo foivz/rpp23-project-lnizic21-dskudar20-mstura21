@@ -163,6 +163,10 @@
       <Project>{24e31211-5516-4681-9620-eeeae7ad6e79}</Project>
       <Name>BusinessLogicLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{EDB2C02A-4185-4F59-A426-FAE9B08CE79A}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">
       <Project>{4847b12c-0654-43e6-b722-ee75f35bfe23}</Project>
       <Name>EntityLayer</Name>

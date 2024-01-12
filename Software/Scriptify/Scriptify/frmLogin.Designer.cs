@@ -43,7 +43,7 @@ namespace Scriptify
             this.checkbxShowPass = new System.Windows.Forms.CheckBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtUserame = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.labelClose = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -137,16 +137,16 @@ namespace Scriptify
             this.label3.TabIndex = 15;
             this.label3.Text = "Password";
             // 
-            // txtUserame
+            // txtUsername
             // 
-            this.txtUserame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.txtUserame.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUserame.Font = new System.Drawing.Font("MS UI Gothic", 16.2F);
-            this.txtUserame.Location = new System.Drawing.Point(93, 161);
-            this.txtUserame.Multiline = true;
-            this.txtUserame.Name = "txtUserame";
-            this.txtUserame.Size = new System.Drawing.Size(281, 28);
-            this.txtUserame.TabIndex = 14;
+            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("MS UI Gothic", 16.2F);
+            this.txtUsername.Location = new System.Drawing.Point(93, 161);
+            this.txtUsername.Multiline = true;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(281, 28);
+            this.txtUsername.TabIndex = 14;
             // 
             // label2
             // 
@@ -217,7 +217,7 @@ namespace Scriptify
             this.Controls.Add(this.checkbxShowPass);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtUserame);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold);
@@ -251,7 +251,7 @@ namespace Scriptify
         private CheckBox checkbxShowPass;
         private TextBox txtPassword;
         private Label label3;
-        private TextBox txtUserame;
+        private TextBox txtUsername;
         private Label label2;
         private Label labelClose;
         private PictureBox pictureBox1;

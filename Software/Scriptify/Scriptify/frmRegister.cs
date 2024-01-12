@@ -27,11 +27,11 @@ namespace Scriptify
             {
                 if(txtUsername.Text != "" && txtPassword.Text != "" && txtComPassword.Text == "")
                 {
-                    MessageBox.Show("Confirm Password field is required", "Registration failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Confirm Password field is required!", "Registration failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("Username and Password fields are required", "Registration failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Username and Password fields are required!", "Registration failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

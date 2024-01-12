@@ -41,29 +41,29 @@ namespace Scriptify
         {
             AuthenticationService _authenticationService = new AuthenticationService();
 
-            if (txtUserame.Text == "" || txtPassword.Text == "")
+            if (txtUsername.Text == "" || txtPassword.Text == "")
             {
-                MessageBox.Show("Username and Password fields are required", "Login failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtUserame.Focus();
+                MessageBox.Show("Username and Password fields are required!", "Login failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUsername.Focus();
             }
             else
 
             {
-                bool userIsExists = _authenticationService.AuthenticateUser(txtUserame.Text, txtPassword.Text);
+                bool userIsExists = _authenticationService.AuthenticateUser(txtUsername.Text, txtPassword.Text);
 
                 if (userIsExists)
                 {
                     //ulaz u aplikaciju
-                    frmIndex frm = new frmIndex(txtUserame.Text);
+                    frmIndex frm = new frmIndex(txtUsername.Text);
                     this.Hide();
                     frm.ShowDialog();
                 }
                 else
                 {
                     MessageBox.Show("Invalid Username or Password, Please Try Again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtUserame.Text = "";
+                    txtUsername.Text = "";
                     txtPassword.Text = "";
-                    txtUserame.Focus();
+                    txtUsername.Focus();
                 }
             
             }
@@ -78,9 +78,9 @@ namespace Scriptify
 
         private void btnClearLoginForm_Click(object sender, EventArgs e)
         {
-            txtUserame.Text = "";
+            txtUsername.Text = "";
             txtPassword.Text = "";
-            txtUserame.Focus();
+            txtUsername.Focus();
         }
 
         private void labelClose_Click(object sender, EventArgs e)
