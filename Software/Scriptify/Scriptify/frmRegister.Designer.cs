@@ -177,7 +177,7 @@ namespace Scriptify
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(96, 485);
+            this.label5.Location = new System.Drawing.Point(246, 487);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(214, 23);
             this.label5.TabIndex = 10;
@@ -188,7 +188,7 @@ namespace Scriptify
             this.labelBackToLogin.AutoSize = true;
             this.labelBackToLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelBackToLogin.ForeColor = System.Drawing.Color.Purple;
-            this.labelBackToLogin.Location = new System.Drawing.Point(137, 517);
+            this.labelBackToLogin.Location = new System.Drawing.Point(287, 519);
             this.labelBackToLogin.Name = "labelBackToLogin";
             this.labelBackToLogin.Size = new System.Drawing.Size(126, 23);
             this.labelBackToLogin.TabIndex = 11;
