@@ -34,6 +34,7 @@ namespace Scriptify
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegister));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUserame = new System.Windows.Forms.TextBox();
@@ -52,23 +53,27 @@ namespace Scriptify
             this.label8 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelClose = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 19.8F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.label1.Location = new System.Drawing.Point(65, 26);
+            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Purple;
+            this.label1.Location = new System.Drawing.Point(103, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 33);
+            this.label1.Size = new System.Drawing.Size(126, 30);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Get Started";
+            this.label1.Text = "Scriptify";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 77);
+            this.label2.Location = new System.Drawing.Point(74, 223);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 23);
             this.label2.TabIndex = 1;
@@ -79,7 +84,7 @@ namespace Scriptify
             this.txtUserame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtUserame.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUserame.Font = new System.Drawing.Font("MS UI Gothic", 16.2F);
-            this.txtUserame.Location = new System.Drawing.Point(30, 103);
+            this.txtUserame.Location = new System.Drawing.Point(74, 249);
             this.txtUserame.Multiline = true;
             this.txtUserame.Name = "txtUserame";
             this.txtUserame.Size = new System.Drawing.Size(259, 28);
@@ -90,7 +95,7 @@ namespace Scriptify
             this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("MS UI Gothic", 16.2F);
-            this.txtPassword.Location = new System.Drawing.Point(30, 169);
+            this.txtPassword.Location = new System.Drawing.Point(74, 324);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '•';
@@ -100,7 +105,7 @@ namespace Scriptify
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 143);
+            this.label3.Location = new System.Drawing.Point(74, 298);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 23);
             this.label3.TabIndex = 3;
@@ -111,7 +116,7 @@ namespace Scriptify
             this.txtComPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtComPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtComPassword.Font = new System.Drawing.Font("MS UI Gothic", 16.2F);
-            this.txtComPassword.Location = new System.Drawing.Point(30, 236);
+            this.txtComPassword.Location = new System.Drawing.Point(378, 324);
             this.txtComPassword.Multiline = true;
             this.txtComPassword.Name = "txtComPassword";
             this.txtComPassword.PasswordChar = '•';
@@ -121,7 +126,7 @@ namespace Scriptify
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 210);
+            this.label4.Location = new System.Drawing.Point(378, 298);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(155, 23);
             this.label4.TabIndex = 5;
@@ -132,7 +137,7 @@ namespace Scriptify
             this.checkbxShowPass.AutoSize = true;
             this.checkbxShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkbxShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkbxShowPass.Location = new System.Drawing.Point(116, 467);
+            this.checkbxShowPass.Location = new System.Drawing.Point(78, 370);
             this.checkbxShowPass.Name = "checkbxShowPass";
             this.checkbxShowPass.Size = new System.Drawing.Size(151, 27);
             this.checkbxShowPass.TabIndex = 7;
@@ -142,12 +147,12 @@ namespace Scriptify
             // 
             // btnRegister
             // 
-            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.btnRegister.BackColor = System.Drawing.Color.Purple;
             this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegister.FlatAppearance.BorderSize = 0;
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(51, 500);
+            this.btnRegister.Location = new System.Drawing.Point(96, 421);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(216, 35);
             this.btnRegister.TabIndex = 8;
@@ -160,8 +165,8 @@ namespace Scriptify
             this.btnClear.BackColor = System.Drawing.Color.White;
             this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.btnClear.Location = new System.Drawing.Point(51, 541);
+            this.btnClear.ForeColor = System.Drawing.Color.Purple;
+            this.btnClear.Location = new System.Drawing.Point(396, 421);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(216, 35);
             this.btnClear.TabIndex = 9;
@@ -172,7 +177,7 @@ namespace Scriptify
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(51, 590);
+            this.label5.Location = new System.Drawing.Point(96, 485);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(214, 23);
             this.label5.TabIndex = 10;
@@ -182,8 +187,8 @@ namespace Scriptify
             // 
             this.labelBackToLogin.AutoSize = true;
             this.labelBackToLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelBackToLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.labelBackToLogin.Location = new System.Drawing.Point(92, 622);
+            this.labelBackToLogin.ForeColor = System.Drawing.Color.Purple;
+            this.labelBackToLogin.Location = new System.Drawing.Point(137, 517);
             this.labelBackToLogin.Name = "labelBackToLogin";
             this.labelBackToLogin.Size = new System.Drawing.Size(126, 23);
             this.labelBackToLogin.TabIndex = 11;
@@ -195,7 +200,7 @@ namespace Scriptify
             this.txtIme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtIme.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIme.Font = new System.Drawing.Font("MS UI Gothic", 16.2F);
-            this.txtIme.Location = new System.Drawing.Point(30, 302);
+            this.txtIme.Location = new System.Drawing.Point(74, 173);
             this.txtIme.Multiline = true;
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(259, 28);
@@ -205,7 +210,7 @@ namespace Scriptify
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(30, 276);
+            this.label7.Location = new System.Drawing.Point(74, 147);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(97, 23);
             this.label7.TabIndex = 12;
@@ -216,7 +221,7 @@ namespace Scriptify
             this.txtPrezime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtPrezime.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPrezime.Font = new System.Drawing.Font("MS UI Gothic", 16.2F);
-            this.txtPrezime.Location = new System.Drawing.Point(30, 360);
+            this.txtPrezime.Location = new System.Drawing.Point(378, 173);
             this.txtPrezime.Multiline = true;
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(259, 28);
@@ -225,7 +230,7 @@ namespace Scriptify
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(30, 334);
+            this.label8.Location = new System.Drawing.Point(378, 147);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(94, 23);
             this.label8.TabIndex = 14;
@@ -236,7 +241,7 @@ namespace Scriptify
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("MS UI Gothic", 16.2F);
-            this.txtEmail.Location = new System.Drawing.Point(28, 419);
+            this.txtEmail.Location = new System.Drawing.Point(378, 249);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(261, 28);
@@ -245,18 +250,54 @@ namespace Scriptify
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(28, 393);
+            this.label10.Location = new System.Drawing.Point(378, 223);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(54, 23);
             this.label10.TabIndex = 16;
             this.label10.Text = "Email";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.ForeColor = System.Drawing.Color.Purple;
+            this.label6.Location = new System.Drawing.Point(261, 78);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(185, 34);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Registration";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(85, 68);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // labelClose
+            // 
+            this.labelClose.AutoSize = true;
+            this.labelClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClose.ForeColor = System.Drawing.Color.Black;
+            this.labelClose.Location = new System.Drawing.Point(627, 9);
+            this.labelClose.Name = "labelClose";
+            this.labelClose.Size = new System.Drawing.Size(63, 31);
+            this.labelClose.TabIndex = 25;
+            this.labelClose.Text = "Exit";
+            this.labelClose.Click += new System.EventHandler(this.labelClose_Click);
             // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(321, 670);
+            this.ClientSize = new System.Drawing.Size(702, 580);
+            this.Controls.Add(this.labelClose);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtPrezime);
@@ -283,6 +324,7 @@ namespace Scriptify
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegister";
             this.Load += new System.EventHandler(this.frmRegister_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,5 +350,8 @@ namespace Scriptify
         private Label label8;
         private TextBox txtEmail;
         private Label label10;
+        private Label label6;
+        private PictureBox pictureBox1;
+        private Label labelClose;
     }
 }

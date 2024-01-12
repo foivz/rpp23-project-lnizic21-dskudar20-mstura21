@@ -168,5 +168,10 @@
       <Name>EntityLayer</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\book.png" />
+    <Content Include="Images\bookicon.png" />
+    <Content Include="Images\usericon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
