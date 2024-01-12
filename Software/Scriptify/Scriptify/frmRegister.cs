@@ -1,4 +1,5 @@
 ﻿using BusinessLogicLayer;
+using DataAccessLayer.Iznimke;
 using EntityLayer;
 using System;
 using System.Collections.Generic;
@@ -47,11 +48,19 @@ namespace Scriptify
                 };
 
                 AuthenticationService service = new AuthenticationService();
-                service.CreateUser(user);
-                MessageBox.Show("Registration succeeded!");
+                try
+                {
+                    service.CreateUser(user);
+                    MessageBox.Show("Registration succeeded!");
 
-                new frmLogin().Show();
-                this.Hide();
+                    new frmLogin().Show();
+                    this.Hide();
+                }
+                catch (RegistrationException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                
             }
 
         }
