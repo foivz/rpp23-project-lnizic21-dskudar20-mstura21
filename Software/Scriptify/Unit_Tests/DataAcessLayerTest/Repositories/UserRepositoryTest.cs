@@ -16,18 +16,18 @@ namespace Unit_Tests.DataAcessLayerTest.Repositories
         [TestMethod]
         public void TestGetUserByUsernameAndPassswordTest()
         {
-            using (var repo = new UserRepository())
+            using (var repo = new LibrarianRepository())
             {
-                User user = repo.GetUserByUsernameAndPasssword("test", "test");
+                Librarian user = repo.GetUserByUsernameAndPasssword("test", "test");
                 Assert.IsNotNull(user);
             }
         }
         [TestMethod]
         public void ExistingUserExceptionTest()
         {
-            using (UserRepository repo = new UserRepository())
+            using (LibrarianRepository repo = new LibrarianRepository())
             {
-                Assert.ThrowsException<RegistrationException>(() => repo.CreateNewUser(new User()
+                Assert.ThrowsException<RegistrationException>(() => repo.CreateNewUser(new Librarian()
                 {
                     username = "test",
                     password = "test",
@@ -35,6 +35,12 @@ namespace Unit_Tests.DataAcessLayerTest.Repositories
                 }));
             }
             
+        }
+        [TestMethod]
+        public void DeleteLibrarianTest() {
+            LibrarianRepository librarianRepository = new LibrarianRepository();
+           bool test = librarianRepository.DeleteLibrarianById(librarianRepository.GetUserByUsernameAndPasssword("test", "test").idLibrarians);
+            Assert.IsTrue(test);
         }
     }
 }
