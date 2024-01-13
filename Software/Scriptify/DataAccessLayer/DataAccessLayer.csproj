@@ -54,6 +54,7 @@
     <Compile Include="Iznimke\RegistrationException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\LibrarianRepository.cs" />
+    <Compile Include="Repositories\LibraryHasBooksRepository.cs" />
     <Compile Include="Repositories\LibraryRepository.cs" />
   </ItemGroup>
   <ItemGroup />
