@@ -14,11 +14,32 @@ namespace Scriptify
 {
     public partial class UcCatalogOfBooks : UserControl
     {
+        private string placeholderText = "Search books";
+
         private Librarian user = new Librarian();
         public UcCatalogOfBooks(Librarian user)
         {
             InitializeComponent();
             this.user = user;
+
+            txtSearchText.Text = placeholderText;
+            txtSearchText.Enter += TextBoxSearch_Enter;
+            txtSearchText.Leave += TextBoxSearch_Leave;
+        }
+        private void TextBoxSearch_Enter(object sender, EventArgs e)
+        {
+            if (txtSearchText.Text == placeholderText)
+            {
+                txtSearchText.Text = "";
+            }
+        }
+
+        private void TextBoxSearch_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSearchText.Text))
+            {
+                txtSearchText.Text = placeholderText;
+            }
         }
 
         private void UcCatalogOfBooks_Load(object sender, EventArgs e)

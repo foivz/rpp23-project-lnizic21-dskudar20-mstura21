@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCatalogOfBooks = new System.Windows.Forms.DataGridView();
+            this.txtSearchText = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCatalogOfBooks)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,17 +47,26 @@
             // dgvCatalogOfBooks
             // 
             this.dgvCatalogOfBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCatalogOfBooks.Location = new System.Drawing.Point(36, 52);
+            this.dgvCatalogOfBooks.Location = new System.Drawing.Point(34, 82);
             this.dgvCatalogOfBooks.Name = "dgvCatalogOfBooks";
             this.dgvCatalogOfBooks.RowHeadersWidth = 51;
             this.dgvCatalogOfBooks.RowTemplate.Height = 24;
             this.dgvCatalogOfBooks.Size = new System.Drawing.Size(732, 352);
             this.dgvCatalogOfBooks.TabIndex = 1;
             // 
+            // txtSearchText
+            // 
+            this.txtSearchText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtSearchText.Location = new System.Drawing.Point(34, 54);
+            this.txtSearchText.Name = "txtSearchText";
+            this.txtSearchText.Size = new System.Drawing.Size(145, 22);
+            this.txtSearchText.TabIndex = 2;
+            // 
             // UcCatalogOfBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtSearchText);
             this.Controls.Add(this.dgvCatalogOfBooks);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -73,5 +83,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvCatalogOfBooks;
+        private System.Windows.Forms.TextBox txtSearchText;
     }
 }
