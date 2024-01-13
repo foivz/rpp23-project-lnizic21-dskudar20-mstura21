@@ -22,17 +22,17 @@ namespace DataAccessLayer.Repositories
             return Context.SaveChanges();
         }
 
-        public IQueryable<Library_has_Books> GetAllBooksFromLibrary(int idLibrary)
+        public IQueryable<Book> GetAllBooksFromLibrary(int idLibrary)
         {
-            var sql = from e in Entities
+            var sql = from e in Entities.Include("Book")
                       where e.Library_idLibrary == idLibrary
-                      select e;
+                      select e.Book;
             return sql;
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            Context.Dispose();
         }
     }
 }

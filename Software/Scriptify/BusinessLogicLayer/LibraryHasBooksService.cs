@@ -11,7 +11,7 @@ namespace BusinessLogicLayer
     public class LibraryHasBooksService
     {
 
-        public List<Library_has_Books> GetAllGetAllBooksFromLibrary(int idLibrary)
+        public List<Book> GetAllGetAllBooksFromLibrary(int idLibrary)
         {
             using (var repo = new LibraryHasBooksRepository())
             {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,12 @@ namespace Scriptify
 {
     public partial class frmIndex : Form
     {
-        public frmIndex(string user)
+        private Librarian user = new Librarian();
+        public frmIndex(Librarian user)
         {
             InitializeComponent();
-            labelUser.Text = user;
+            this.user = user;
+            labelUser.Text = user.first_name + " " + user.last_name;
             OpenHomePage();
         }
         
@@ -41,7 +44,7 @@ namespace Scriptify
         private void btnCatalogOfBooks_Click(object sender, EventArgs e)
         {
             panelControls.Controls.Clear();
-            UcCatalogOfBooks ucCatalogOfBooks = new UcCatalogOfBooks();
+            UcCatalogOfBooks ucCatalogOfBooks = new UcCatalogOfBooks(user);
             panelControls.Controls.Add(ucCatalogOfBooks);
         }
 

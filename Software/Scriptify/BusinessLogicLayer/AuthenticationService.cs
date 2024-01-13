@@ -19,6 +19,14 @@ namespace BusinessLogicLayer
             }
         }
 
+        public Librarian GetUser(string username, string password)
+        {
+            using (var repo = new LibrarianRepository())
+            {
+                Librarian user = repo.GetUserByUsernameAndPasssword(username, password);
+                return user;
+            }
+        }
         public bool CreateUser(Librarian user)
         {
             bool isSuccessful = false;

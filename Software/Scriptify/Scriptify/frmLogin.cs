@@ -1,4 +1,5 @@
 ﻿using BusinessLogicLayer;
+using EntityLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -53,8 +54,9 @@ namespace Scriptify
 
                 if (userIsExists)
                 {
+                    Librarian user = _authenticationService.GetUser(txtUsername.Text, txtPassword.Text);
                     //ulaz u aplikaciju
-                    frmIndex frm = new frmIndex(txtUsername.Text);
+                    frmIndex frm = new frmIndex(user);
                     this.Hide();
                     frm.ShowDialog();
                 }
