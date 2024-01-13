@@ -17,7 +17,9 @@ namespace Scriptify
     {
         public frmRegister()
         {
+
             InitializeComponent();
+           
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -98,10 +100,13 @@ namespace Scriptify
         {
 
         }
-
+         
         private void frmRegister_Load(object sender, EventArgs e)
         {
-
+            cmbLibrary.DisplayMember = "name";
+            cmbLibrary.ValueMember = "idLibrary";
+            AuthenticationService service = new AuthenticationService();
+            cmbLibrary.DataSource = service.GetAllLibrariesForRegistration();
         }
 
         private void labelClose_Click(object sender, EventArgs e)

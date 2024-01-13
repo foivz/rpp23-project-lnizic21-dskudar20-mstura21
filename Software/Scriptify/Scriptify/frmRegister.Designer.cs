@@ -57,6 +57,7 @@ namespace Scriptify
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelClose = new System.Windows.Forms.Label();
             this.cmbLibrary = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,7 +154,7 @@ namespace Scriptify
             this.btnRegister.FlatAppearance.BorderSize = 0;
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(96, 421);
+            this.btnRegister.Location = new System.Drawing.Point(74, 449);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(216, 35);
             this.btnRegister.TabIndex = 8;
@@ -167,7 +168,7 @@ namespace Scriptify
             this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.ForeColor = System.Drawing.Color.Purple;
-            this.btnClear.Location = new System.Drawing.Point(396, 421);
+            this.btnClear.Location = new System.Drawing.Point(397, 449);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(216, 35);
             this.btnClear.TabIndex = 9;
@@ -178,7 +179,7 @@ namespace Scriptify
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(246, 487);
+            this.label5.Location = new System.Drawing.Point(262, 512);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(181, 19);
             this.label5.TabIndex = 10;
@@ -189,7 +190,7 @@ namespace Scriptify
             this.labelBackToLogin.AutoSize = true;
             this.labelBackToLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelBackToLogin.ForeColor = System.Drawing.Color.Purple;
-            this.labelBackToLogin.Location = new System.Drawing.Point(287, 519);
+            this.labelBackToLogin.Location = new System.Drawing.Point(288, 541);
             this.labelBackToLogin.Name = "labelBackToLogin";
             this.labelBackToLogin.Size = new System.Drawing.Size(106, 19);
             this.labelBackToLogin.TabIndex = 11;
@@ -293,11 +294,20 @@ namespace Scriptify
             // cmbLibrary
             // 
             this.cmbLibrary.FormattingEnabled = true;
-            this.cmbLibrary.Location = new System.Drawing.Point(378, 370);
+            this.cmbLibrary.Location = new System.Drawing.Point(378, 401);
             this.cmbLibrary.Name = "cmbLibrary";
             this.cmbLibrary.Size = new System.Drawing.Size(259, 27);
             this.cmbLibrary.TabIndex = 26;
             this.cmbLibrary.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(378, 374);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 19);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "Your Employer";
             // 
             // frmRegister
             // 
@@ -305,6 +315,7 @@ namespace Scriptify
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(702, 580);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.cmbLibrary);
             this.Controls.Add(this.labelClose);
             this.Controls.Add(this.pictureBox1);
@@ -365,5 +376,6 @@ namespace Scriptify
         private PictureBox pictureBox1;
         private Label labelClose;
         private ComboBox cmbLibrary;
+        private Label label9;
     }
 }

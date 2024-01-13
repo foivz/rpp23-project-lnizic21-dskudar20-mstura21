@@ -29,5 +29,12 @@ namespace BusinessLogicLayer
             }
             return isSuccessful;
         }
+        public List<Library> GetAllLibrariesForRegistration()
+        {
+            using (var repo = new LibraryRepository())
+            {
+                return repo.GetAllLibraries().ToList();
+            }
+        }
     }
 }
