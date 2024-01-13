@@ -42,5 +42,17 @@ namespace Unit_Tests.DataAcessLayerTest.Repositories
            bool test = librarianRepository.DeleteLibrarianById(librarianRepository.GetUserByUsernameAndPasssword("test", "test").idLibrarians);
             Assert.IsTrue(test);
         }
+        [TestMethod]
+        public void GetLibraryByNameTest() {
+            LibraryRepository librarianRepository = new LibraryRepository();
+            Library librarians = librarianRepository.GetLibraryByName("Verbum knjižnica");
+            Assert.IsNotNull(librarians);
+        }
+        [TestMethod]
+        public void GetLibraryByIdTest() {
+            LibraryRepository librarianRepository = new LibraryRepository();
+            Library librarians = librarianRepository.GetLibraryById(1);
+            Assert.IsNotNull(librarians);
+        }
     }
 }
