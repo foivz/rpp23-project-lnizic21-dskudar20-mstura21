@@ -15,7 +15,7 @@ namespace Scriptify
     public partial class UcCatalogOfBooks : UserControl
     {
         private string placeholderText = "Search books";
-
+        private BindingSource bindingSource = new BindingSource();
         private Librarian user = new Librarian();
         public UcCatalogOfBooks(Librarian user)
         {
@@ -50,9 +50,18 @@ namespace Scriptify
         private void ShowBooks()
         {
             var service = new LibraryHasBooksService();
-            dgvCatalogOfBooks.DataSource = service.GetAllGetAllBooksFromLibrary(user.Library_idLibrary);
+            List<Book> listOfBooks = service.GetAllGetAllBooksFromLibrary(user.Library_idLibrary);
+            bindingSource.DataSource = listOfBooks;
+            dgvCatalogOfBooks.DataSource = bindingSource;
+
             dgvCatalogOfBooks.Columns["Library_has_Books"].Visible = false;
             dgvCatalogOfBooks.Columns["Users"].Visible = false;
+        }
+
+        private void txtSearchText_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = txtSearchText.Text.ToLower();
+            bindingSource.Filter = $"book_name LIKE '%{searchText}%'";
         }
     }
 }
