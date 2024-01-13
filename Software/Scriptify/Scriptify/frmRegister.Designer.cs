@@ -56,6 +56,7 @@ namespace Scriptify
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelClose = new System.Windows.Forms.Label();
+            this.cmbLibrary = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +67,7 @@ namespace Scriptify
             this.label1.ForeColor = System.Drawing.Color.Purple;
             this.label1.Location = new System.Drawing.Point(103, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 30);
+            this.label1.Size = new System.Drawing.Size(101, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Scriptify";
             // 
@@ -75,7 +76,7 @@ namespace Scriptify
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(74, 223);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 23);
+            this.label2.Size = new System.Drawing.Size(76, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Username";
             // 
@@ -107,7 +108,7 @@ namespace Scriptify
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(74, 298);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 23);
+            this.label3.Size = new System.Drawing.Size(73, 19);
             this.label3.TabIndex = 3;
             this.label3.Text = "Password";
             // 
@@ -128,7 +129,7 @@ namespace Scriptify
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(378, 298);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 23);
+            this.label4.Size = new System.Drawing.Size(131, 19);
             this.label4.TabIndex = 5;
             this.label4.Text = "Confirm Password";
             // 
@@ -139,7 +140,7 @@ namespace Scriptify
             this.checkbxShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkbxShowPass.Location = new System.Drawing.Point(78, 370);
             this.checkbxShowPass.Name = "checkbxShowPass";
-            this.checkbxShowPass.Size = new System.Drawing.Size(151, 27);
+            this.checkbxShowPass.Size = new System.Drawing.Size(129, 23);
             this.checkbxShowPass.TabIndex = 7;
             this.checkbxShowPass.Text = "Show Password";
             this.checkbxShowPass.UseVisualStyleBackColor = true;
@@ -179,7 +180,7 @@ namespace Scriptify
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(246, 487);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(214, 23);
+            this.label5.Size = new System.Drawing.Size(181, 19);
             this.label5.TabIndex = 10;
             this.label5.Text = "Already Have An Account";
             // 
@@ -190,7 +191,7 @@ namespace Scriptify
             this.labelBackToLogin.ForeColor = System.Drawing.Color.Purple;
             this.labelBackToLogin.Location = new System.Drawing.Point(287, 519);
             this.labelBackToLogin.Name = "labelBackToLogin";
-            this.labelBackToLogin.Size = new System.Drawing.Size(126, 23);
+            this.labelBackToLogin.Size = new System.Drawing.Size(106, 19);
             this.labelBackToLogin.TabIndex = 11;
             this.labelBackToLogin.Text = "Back to LOGIN";
             this.labelBackToLogin.Click += new System.EventHandler(this.labelBackToLogin_Click);
@@ -212,7 +213,7 @@ namespace Scriptify
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(74, 147);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 23);
+            this.label7.Size = new System.Drawing.Size(81, 19);
             this.label7.TabIndex = 12;
             this.label7.Text = "First Name";
             // 
@@ -232,7 +233,7 @@ namespace Scriptify
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(378, 147);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 23);
+            this.label8.Size = new System.Drawing.Size(79, 19);
             this.label8.TabIndex = 14;
             this.label8.Text = "Last Name";
             // 
@@ -252,7 +253,7 @@ namespace Scriptify
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(378, 223);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 23);
+            this.label10.Size = new System.Drawing.Size(45, 19);
             this.label10.TabIndex = 16;
             this.label10.Text = "Email";
             // 
@@ -263,7 +264,7 @@ namespace Scriptify
             this.label6.ForeColor = System.Drawing.Color.Purple;
             this.label6.Location = new System.Drawing.Point(261, 78);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(185, 34);
+            this.label6.Size = new System.Drawing.Size(147, 27);
             this.label6.TabIndex = 18;
             this.label6.Text = "Registration";
             // 
@@ -284,17 +285,27 @@ namespace Scriptify
             this.labelClose.ForeColor = System.Drawing.Color.Black;
             this.labelClose.Location = new System.Drawing.Point(627, 9);
             this.labelClose.Name = "labelClose";
-            this.labelClose.Size = new System.Drawing.Size(63, 31);
+            this.labelClose.Size = new System.Drawing.Size(53, 26);
             this.labelClose.TabIndex = 25;
             this.labelClose.Text = "Exit";
             this.labelClose.Click += new System.EventHandler(this.labelClose_Click);
             // 
+            // cmbLibrary
+            // 
+            this.cmbLibrary.FormattingEnabled = true;
+            this.cmbLibrary.Location = new System.Drawing.Point(378, 370);
+            this.cmbLibrary.Name = "cmbLibrary";
+            this.cmbLibrary.Size = new System.Drawing.Size(259, 27);
+            this.cmbLibrary.TabIndex = 26;
+            this.cmbLibrary.Visible = false;
+            // 
             // frmRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(702, 580);
+            this.Controls.Add(this.cmbLibrary);
             this.Controls.Add(this.labelClose);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
@@ -353,5 +364,6 @@ namespace Scriptify
         private Label label6;
         private PictureBox pictureBox1;
         private Label labelClose;
+        private ComboBox cmbLibrary;
     }
 }

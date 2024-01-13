@@ -37,14 +37,14 @@ namespace Scriptify
             }
             else
             {
-                User user = new User()
+                Librarian user = new Librarian()
                 {
                     username = txtUsername.Text,
                     email = txtEmail.Text,
                     password = txtPassword.Text,
-                    create_time = DateTime.Now,
-                    First_Name = txtIme.Text,
-                    Last_Name = txtPrezime.Text,
+                    first_name = txtIme.Text,
+                    last_name = txtPrezime.Text,
+                    Library_idLibrary = 1
                 };
 
                 AuthenticationService service = new AuthenticationService();

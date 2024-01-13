@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories
 {
-    public class UserRepository : IDisposable
+    public class LibrarianRepository : IDisposable
     {
         protected EntityModels Context { get; set; }
-        public DbSet<User> Entities { get; set; }
-        public UserRepository()
+        public DbSet<Librarian> Entities { get; set; }
+        public LibrarianRepository()
         {
             Context = new EntityModels();
-            Entities = Context.Set<User>();
+            Entities = Context.Set<Librarian>();
         }
         
         public int SaveChanges()
@@ -24,12 +24,12 @@ namespace DataAccessLayer.Repositories
             return Context.SaveChanges();
         }
 
-        public User GetUserByUsernameAndPasssword(string username, string password)
+        public Librarian GetUserByUsernameAndPasssword(string username, string password)
         {
             return Entities.SingleOrDefault(u => u.username == username && u.password == password);
         }
 
-        public int CreateNewUser(User user, bool saveChanges = true)
+        public int CreateNewUser(Librarian user, bool saveChanges = true)
         {
             if(Entities.Count(u => u.username == user.username) > 0)
             {

@@ -12,17 +12,17 @@ namespace BusinessLogicLayer
     {
         public bool AuthenticateUser(string username, string password)
         {
-            using (var repo = new UserRepository())
+            using (var repo = new LibrarianRepository())
             {
-                User user = repo.GetUserByUsernameAndPasssword(username, password);
+                Librarian user = repo.GetUserByUsernameAndPasssword(username, password);
                 return user != null;
             }
         }
 
-        public bool CreateUser(User user)
+        public bool CreateUser(Librarian user)
         {
             bool isSuccessful = false;
-            using (var repo = new UserRepository())
+            using (var repo = new LibrarianRepository())
             {
                 int affectedRow = repo.CreateNewUser(user);
                 isSuccessful = affectedRow > 0;
