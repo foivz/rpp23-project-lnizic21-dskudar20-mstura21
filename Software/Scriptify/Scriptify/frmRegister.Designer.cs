@@ -298,7 +298,6 @@ namespace Scriptify
             this.cmbLibrary.Name = "cmbLibrary";
             this.cmbLibrary.Size = new System.Drawing.Size(259, 27);
             this.cmbLibrary.TabIndex = 26;
-            this.cmbLibrary.Visible = false;
             // 
             // label9
             // 

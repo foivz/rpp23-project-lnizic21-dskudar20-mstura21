@@ -23,6 +23,18 @@ namespace DataAccessLayer.Repositories
                       select l;
             return sql;
         }
+        public Library GetLibraryById(int id) {
+            var sql = from l in Entities
+                      where l.idLibrary == id
+                      select l;
+            return sql.FirstOrDefault();
+        }
+        public Library GetLibraryByName(string name) {
+            var sql = from l in Entities
+                      where l.name == name
+                      select l;
+            return sql.FirstOrDefault();
+        }
         public void Dispose()
         {
             Context.Dispose();

@@ -43,6 +43,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAcessLayerTest\Repositories\LibraryRepostoryTest.cs" />
     <Compile Include="DataAcessLayerTest\Repositories\UserRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
