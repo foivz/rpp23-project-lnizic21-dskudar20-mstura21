@@ -8,3 +8,13 @@ C:\Users\David\Source\Repos\rpp23-project-lnizic21-dskudar20-mstura21\Software\S
 C:\Users\David\Source\Repos\rpp23-project-lnizic21-dskudar20-mstura21\Software\Scriptify\EntityLayer\obj\Debug\EntityLayer.csproj.CopyComplete
 C:\Users\David\Source\Repos\rpp23-project-lnizic21-dskudar20-mstura21\Software\Scriptify\EntityLayer\obj\Debug\EntityLayer.dll
 C:\Users\David\Source\Repos\rpp23-project-lnizic21-dskudar20-mstura21\Software\Scriptify\EntityLayer\obj\Debug\EntityLayer.pdb
+C:\RPP_Projekt\Software\Scriptify\EntityLayer\bin\Debug\EntityLayer.dll.config
+C:\RPP_Projekt\Software\Scriptify\EntityLayer\bin\Debug\EntityLayer.dll
+C:\RPP_Projekt\Software\Scriptify\EntityLayer\bin\Debug\EntityLayer.pdb
+C:\RPP_Projekt\Software\Scriptify\EntityLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\RPP_Projekt\Software\Scriptify\EntityLayer\bin\Debug\EntityFramework.dll
+C:\RPP_Projekt\Software\Scriptify\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
+C:\RPP_Projekt\Software\Scriptify\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
+C:\RPP_Projekt\Software\Scriptify\EntityLayer\obj\Debug\EntityLayer.csproj.CopyComplete
+C:\RPP_Projekt\Software\Scriptify\EntityLayer\obj\Debug\EntityLayer.dll
+C:\RPP_Projekt\Software\Scriptify\EntityLayer\obj\Debug\EntityLayer.pdb
