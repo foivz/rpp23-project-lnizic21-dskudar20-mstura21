@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -48,6 +49,14 @@ namespace DataAccessLayer.Repositories
             {
                 return 0;
             }
+        }
+        public bool DeleteLibrarianById(int id) {
+            if(Context.Librarians.Find(id) == null) {
+                return false;
+            }
+            Context.Librarians.Remove(Context.Librarians.Find(id));
+            return true;
+
         }
 
         public void Dispose()
