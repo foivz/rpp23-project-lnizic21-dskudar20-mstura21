@@ -84,5 +84,11 @@ namespace Scriptify
         {
 
         }
+
+        private void txtLoanHistory_Click(object sender, EventArgs e) {
+            panelControls.Controls.Clear();
+            uc_LoanHistoryAndSanctions uc_LoanHistoryAndSanctions = new uc_LoanHistoryAndSanctions();
+            panelControls.Controls.Add(uc_LoanHistoryAndSanctions);
+        }
     }
 }
