@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLogicLayer;
+using EntityLayer;
 
 namespace Scriptify {
     public enum Action {
@@ -39,7 +41,22 @@ namespace Scriptify {
         }
 
         private void btn_add_Click(object sender, EventArgs e) {
-
+            BookManagmentService bookManagmentService = new BookManagmentService();
+            Book book = new Book {
+            book_name = txtBookName.Text,
+            author = txtAuthor.Text,
+            overview = txtDescription.Text,
+            genre = txtGenre.Text
+            };
+            var bookAdded = bookManagmentService.AddBook(book);
+            if (bookAdded) {
+                MessageBox.Show("Book added successfully to the system","Book added",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                var bookAddedToLibrary = bookManagmentService.AddBookToLibrary(LibraryId, book.book_name);
+                if (bookAddedToLibrary) {
+                    MessageBox.Show("Book added successfully to your Library", "Book added", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    
+                }
+            }
         }
     }
 }

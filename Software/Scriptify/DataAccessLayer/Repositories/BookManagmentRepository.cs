@@ -38,6 +38,11 @@ namespace DataAccessLayer.Repositories {
             Context.SaveChanges();
             return true;
         }
+        public bool AddBook(Book book) {
+            Context.Books.Add(book);
+            Context.SaveChanges();
+            return true; 
+        }
         public void Dispose() {
             Context.Dispose();
         }

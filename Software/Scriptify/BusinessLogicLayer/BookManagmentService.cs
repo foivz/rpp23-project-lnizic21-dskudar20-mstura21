@@ -26,5 +26,15 @@ namespace BusinessLogicLayer {
                 
             }
         }
+        public bool AddBook(Book book) {
+            using(var repo = new BookManagmentRepository()) {
+                try {
+                    return repo.AddBook(book);
+                }catch(DbUpdateException ex) {
+                    return false;
+                }
+                
+            }
+        }
     }
 }
