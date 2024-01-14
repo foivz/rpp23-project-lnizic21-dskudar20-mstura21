@@ -53,6 +53,7 @@ namespace Scriptify
             List<Book> listOfBooks = service.GetAllGetAllBooksFromLibrary(user.Library_idLibrary);
             bindingSource.DataSource = listOfBooks;
             dgvCatalogOfBooks.DataSource = bindingSource;
+            
 
             dgvCatalogOfBooks.Columns["Library_has_Books"].Visible = false;
             dgvCatalogOfBooks.Columns["Users"].Visible = false;
@@ -60,9 +61,19 @@ namespace Scriptify
 
         private void txtSearchText_TextChanged(object sender, EventArgs e)
         {
-            string searchText = txtSearchText.Text.ToLower();
-            bindingSource.Filter = $"book_name LIKE '%{searchText}%'";
-
+            var service = new LibraryHasBooksService();
+            string searchText = txtSearchText.Text.Trim().ToLowerInvariant();
+            if (string.IsNullOrWhiteSpace(searchText) ||  searchText == placeholderText.ToLowerInvariant())
+            {
+                ShowBooks();
+            }
+            else
+            {
+                List<Book> listOfBooks = service.GetAllGetAllBooksFromLibrary(user.Library_idLibrary);
+                List<Book> filteredBooks = listOfBooks.Where(book => book.book_name.ToLowerInvariant().Contains(searchText)).ToList();
+                bindingSource.DataSource = filteredBooks;
+                dgvCatalogOfBooks.DataSource = bindingSource;
+            }
         }
     }
 }
