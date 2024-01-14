@@ -62,6 +62,7 @@ namespace Scriptify
         {
             string searchText = txtSearchText.Text.ToLower();
             bindingSource.Filter = $"book_name LIKE '%{searchText}%'";
+
         }
     }
 }
