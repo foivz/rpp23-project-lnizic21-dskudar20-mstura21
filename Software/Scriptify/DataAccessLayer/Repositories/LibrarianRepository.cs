@@ -51,9 +51,9 @@ namespace DataAccessLayer.Repositories
             }
         }
         public int GetLibrarianLibraryIDbyName(string name) {
-            var sql = from l in Context.Libraries
-                      where l.name == name
-                      select l.idLibrary;
+            var sql = from l in Context.Librarians
+                      where l.username == name
+                      select l.Library_idLibrary;
             return sql.FirstOrDefault();
         }
         public bool DeleteLibrarianById(int id) {

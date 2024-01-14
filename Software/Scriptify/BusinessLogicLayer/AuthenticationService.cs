@@ -18,6 +18,11 @@ namespace BusinessLogicLayer
                 return user != null;
             }
         }
+        public int GetLibrarianLibraryIDbyName(string name) {
+            using (var repo = new LibrarianRepository()) {
+                return repo.GetLibrarianLibraryIDbyName(name);
+            }
+        }
 
         public bool CreateUser(Librarian user)
         {

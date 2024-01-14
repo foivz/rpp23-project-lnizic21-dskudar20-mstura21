@@ -26,7 +26,12 @@ namespace Scriptify
 
         private void UcCatalogOfBooks_Load(object sender, EventArgs e)
         {
-            dgvBookManagment.DataSource = bookManagmentService.GetBooksForLibrary(Library_ID);
+          
+            List < Book > books = bookManagmentService.GetBooksForLibrary(Library_ID);
+            dgvBookManagment.DataSource = books;
+            dgvBookManagment.Columns["Users"].Visible = false;
+            dgvBookManagment.Columns["Library_has_Books"].Visible = false;
+            dgvBookManagment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }

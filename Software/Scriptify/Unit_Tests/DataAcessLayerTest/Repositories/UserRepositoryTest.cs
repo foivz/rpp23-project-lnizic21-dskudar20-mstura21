@@ -54,5 +54,11 @@ namespace Unit_Tests.DataAcessLayerTest.Repositories
             Library librarians = librarianRepository.GetLibraryById(1);
             Assert.IsNotNull(librarians);
         }
+        [TestMethod]
+        public void GetLibrarianLibraryIDbyName() {
+            LibrarianRepository librarian = new LibrarianRepository();
+            int id = librarian.GetLibrarianLibraryIDbyName("test");
+            Assert.IsNotNull(id);
+        }
     }
 }

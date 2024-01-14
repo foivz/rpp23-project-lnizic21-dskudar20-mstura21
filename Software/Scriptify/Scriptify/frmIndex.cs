@@ -7,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BusinessLogicLayer;
 namespace Scriptify
 {
     public partial class frmIndex : Form
     {
+        private AuthenticationService authenticationService;
+        private string loggedInUser;
         public frmIndex(string user)
         {
             InitializeComponent();
             labelUser.Text = user;
+            loggedInUser = user;
+            authenticationService = new AuthenticationService();
             OpenHomePage();
         }
         
@@ -41,7 +45,8 @@ namespace Scriptify
         private void btnCatalogOfBooks_Click(object sender, EventArgs e)
         {
             panelControls.Controls.Clear();
-            UcCatalogOfBooks ucCatalogOfBooks = new UcCatalogOfBooks();
+            int libraryId = authenticationService.GetLibrarianLibraryIDbyName(loggedInUser);
+            UcCatalogOfBooks ucCatalogOfBooks = new UcCatalogOfBooks(libraryId);
             panelControls.Controls.Add(ucCatalogOfBooks);
         }
 

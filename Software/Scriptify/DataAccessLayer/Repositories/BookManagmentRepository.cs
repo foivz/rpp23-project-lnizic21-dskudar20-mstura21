@@ -20,7 +20,7 @@ namespace DataAccessLayer.Repositories {
                       on book.idBook equals libraryBook.Books_idBook
                       where libraryBook.Library_idLibrary == idLibrary
                       select book;
-            return sql;
+            return sql.Include("Users").Include("Library_has_Books");
         }
         public void Dispose() {
             Context.Dispose();
