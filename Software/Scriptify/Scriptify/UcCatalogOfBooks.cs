@@ -33,5 +33,15 @@ namespace Scriptify
             dgvBookManagment.Columns["Library_has_Books"].Visible = false;
             dgvBookManagment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+
+        private void btnAddBook_Click(object sender, EventArgs e) {
+            frmAdd_EditBooks frmAdd_EditBooks = new frmAdd_EditBooks(Action.Add,Library_ID);
+            frmAdd_EditBooks.ShowDialog();  
+        }
+
+        private void btnEditBook_Click(object sender, EventArgs e) {
+            frmAdd_EditBooks frmAdd_EditBooks = new frmAdd_EditBooks(Action.Edit, Library_ID);
+            frmAdd_EditBooks.ShowDialog();
+        }
     }
 }

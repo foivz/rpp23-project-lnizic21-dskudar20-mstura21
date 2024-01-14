@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAdd_EditBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdd_EditBooks.Designer.cs">
+      <DependentUpon>frmAdd_EditBooks.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmIndex.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     <Compile Include="UcLoans.Designer.cs">
       <DependentUpon>UcLoans.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmAdd_EditBooks.resx">
+      <DependentUpon>frmAdd_EditBooks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmIndex.resx">
       <DependentUpon>frmIndex.cs</DependentUpon>
     </EmbeddedResource>
