@@ -8,17 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLogicLayer;
+using EntityLayer;
+
 namespace Scriptify
 {
     public partial class frmIndex : Form
     {
         private AuthenticationService authenticationService;
-        private string loggedInUser;
-        public frmIndex(string user)
+        private Librarian loggedInUser = new Librarian();
+        public frmIndex(Librarian user)
         {
             InitializeComponent();
-            labelUser.Text = user;
-            loggedInUser = user;
+            labelUser.Text = user.first_name + " " + user.last_name;
+            this.loggedInUser = user;
             authenticationService = new AuthenticationService();
             OpenHomePage();
         }
@@ -45,8 +47,8 @@ namespace Scriptify
         private void btnCatalogOfBooks_Click(object sender, EventArgs e)
         {
             panelControls.Controls.Clear();
-            int libraryId = authenticationService.GetLibrarianLibraryIDbyName(loggedInUser);
-            UcCatalogOfBooks ucCatalogOfBooks = new UcCatalogOfBooks(libraryId);
+            int libraryId = authenticationService.GetLibrarianLibraryIDbyName(loggedInUser.username);
+            UcCatalogOfBooks ucCatalogOfBooks = new UcCatalogOfBooks(loggedInUser);
             panelControls.Controls.Add(ucCatalogOfBooks);
         }
 

@@ -60,7 +60,7 @@ namespace Scriptify
                     new frmLogin().Show();
                     this.Hide();
                 }
-                catch (Exception ex)
+                catch (RegistrationException ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
