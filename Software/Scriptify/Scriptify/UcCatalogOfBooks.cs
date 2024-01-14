@@ -18,19 +18,49 @@ namespace Scriptify
         
         
         private BookManagmentService bookManagmentService;
+        private string placeholderText = "Search books";
+        private BindingSource bindingSource = new BindingSource();
+        private Librarian user = new Librarian();
         private int Library_ID;
         public UcCatalogOfBooks(int id)
         {
             InitializeComponent();
             bookManagmentService = new BookManagmentService();
             Library_ID = id;
+
+            txtSearchBooks.Text = placeholderText;
+            txtSearchBooks.Enter += TextBoxSearch_Enter;
+            txtSearchBooks.Leave += TextBoxSearch_Leave;
+        }
+
+        private void TextBoxSearch_Enter(object sender, EventArgs e)
+        {
+            if (txtSearchBooks.Text == placeholderText)
+            {
+                txtSearchBooks.Text = "";
+            }
+        }
+
+        private void TextBoxSearch_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSearchBooks.Text))
+            {
+                txtSearchBooks.Text = placeholderText;
+            }
         }
 
         private void UcCatalogOfBooks_Load(object sender, EventArgs e)
         {
-          
-            List < Book > books = bookManagmentService.GetBooksForLibrary(Library_ID);
+
+            ShowBooks();
+           
+        }
+
+        private void ShowBooks()
+        {
+            List<Book> books = bookManagmentService.GetBooksForLibrary(Library_ID);
             dgvBookManagment.DataSource = books;
+            dgvBookManagment.DataSource = bindingSource;
             dgvBookManagment.Columns["Users"].Visible = false;
             dgvBookManagment.Columns["Library_has_Books"].Visible = false;
             dgvBookManagment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -80,6 +110,22 @@ namespace Scriptify
                 dgvBookManagment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             } else {
                 MessageBox.Show("Book could not be deleted", "Book not deleted", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtSearchBooks_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = txtSearchBooks.Text.Trim().ToLowerInvariant();
+            if (string.IsNullOrWhiteSpace(searchText) || searchText == placeholderText.ToLowerInvariant())
+            {
+                ShowBooks();
+            }
+            else
+            {
+                List<Book> listOfBooks = bookManagmentService.GetBooksForLibrary(user.Library_idLibrary);
+                List<Book> filteredBooks = listOfBooks.Where(book => book.book_name.ToLowerInvariant().Contains(searchText)).ToList();
+                bindingSource.DataSource = filteredBooks;
+                dgvBookManagment.DataSource = bindingSource;
             }
         }
     }

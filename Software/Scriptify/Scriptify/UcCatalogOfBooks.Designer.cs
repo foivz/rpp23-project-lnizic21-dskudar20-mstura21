@@ -33,6 +33,7 @@
             this.btnAddBook = new System.Windows.Forms.Button();
             this.btnDeleteBook = new System.Windows.Forms.Button();
             this.btnEditBook = new System.Windows.Forms.Button();
+            this.txtSearchBooks = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookManagment)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,27 +41,29 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(220, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(293, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 25);
+            this.label1.Size = new System.Drawing.Size(219, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Catalog of books";
             // 
             // dgvBookManagment
             // 
             this.dgvBookManagment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBookManagment.Location = new System.Drawing.Point(0, 37);
+            this.dgvBookManagment.Location = new System.Drawing.Point(0, 87);
+            this.dgvBookManagment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvBookManagment.Name = "dgvBookManagment";
-            this.dgvBookManagment.Size = new System.Drawing.Size(567, 253);
+            this.dgvBookManagment.RowHeadersWidth = 51;
+            this.dgvBookManagment.Size = new System.Drawing.Size(756, 311);
             this.dgvBookManagment.TabIndex = 2;
             // 
             // btnAddBook
             // 
             this.btnAddBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnAddBook.Location = new System.Drawing.Point(320, 296);
+            this.btnAddBook.Location = new System.Drawing.Point(427, 405);
+            this.btnAddBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Size = new System.Drawing.Size(75, 23);
+            this.btnAddBook.Size = new System.Drawing.Size(100, 28);
             this.btnAddBook.TabIndex = 3;
             this.btnAddBook.Text = "Add";
             this.btnAddBook.UseVisualStyleBackColor = false;
@@ -69,9 +72,10 @@
             // btnDeleteBook
             // 
             this.btnDeleteBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnDeleteBook.Location = new System.Drawing.Point(492, 296);
+            this.btnDeleteBook.Location = new System.Drawing.Point(656, 405);
+            this.btnDeleteBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDeleteBook.Name = "btnDeleteBook";
-            this.btnDeleteBook.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteBook.Size = new System.Drawing.Size(100, 28);
             this.btnDeleteBook.TabIndex = 4;
             this.btnDeleteBook.Text = "Delete";
             this.btnDeleteBook.UseVisualStyleBackColor = false;
@@ -80,26 +84,36 @@
             // btnEditBook
             // 
             this.btnEditBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnEditBook.Location = new System.Drawing.Point(411, 296);
+            this.btnEditBook.Location = new System.Drawing.Point(548, 405);
+            this.btnEditBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditBook.Name = "btnEditBook";
-            this.btnEditBook.Size = new System.Drawing.Size(75, 23);
+            this.btnEditBook.Size = new System.Drawing.Size(100, 28);
             this.btnEditBook.TabIndex = 5;
             this.btnEditBook.Text = "Edit";
             this.btnEditBook.UseVisualStyleBackColor = false;
             this.btnEditBook.Click += new System.EventHandler(this.btnEditBook_Click);
             // 
+            // txtSearchBooks
+            // 
+            this.txtSearchBooks.Location = new System.Drawing.Point(3, 58);
+            this.txtSearchBooks.Name = "txtSearchBooks";
+            this.txtSearchBooks.Size = new System.Drawing.Size(154, 22);
+            this.txtSearchBooks.TabIndex = 6;
+            this.txtSearchBooks.TextChanged += new System.EventHandler(this.txtSearchBooks_TextChanged);
+            // 
             // UcCatalogOfBooks
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtSearchBooks);
             this.Controls.Add(this.btnEditBook);
             this.Controls.Add(this.btnDeleteBook);
             this.Controls.Add(this.btnAddBook);
             this.Controls.Add(this.dgvBookManagment);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UcCatalogOfBooks";
-            this.Size = new System.Drawing.Size(604, 427);
+            this.Size = new System.Drawing.Size(805, 526);
             this.Load += new System.EventHandler(this.UcCatalogOfBooks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookManagment)).EndInit();
             this.ResumeLayout(false);
@@ -114,5 +128,6 @@
         private System.Windows.Forms.Button btnAddBook;
         private System.Windows.Forms.Button btnDeleteBook;
         private System.Windows.Forms.Button btnEditBook;
+        private System.Windows.Forms.TextBox txtSearchBooks;
     }
 }
