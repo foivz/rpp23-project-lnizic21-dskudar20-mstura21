@@ -34,6 +34,8 @@
             this.btnDeleteBook = new System.Windows.Forms.Button();
             this.btnEditBook = new System.Windows.Forms.Button();
             this.txtSearchBooks = new System.Windows.Forms.TextBox();
+            this.cmbFiltering = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookManagment)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,7 +43,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(293, 11);
+            this.label1.Location = new System.Drawing.Point(290, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(219, 29);
             this.label1.TabIndex = 0;
@@ -102,10 +104,32 @@
             this.txtSearchBooks.TabIndex = 6;
             this.txtSearchBooks.TextChanged += new System.EventHandler(this.txtSearchBooks_TextChanged);
             // 
+            // cmbFiltering
+            // 
+            this.cmbFiltering.BackColor = System.Drawing.Color.White;
+            this.cmbFiltering.FormattingEnabled = true;
+            this.cmbFiltering.Location = new System.Drawing.Point(620, 42);
+            this.cmbFiltering.Name = "cmbFiltering";
+            this.cmbFiltering.Size = new System.Drawing.Size(139, 24);
+            this.cmbFiltering.TabIndex = 7;
+            this.cmbFiltering.SelectedIndexChanged += new System.EventHandler(this.cmbFiltering_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(547, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 20);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Sort by:";
+            // 
             // UcCatalogOfBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cmbFiltering);
             this.Controls.Add(this.txtSearchBooks);
             this.Controls.Add(this.btnEditBook);
             this.Controls.Add(this.btnDeleteBook);
@@ -130,5 +154,7 @@
         private System.Windows.Forms.Button btnDeleteBook;
         private System.Windows.Forms.Button btnEditBook;
         private System.Windows.Forms.TextBox txtSearchBooks;
+        private System.Windows.Forms.ComboBox cmbFiltering;
+        private System.Windows.Forms.Label label2;
     }
 }

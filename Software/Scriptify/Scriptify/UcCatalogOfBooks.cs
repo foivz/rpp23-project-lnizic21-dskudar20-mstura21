@@ -30,6 +30,11 @@ namespace Scriptify
             txtSearchBooks.Text = placeholderText;
             txtSearchBooks.Enter += TextBoxSearch_Enter;
             txtSearchBooks.Leave += TextBoxSearch_Leave;
+
+            cmbFiltering.Items.Add("Book name (A-Z)");
+            cmbFiltering.Items.Add("Book name (Z-A)");
+            cmbFiltering.Items.Add("Author (A-Z)");
+            cmbFiltering.Items.Add("Author (Z-A)");
         }
 
         private void TextBoxSearch_Enter(object sender, EventArgs e)
@@ -58,9 +63,29 @@ namespace Scriptify
         private void ShowBooks()
         {
             List<Book> books = bookManagmentService.GetBooksForLibrary(user.Library_idLibrary);
+
+
+            string sortOrder = cmbFiltering?.SelectedItem?.ToString();
+
+            if (sortOrder == "Book name (A-Z)")
+            {
+                books = books.OrderBy(book => book.book_name).ToList();
+            }
+            else if(sortOrder == "Book name (Z-A)")
+            {
+                books = books.OrderByDescending(book => book.book_name).ToList();
+            }
+            else if(sortOrder == "Author (A-Z)")
+            {
+                books = books.OrderBy(book => book.author).ToList();
+            }
+            else if (sortOrder == "Author (Z-A)")
+            {
+                books = books.OrderByDescending(book => book.author).ToList();
+            }
+
             bindingSource.DataSource = books;
             dgvBookManagment.DataSource = bindingSource;
-
 
             dgvBookManagment.Columns["Users"].Visible = false;
             dgvBookManagment.Columns["Library_has_Books"].Visible = false;
@@ -127,6 +152,11 @@ namespace Scriptify
                 bindingSource.DataSource = filteredBooks;
                 dgvBookManagment.DataSource = bindingSource;
             }
+        }
+
+        private void cmbFiltering_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShowBooks();
         }
     }
 }
