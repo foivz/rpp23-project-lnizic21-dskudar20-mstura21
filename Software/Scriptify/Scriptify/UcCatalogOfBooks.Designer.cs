@@ -50,18 +50,18 @@
             // dgvBookManagment
             // 
             this.dgvBookManagment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBookManagment.Location = new System.Drawing.Point(0, 87);
-            this.dgvBookManagment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvBookManagment.Location = new System.Drawing.Point(3, 71);
+            this.dgvBookManagment.Margin = new System.Windows.Forms.Padding(4);
             this.dgvBookManagment.Name = "dgvBookManagment";
             this.dgvBookManagment.RowHeadersWidth = 51;
-            this.dgvBookManagment.Size = new System.Drawing.Size(756, 311);
+            this.dgvBookManagment.Size = new System.Drawing.Size(756, 296);
             this.dgvBookManagment.TabIndex = 2;
             // 
             // btnAddBook
             // 
             this.btnAddBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnAddBook.Location = new System.Drawing.Point(427, 405);
-            this.btnAddBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddBook.Location = new System.Drawing.Point(430, 375);
+            this.btnAddBook.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddBook.Name = "btnAddBook";
             this.btnAddBook.Size = new System.Drawing.Size(100, 28);
             this.btnAddBook.TabIndex = 3;
@@ -72,8 +72,8 @@
             // btnDeleteBook
             // 
             this.btnDeleteBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnDeleteBook.Location = new System.Drawing.Point(656, 405);
-            this.btnDeleteBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteBook.Location = new System.Drawing.Point(659, 375);
+            this.btnDeleteBook.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteBook.Name = "btnDeleteBook";
             this.btnDeleteBook.Size = new System.Drawing.Size(100, 28);
             this.btnDeleteBook.TabIndex = 4;
@@ -84,8 +84,8 @@
             // btnEditBook
             // 
             this.btnEditBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnEditBook.Location = new System.Drawing.Point(548, 405);
-            this.btnEditBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditBook.Location = new System.Drawing.Point(551, 375);
+            this.btnEditBook.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditBook.Name = "btnEditBook";
             this.btnEditBook.Size = new System.Drawing.Size(100, 28);
             this.btnEditBook.TabIndex = 5;
@@ -95,7 +95,8 @@
             // 
             // txtSearchBooks
             // 
-            this.txtSearchBooks.Location = new System.Drawing.Point(3, 58);
+            this.txtSearchBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtSearchBooks.Location = new System.Drawing.Point(3, 42);
             this.txtSearchBooks.Name = "txtSearchBooks";
             this.txtSearchBooks.Size = new System.Drawing.Size(154, 22);
             this.txtSearchBooks.TabIndex = 6;

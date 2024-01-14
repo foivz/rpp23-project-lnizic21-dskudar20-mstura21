@@ -21,12 +21,11 @@ namespace Scriptify
         private string placeholderText = "Search books";
         private BindingSource bindingSource = new BindingSource();
         private Librarian user = new Librarian();
-        private int Library_ID;
-        public UcCatalogOfBooks(int id)
+        public UcCatalogOfBooks(Librarian user)
         {
             InitializeComponent();
             bookManagmentService = new BookManagmentService();
-            Library_ID = id;
+            this.user = user;
 
             txtSearchBooks.Text = placeholderText;
             txtSearchBooks.Enter += TextBoxSearch_Enter;
@@ -58,16 +57,19 @@ namespace Scriptify
 
         private void ShowBooks()
         {
-            List<Book> books = bookManagmentService.GetBooksForLibrary(Library_ID);
-            dgvBookManagment.DataSource = books;
+            List<Book> books = bookManagmentService.GetBooksForLibrary(user.Library_idLibrary);
+            bindingSource.DataSource = books;
             dgvBookManagment.DataSource = bindingSource;
+
+
             dgvBookManagment.Columns["Users"].Visible = false;
             dgvBookManagment.Columns["Library_has_Books"].Visible = false;
+
             dgvBookManagment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void btnAddBook_Click(object sender, EventArgs e) {
-            frmAdd_EditBooks frmAdd_EditBooks = new frmAdd_EditBooks(Action.Add,Library_ID,0);
+            frmAdd_EditBooks frmAdd_EditBooks = new frmAdd_EditBooks(Action.Add,user.Library_idLibrary,0);
             frmAdd_EditBooks.BookAddedEvent += LoadOnSucces;
             frmAdd_EditBooks.ShowDialog();  
         }
@@ -78,7 +80,7 @@ namespace Scriptify
                 return;
             }
             int bookID = SelectedBookId();
-            frmAdd_EditBooks frmAdd_EditBooks = new frmAdd_EditBooks(Action.Edit, Library_ID,bookID);
+            frmAdd_EditBooks frmAdd_EditBooks = new frmAdd_EditBooks(Action.Edit, user.Library_idLibrary,bookID);
             frmAdd_EditBooks.BookAddedEvent += LoadOnSucces;
             frmAdd_EditBooks.ShowDialog();
         }
@@ -88,10 +90,8 @@ namespace Scriptify
             return book.idBook;
         }
         
-
-
         private void LoadOnSucces(object sender, EventArgs e) {
-            List<Book> books = bookManagmentService.GetBooksForLibrary(Library_ID);
+            List<Book> books = bookManagmentService.GetBooksForLibrary(user.Library_idLibrary);
             dgvBookManagment.DataSource = books;
             dgvBookManagment.Columns["Users"].Visible = false;
             dgvBookManagment.Columns["Library_has_Books"].Visible = false;
@@ -103,7 +103,7 @@ namespace Scriptify
             var sucess =  bookManagmentService.DeleteBook(bookID);
             if (sucess) {
                 MessageBox.Show("Book deleted successfully", "Book deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                List<Book> books = bookManagmentService.GetBooksForLibrary(Library_ID);
+                List<Book> books = bookManagmentService.GetBooksForLibrary(user.Library_idLibrary);
                 dgvBookManagment.DataSource = books;
                 dgvBookManagment.Columns["Users"].Visible = false;
                 dgvBookManagment.Columns["Library_has_Books"].Visible = false;
