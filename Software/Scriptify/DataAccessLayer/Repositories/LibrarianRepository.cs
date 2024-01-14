@@ -50,6 +50,12 @@ namespace DataAccessLayer.Repositories
                 return 0;
             }
         }
+        public int GetLibrarianLibraryIDbyName(string name) {
+            var sql = from l in Context.Libraries
+                      where l.name == name
+                      select l.idLibrary;
+            return sql.FirstOrDefault();
+        }
         public bool DeleteLibrarianById(int id) {
             if(Context.Librarians.Find(id) == null) {
                 return false;
