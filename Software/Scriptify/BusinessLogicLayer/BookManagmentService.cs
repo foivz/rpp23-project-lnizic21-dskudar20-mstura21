@@ -36,5 +36,10 @@ namespace BusinessLogicLayer {
                 
             }
         }
+        public Book GetBookById(int id) {
+            using(var repo = new BookManagmentRepository()) {
+                return repo.GetBookByID(id);
+            }
+        }
     }
 }

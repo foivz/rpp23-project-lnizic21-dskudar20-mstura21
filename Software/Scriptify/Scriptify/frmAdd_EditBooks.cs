@@ -15,7 +15,11 @@ namespace Scriptify {
         Add,
         Edit
     };
+
     public partial class frmAdd_EditBooks : Form {
+        public delegate void BookAddedEventHandler(object sender, EventArgs e);
+        public event BookAddedEventHandler BookAddedEvent;
+
         private Action FormAction;
         private int LibraryId;
         private int? BookId;
@@ -31,8 +35,11 @@ namespace Scriptify {
                 txtTitle.Text = "Add Book";
                 btn_save.Visible = false;
             } else if(FormAction == Action.Edit) {
+                
                 txtTitle.Text = "Edit Book";
                 btn_add.Visible = false;
+                BookManagmentService bookManagmentService = new BookManagmentService();
+                var book = bookManagmentService.GetBookById(BookId.Value);
             }
         }
 
@@ -53,10 +60,17 @@ namespace Scriptify {
                 MessageBox.Show("Book added successfully to the system","Book added",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 var bookAddedToLibrary = bookManagmentService.AddBookToLibrary(LibraryId, book.book_name);
                 if (bookAddedToLibrary) {
-                    MessageBox.Show("Book added successfully to your Library", "Book added", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    
+                    MessageBox.Show("Book added successfully to your Library", "Book added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    OnBookAddedEvent();
+                    Close();
                 }
             }
+
+        }
+
+        protected virtual void OnBookAddedEvent() {
+           
+            BookAddedEvent?.Invoke(this, EventArgs.Empty);
         }
     }
 }

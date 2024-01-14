@@ -43,6 +43,12 @@ namespace DataAccessLayer.Repositories {
             Context.SaveChanges();
             return true; 
         }
+        public Book GetBookByID(int Id) {
+            var sql = from book in Context.Books
+                      where book.idBook == Id
+                      select book;
+            return sql.FirstOrDefault();
+        }
         public void Dispose() {
             Context.Dispose();
         }

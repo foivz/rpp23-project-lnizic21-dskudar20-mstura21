@@ -15,6 +15,8 @@ namespace Scriptify
 {
     public partial class UcCatalogOfBooks : UserControl
     {
+        
+        
         private BookManagmentService bookManagmentService;
         private int Library_ID;
         public UcCatalogOfBooks(int id)
@@ -36,6 +38,7 @@ namespace Scriptify
 
         private void btnAddBook_Click(object sender, EventArgs e) {
             frmAdd_EditBooks frmAdd_EditBooks = new frmAdd_EditBooks(Action.Add,Library_ID,null);
+            frmAdd_EditBooks.BookAddedEvent += LoadOnSucces;
             frmAdd_EditBooks.ShowDialog();  
         }
 
@@ -46,12 +49,23 @@ namespace Scriptify
             }
             int bookID = SelectedBookId();
             frmAdd_EditBooks frmAdd_EditBooks = new frmAdd_EditBooks(Action.Edit, Library_ID,bookID);
+            frmAdd_EditBooks.BookAddedEvent += LoadOnSucces;
             frmAdd_EditBooks.ShowDialog();
         }
         private int SelectedBookId() {
          
            Book book =  dgvBookManagment.SelectedRows[0].DataBoundItem as Book;
             return book.idBook;
+        }
+        
+
+
+        private void LoadOnSucces(object sender, EventArgs e) {
+            List<Book> books = bookManagmentService.GetBooksForLibrary(Library_ID);
+            dgvBookManagment.DataSource = books;
+            dgvBookManagment.Columns["Users"].Visible = false;
+            dgvBookManagment.Columns["Library_has_Books"].Visible = false;
+            dgvBookManagment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }

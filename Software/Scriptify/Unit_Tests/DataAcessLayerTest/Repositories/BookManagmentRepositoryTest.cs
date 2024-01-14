@@ -29,11 +29,20 @@ namespace Unit_Tests.DataAcessLayerTest.Repositories {
                 Assert.ThrowsException<DbUpdateException>(() =>  repo.AddBookToLibrary(1, "xxxx"));
             }
         }
+        [TestMethod]
         public void AddBookToLibraryTest() {
             using (BookManagmentRepository repo = new BookManagmentRepository()) {
 
                bool sucess =  repo.AddBookToLibrary(1, "Test knjiga 3");
                 Assert.IsTrue(sucess);
+            }
+        }
+        [TestMethod]
+        public void GetBookByIdTest() {
+            using (BookManagmentRepository repo = new BookManagmentRepository()) {
+
+                Book book = repo.GetBookByID(1);
+                Assert.IsNotNull(book);
             }
         }
 
