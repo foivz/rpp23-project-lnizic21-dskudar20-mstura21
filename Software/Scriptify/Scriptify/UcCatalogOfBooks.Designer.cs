@@ -75,6 +75,7 @@
             this.btnDeleteBook.TabIndex = 4;
             this.btnDeleteBook.Text = "Delete";
             this.btnDeleteBook.UseVisualStyleBackColor = false;
+            this.btnDeleteBook.Click += new System.EventHandler(this.btnDeleteBook_Click);
             // 
             // btnEditBook
             // 

@@ -62,6 +62,16 @@ namespace DataAccessLayer.Repositories {
             return true;
 
         }
+        public bool DeleteBook(int id) {
+            var sql = from b in Context.Library_has_Books
+                      where b.Books_idBook == id
+                      select b;
+            Library_has_Books bookToDelete = sql.FirstOrDefault();
+            Context.Library_has_Books.Remove(bookToDelete);
+            Context.SaveChanges();
+            return true;
+        }
+
         public void Dispose() {
             Context.Dispose();
         }

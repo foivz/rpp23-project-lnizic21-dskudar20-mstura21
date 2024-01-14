@@ -52,5 +52,16 @@ namespace BusinessLogicLayer {
                 
             }
         }
+        public bool DeleteBook(int id) {
+            using (var repo = new BookManagmentRepository()) {
+                try {
+                    repo.DeleteBook(id);
+                    return true;
+                } catch (DbUpdateException ex) {
+                    return false;
+                }
+
+            }
+        }
     }
 }

@@ -54,6 +54,13 @@ namespace Unit_Tests.DataAcessLayerTest.Repositories {
                 Assert.IsTrue(sucess);
             }
         }
+        [TestMethod]
+        public void DeleteBookTest() {
+            using (BookManagmentRepository repo = new BookManagmentRepository()) {
+                bool sucess = repo.DeleteBook(1);
+                Assert.IsTrue(sucess);
+            }
+        }
 
     }
 }

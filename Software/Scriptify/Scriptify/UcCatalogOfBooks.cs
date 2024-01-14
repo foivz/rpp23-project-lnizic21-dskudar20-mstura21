@@ -67,5 +67,20 @@ namespace Scriptify
             dgvBookManagment.Columns["Library_has_Books"].Visible = false;
             dgvBookManagment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+
+        private void btnDeleteBook_Click(object sender, EventArgs e) {
+            int bookID = SelectedBookId();
+            var sucess =  bookManagmentService.DeleteBook(bookID);
+            if (sucess) {
+                MessageBox.Show("Book deleted successfully", "Book deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                List<Book> books = bookManagmentService.GetBooksForLibrary(Library_ID);
+                dgvBookManagment.DataSource = books;
+                dgvBookManagment.Columns["Users"].Visible = false;
+                dgvBookManagment.Columns["Library_has_Books"].Visible = false;
+                dgvBookManagment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            } else {
+                MessageBox.Show("Book could not be deleted", "Book not deleted", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
