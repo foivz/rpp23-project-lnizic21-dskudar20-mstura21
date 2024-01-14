@@ -35,13 +35,23 @@ namespace Scriptify
         }
 
         private void btnAddBook_Click(object sender, EventArgs e) {
-            frmAdd_EditBooks frmAdd_EditBooks = new frmAdd_EditBooks(Action.Add,Library_ID);
+            frmAdd_EditBooks frmAdd_EditBooks = new frmAdd_EditBooks(Action.Add,Library_ID,null);
             frmAdd_EditBooks.ShowDialog();  
         }
 
         private void btnEditBook_Click(object sender, EventArgs e) {
-            frmAdd_EditBooks frmAdd_EditBooks = new frmAdd_EditBooks(Action.Edit, Library_ID);
+            if(dgvBookManagment.SelectedRows.Count == 0) {
+                MessageBox.Show("Please select a book to edit","No book is selected",MessageBoxButtons.RetryCancel,MessageBoxIcon.Exclamation);
+                return;
+            }
+            int bookID = SelectedBookId();
+            frmAdd_EditBooks frmAdd_EditBooks = new frmAdd_EditBooks(Action.Edit, Library_ID,bookID);
             frmAdd_EditBooks.ShowDialog();
+        }
+        private int SelectedBookId() {
+         
+           Book book =  dgvBookManagment.SelectedRows[0].DataBoundItem as Book;
+            return book.idBook;
         }
     }
 }

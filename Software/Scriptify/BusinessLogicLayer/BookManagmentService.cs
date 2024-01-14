@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using EntityLayer;
 using DataAccessLayer;
 using DataAccessLayer.Repositories;
+using System.Data.Entity.Infrastructure;
 
 namespace BusinessLogicLayer {
     public class BookManagmentService {
@@ -13,6 +14,17 @@ namespace BusinessLogicLayer {
             using(var repo = new BookManagmentRepository()) {
                 return repo.GetBooksForLibrary(id).ToList();
             }   
+        }
+        public bool AddBookToLibrary(int idLibrary,string bookName) {
+            using(var repo = new BookManagmentRepository()) {
+                try {
+                    repo.AddBookToLibrary(idLibrary,bookName);
+                    return true;
+                }catch(DbUpdateException ex) {
+                    return false;
+                }
+                
+            }
         }
     }
 }

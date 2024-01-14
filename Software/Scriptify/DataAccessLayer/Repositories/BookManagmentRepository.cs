@@ -22,6 +22,22 @@ namespace DataAccessLayer.Repositories {
                       select book;
             return sql.Include("Users").Include("Library_has_Books");
         }
+        public int GetBookIdByName(string name) {
+            var sql = from book in Context.Books
+                      where book.book_name == name
+                      select book.idBook;
+            return sql.FirstOrDefault();
+        }
+        public bool AddBookToLibrary(int idLibrary,string bookName) {
+            int idBook = GetBookIdByName(bookName);
+            Library_has_Books library_has_Books = new Library_has_Books() {
+                Books_idBook = idBook,
+                Library_idLibrary = idLibrary
+            };
+            Entities.Add(library_has_Books);
+            Context.SaveChanges();
+            return true;
+        }
         public void Dispose() {
             Context.Dispose();
         }
