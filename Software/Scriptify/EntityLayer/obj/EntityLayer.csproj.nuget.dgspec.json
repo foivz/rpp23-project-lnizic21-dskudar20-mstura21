@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\RPP_Projekt\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj": {}
+    "C:\\Rpp_Projekt\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj": {}
   },
   "projects": {
-    "C:\\RPP_Projekt\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Rpp_Projekt\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\RPP_Projekt\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Rpp_Projekt\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\RPP_Projekt\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
+        "projectPath": "C:\\Rpp_Projekt\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
         "packagesPath": "C:\\Users\\mustr\\.nuget\\packages\\",
-        "outputPath": "C:\\RPP_Projekt\\Software\\Scriptify\\EntityLayer\\obj\\",
+        "outputPath": "C:\\Rpp_Projekt\\Software\\Scriptify\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
