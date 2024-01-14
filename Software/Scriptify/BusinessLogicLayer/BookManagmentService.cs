@@ -41,5 +41,16 @@ namespace BusinessLogicLayer {
                 return repo.GetBookByID(id);
             }
         }
+        public bool UpdateBook(Book book) {
+            using(var repo = new BookManagmentRepository()) {
+                try {
+                    repo.UpdateBook(book);
+                    return true;
+                }catch(DbUpdateException ex) {
+                    return false;
+                }
+                
+            }
+        }
     }
 }

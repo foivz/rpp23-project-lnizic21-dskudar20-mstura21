@@ -45,6 +45,15 @@ namespace Unit_Tests.DataAcessLayerTest.Repositories {
                 Assert.IsNotNull(book);
             }
         }
+        [TestMethod]
+        public void UpdateBookTest() {
+            using (BookManagmentRepository repo = new BookManagmentRepository()) {
+                Book book = repo.GetBookByID(1);
+                book.book_name = "Test knjiga 3";
+                bool sucess = repo.UpdateBook(book);
+                Assert.IsTrue(sucess);
+            }
+        }
 
     }
 }

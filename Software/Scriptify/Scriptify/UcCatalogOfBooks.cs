@@ -37,7 +37,7 @@ namespace Scriptify
         }
 
         private void btnAddBook_Click(object sender, EventArgs e) {
-            frmAdd_EditBooks frmAdd_EditBooks = new frmAdd_EditBooks(Action.Add,Library_ID,null);
+            frmAdd_EditBooks frmAdd_EditBooks = new frmAdd_EditBooks(Action.Add,Library_ID,0);
             frmAdd_EditBooks.BookAddedEvent += LoadOnSucces;
             frmAdd_EditBooks.ShowDialog();  
         }

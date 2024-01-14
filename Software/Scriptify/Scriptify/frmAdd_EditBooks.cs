@@ -22,8 +22,8 @@ namespace Scriptify {
 
         private Action FormAction;
         private int LibraryId;
-        private int? BookId;
-        public frmAdd_EditBooks(Action action,int id,int? bookid) {
+        private int BookId;
+        public frmAdd_EditBooks(Action action,int id,int bookid) {
             InitializeComponent();
             FormAction = action;
             LibraryId = id;
@@ -39,12 +39,35 @@ namespace Scriptify {
                 txtTitle.Text = "Edit Book";
                 btn_add.Visible = false;
                 BookManagmentService bookManagmentService = new BookManagmentService();
-                var book = bookManagmentService.GetBookById(BookId.Value);
+                var book = bookManagmentService.GetBookById(BookId);
+                txtBookName.Text = book.book_name;
+                txtAuthor.Text = book.author;
+                txtDescription.Text = book.overview;
+                txtGenre.Text = book.genre;
+                
             }
         }
 
         private void btn_save_Click(object sender, EventArgs e) {
-
+           
+            BookManagmentService bookManagmentService = new BookManagmentService();
+            Book book = new Book {
+                idBook = BookId,
+                book_name = txtBookName.Text,
+                author = txtAuthor.Text,
+                overview = txtDescription.Text,
+                genre = txtGenre.Text
+            };
+            var bookUpdated = bookManagmentService.UpdateBook(book);
+            if (bookUpdated) {
+                MessageBox.Show("Book updated successfully", "Book updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                OnBookAddedEvent();
+                Close();
+            } else {
+                MessageBox.Show("Book could not be updated", "Book not updated", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+          
+            
         }
 
         private void btn_add_Click(object sender, EventArgs e) {

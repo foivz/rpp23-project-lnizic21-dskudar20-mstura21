@@ -49,6 +49,19 @@ namespace DataAccessLayer.Repositories {
                       select book;
             return sql.FirstOrDefault();
         }
+        public bool UpdateBook(Book book) {
+            var sql = from b in Context.Books
+                      where b.idBook == book.idBook
+                      select b;
+            Book bookToUpdate = sql.FirstOrDefault();
+            bookToUpdate.book_name = book.book_name;
+            bookToUpdate.author = book.author;
+            bookToUpdate.overview = book.overview;
+            bookToUpdate.genre = book.genre;
+            Context.SaveChanges();
+            return true;
+
+        }
         public void Dispose() {
             Context.Dispose();
         }
