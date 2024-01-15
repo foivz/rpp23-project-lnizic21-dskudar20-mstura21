@@ -25,6 +25,7 @@
         private void InitializeComponent() {
             this.label1 = new System.Windows.Forms.Label();
             this.dgvLoanHistoryAndSanctions = new System.Windows.Forms.DataGridView();
+            this.btnSanction = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoanHistoryAndSanctions)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,13 +49,26 @@
             this.dgvLoanHistoryAndSanctions.Size = new System.Drawing.Size(648, 310);
             this.dgvLoanHistoryAndSanctions.TabIndex = 3;
             // 
+            // btnSanction
+            // 
+            this.btnSanction.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnSanction.ForeColor = System.Drawing.Color.Red;
+            this.btnSanction.Location = new System.Drawing.Point(569, 384);
+            this.btnSanction.Name = "btnSanction";
+            this.btnSanction.Size = new System.Drawing.Size(97, 32);
+            this.btnSanction.TabIndex = 4;
+            this.btnSanction.Text = "Sanction";
+            this.btnSanction.UseVisualStyleBackColor = true;
+            this.btnSanction.Click += new System.EventHandler(this.btnSanction_Click);
+            // 
             // uc_LoanHistoryAndSanctions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnSanction);
             this.Controls.Add(this.dgvLoanHistoryAndSanctions);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "uc_LoanHistoryAndSanctions";
             this.Size = new System.Drawing.Size(757, 478);
             this.Load += new System.EventHandler(this.uc_LoanHistoryAndSanctions_Load);
@@ -68,5 +82,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvLoanHistoryAndSanctions;
+        private System.Windows.Forms.Button btnSanction;
     }
 }

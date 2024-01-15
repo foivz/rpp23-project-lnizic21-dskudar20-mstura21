@@ -31,5 +31,18 @@ namespace Scriptify {
             List<Loan> loans = loanHistoryAndSanctionsService.GetAllExpiredLoans(user.idLibrarians);
             dgvLoanHistoryAndSanctions.DataSource = loans;
         }
+
+        private void btnSanction_Click(object sender, EventArgs e)
+        {
+            var choosedLoan = dgvLoanHistoryAndSanctions.CurrentRow.DataBoundItem as Loan;
+            if(choosedLoan == null)
+            {
+                MessageBox.Show("Please select a loan for issuing a sanction!");
+            }
+            else
+            {
+                if(choosedLoan.loan_status ==)
+            }
+        }
     }
 }
