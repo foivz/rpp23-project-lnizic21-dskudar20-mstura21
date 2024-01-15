@@ -43,7 +43,7 @@ namespace Scriptify {
             {
                 if(choosedLoan.loan_status == "Completed")
                 {
-                    MessageBox.Show("Select the loan that is overdue!");
+                    MessageBox.Show("Please select the loan that is overdue!");
                 }
                 else
                 {
