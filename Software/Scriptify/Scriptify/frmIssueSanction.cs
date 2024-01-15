@@ -43,8 +43,17 @@ namespace Scriptify
         private void btnCalculateDays_Click(object sender, EventArgs e)
         {
             DateTime today = DateTime.Now.Date;
-            var days = today - loan.planned_return;
-            txtDays.Text = days.ToString();
+            TimeSpan? difference = today - loan.planned_return;
+
+            if (difference.HasValue)
+            {
+                int days = difference.Value.Days;
+                txtDays.Text = days.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Unable to calculate the difference in days. Try again..");
+            } 
 
         }
 
@@ -54,13 +63,17 @@ namespace Scriptify
             {
                 MessageBox.Show("Please enter the amount!");
             }
-            if(txtDays.Text == "")
+            else if(txtDays.Text == "")
             {
                 MessageBox.Show("Please calculate the number of days!");
             }
-            var totalAmount = Convert.ToDouble(txtAmount.Text) * Convert.ToDouble(txtDays.Text);
+            else
+            {
+                var totalAmount = Convert.ToDouble(txtAmount.Text) * Convert.ToDouble(txtDays.Text);
 
-            txtTotal.Text = totalAmount.ToString();
+                txtTotal.Text = totalAmount.ToString();
+            }
+            
         }
 
         private void btnSanction_Click(object sender, EventArgs e)

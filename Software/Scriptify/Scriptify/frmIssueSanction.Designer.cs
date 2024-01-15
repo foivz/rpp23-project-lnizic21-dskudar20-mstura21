@@ -100,6 +100,7 @@
             // 
             // dtmDateOfLoan
             // 
+            this.dtmDateOfLoan.Enabled = false;
             this.dtmDateOfLoan.Location = new System.Drawing.Point(179, 184);
             this.dtmDateOfLoan.Name = "dtmDateOfLoan";
             this.dtmDateOfLoan.Size = new System.Drawing.Size(200, 22);
@@ -127,6 +128,7 @@
             // 
             // dtmPlannedReturn
             // 
+            this.dtmPlannedReturn.Enabled = false;
             this.dtmPlannedReturn.Location = new System.Drawing.Point(179, 219);
             this.dtmPlannedReturn.Name = "dtmPlannedReturn";
             this.dtmPlannedReturn.Size = new System.Drawing.Size(200, 22);
@@ -152,7 +154,7 @@
             // 
             // txtAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(188, 36);
+            this.txtAmount.Location = new System.Drawing.Point(217, 35);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(74, 27);
             this.txtAmount.TabIndex = 11;
@@ -197,7 +199,7 @@
             // 
             // txtDays
             // 
-            this.txtDays.Location = new System.Drawing.Point(188, 80);
+            this.txtDays.Location = new System.Drawing.Point(217, 80);
             this.txtDays.Name = "txtDays";
             this.txtDays.ReadOnly = true;
             this.txtDays.Size = new System.Drawing.Size(74, 27);
@@ -207,7 +209,7 @@
             // 
             this.btnCalculateAmount.Location = new System.Drawing.Point(130, 137);
             this.btnCalculateAmount.Name = "btnCalculateAmount";
-            this.btnCalculateAmount.Size = new System.Drawing.Size(105, 37);
+            this.btnCalculateAmount.Size = new System.Drawing.Size(114, 37);
             this.btnCalculateAmount.TabIndex = 15;
             this.btnCalculateAmount.Text = "Calculate";
             this.btnCalculateAmount.UseVisualStyleBackColor = true;
@@ -235,9 +237,9 @@
             this.btnSanction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnSanction.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnSanction.ForeColor = System.Drawing.Color.Black;
-            this.btnSanction.Location = new System.Drawing.Point(324, 312);
+            this.btnSanction.Location = new System.Drawing.Point(308, 312);
             this.btnSanction.Name = "btnSanction";
-            this.btnSanction.Size = new System.Drawing.Size(191, 53);
+            this.btnSanction.Size = new System.Drawing.Size(236, 57);
             this.btnSanction.TabIndex = 14;
             this.btnSanction.Text = "Issue a sanction";
             this.btnSanction.UseVisualStyleBackColor = false;
