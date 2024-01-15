@@ -10,11 +10,11 @@ namespace BusinessLogicLayer
 {
     public class LoanHistoryAndSanctionsService
     {
-        public List<Loan> GetAllExpiredLoans()
+        public List<Loan> GetAllExpiredLoans(int librarianId)
         {
             using (var repo = new LoanHistoryAndSanctionRepository())
             {
-                return repo.GetAllExpiredLoans().ToList();
+                return repo.GetAllExpiredLoans(librarianId).ToList();
             }
         }
     }

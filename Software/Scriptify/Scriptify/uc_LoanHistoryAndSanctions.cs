@@ -17,7 +17,7 @@ namespace Scriptify {
         private Librarian user = new Librarian();
         public uc_LoanHistoryAndSanctions(Librarian user) {
             InitializeComponent();
-            user = user;
+            this.user = user;
             loanHistoryAndSanctionsService = new LoanHistoryAndSanctionsService();
         }
 
@@ -28,7 +28,7 @@ namespace Scriptify {
 
         private void ShowLoans()
         {
-            List<Loan> loans = loanHistoryAndSanctionsService.GetAllExpiredLoans();
+            List<Loan> loans = loanHistoryAndSanctionsService.GetAllExpiredLoans(user.idLibrarians);
             dgvLoanHistoryAndSanctions.DataSource = loans;
         }
     }
