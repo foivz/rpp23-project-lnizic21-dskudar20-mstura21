@@ -193,6 +193,7 @@
             this.btnCalculateDays.TabIndex = 13;
             this.btnCalculateDays.Text = "Count the days";
             this.btnCalculateDays.UseVisualStyleBackColor = true;
+            this.btnCalculateDays.Click += new System.EventHandler(this.btnCalculateDays_Click);
             // 
             // txtDays
             // 
@@ -210,6 +211,7 @@
             this.btnCalculateAmount.TabIndex = 15;
             this.btnCalculateAmount.Text = "Calculate";
             this.btnCalculateAmount.UseVisualStyleBackColor = true;
+            this.btnCalculateAmount.Click += new System.EventHandler(this.btnCalculateAmount_Click);
             // 
             // label8
             // 

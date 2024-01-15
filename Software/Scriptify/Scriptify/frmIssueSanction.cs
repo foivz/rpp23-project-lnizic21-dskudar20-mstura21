@@ -34,7 +34,33 @@ namespace Scriptify
         {
             txtFirstName.Text = loan.first_name;
             txtLastName.Text = loan.last_name;
+            txtBookName.Text = loan.book_name;
+            dtmDateOfLoan.Value = Convert.ToDateTime(loan.date_of_loan);
+            dtmPlannedReturn.Value = Convert.ToDateTime(loan.planned_return);
 
+        }
+
+        private void btnCalculateDays_Click(object sender, EventArgs e)
+        {
+            DateTime today = DateTime.Now.Date;
+            var days = today - loan.planned_return;
+            txtDays.Text = days.ToString();
+
+        }
+
+        private void btnCalculateAmount_Click(object sender, EventArgs e)
+        {
+            if(txtAmount.Text == "")
+            {
+                MessageBox.Show("Please enter the amount!");
+            }
+            if(txtDays.Text == "")
+            {
+                MessageBox.Show("Please calculate the number of days!");
+            }
+            var totalAmount = Convert.ToDouble(txtAmount.Text) * Convert.ToDouble(txtDays.Text);
+
+            txtTotal.Text = totalAmount.ToString();
         }
     }
 }
