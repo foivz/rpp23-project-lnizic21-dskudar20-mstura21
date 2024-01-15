@@ -62,5 +62,18 @@ namespace Scriptify
 
             txtTotal.Text = totalAmount.ToString();
         }
+
+        private void btnSanction_Click(object sender, EventArgs e)
+        {
+            if(txtTotal.Text == "")
+            {
+                MessageBox.Show("Please caluclate the amount of sanction!");
+            }
+            else
+            {
+                MessageBox.Show("Sanction issued!");
+                Close();
+            }
+        }
     }
 }

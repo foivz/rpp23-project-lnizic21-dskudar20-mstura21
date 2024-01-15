@@ -241,6 +241,7 @@
             this.btnSanction.TabIndex = 14;
             this.btnSanction.Text = "Issue a sanction";
             this.btnSanction.UseVisualStyleBackColor = false;
+            this.btnSanction.Click += new System.EventHandler(this.btnSanction_Click);
             // 
             // frmIssueSanction
             // 
