@@ -19,5 +19,22 @@ namespace Scriptify
             InitializeComponent();
             this.loan = loan;
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmIssueSanction_Load(object sender, EventArgs e)
+        {
+            ShowData();
+        }
+
+        private void ShowData()
+        {
+            txtFirstName.Text = loan.first_name;
+            txtLastName.Text = loan.last_name;
+
+        }
     }
 }
