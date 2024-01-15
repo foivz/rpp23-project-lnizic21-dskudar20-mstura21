@@ -57,8 +57,7 @@
             this.dgvBookManagment.Name = "dgvBookManagment";
             this.dgvBookManagment.RowHeadersWidth = 51;
             this.dgvBookManagment.Size = new System.Drawing.Size(756, 296);
-            this.dgvBookManagment.TabIndex = 2;
-            // 
+            this.dgvBookManagment.TabIndex = 2;            // 
             // btnAddBook
             // 
             this.btnAddBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));

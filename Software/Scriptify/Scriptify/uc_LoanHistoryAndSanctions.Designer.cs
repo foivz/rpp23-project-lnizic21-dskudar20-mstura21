@@ -24,26 +24,41 @@
         /// </summary>
         private void InitializeComponent() {
             this.label1 = new System.Windows.Forms.Label();
+            this.dgvLoanHistoryAndSanctions = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLoanHistoryAndSanctions)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(156, 13);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(208, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(277, 25);
+            this.label1.Size = new System.Drawing.Size(349, 29);
             this.label1.TabIndex = 2;
             this.label1.Text = "Loan History and Sanctions";
             // 
+            // dgvLoanHistoryAndSanctions
+            // 
+            this.dgvLoanHistoryAndSanctions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLoanHistoryAndSanctions.Location = new System.Drawing.Point(18, 68);
+            this.dgvLoanHistoryAndSanctions.Name = "dgvLoanHistoryAndSanctions";
+            this.dgvLoanHistoryAndSanctions.RowHeadersWidth = 51;
+            this.dgvLoanHistoryAndSanctions.RowTemplate.Height = 24;
+            this.dgvLoanHistoryAndSanctions.Size = new System.Drawing.Size(648, 310);
+            this.dgvLoanHistoryAndSanctions.TabIndex = 3;
+            // 
             // uc_LoanHistoryAndSanctions
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dgvLoanHistoryAndSanctions);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "uc_LoanHistoryAndSanctions";
-            this.Size = new System.Drawing.Size(568, 388);
+            this.Size = new System.Drawing.Size(757, 478);
+            this.Load += new System.EventHandler(this.uc_LoanHistoryAndSanctions_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLoanHistoryAndSanctions)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -52,5 +67,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvLoanHistoryAndSanctions;
     }
 }
