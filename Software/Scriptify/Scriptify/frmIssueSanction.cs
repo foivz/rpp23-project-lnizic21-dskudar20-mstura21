@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace Scriptify
 {
     public partial class frmIssueSanction : Form
     {
-        public frmIssueSanction()
+        private Loan loan = new Loan();
+        public frmIssueSanction(Loan loan)
         {
             InitializeComponent();
+            this.loan = loan;
         }
     }
 }

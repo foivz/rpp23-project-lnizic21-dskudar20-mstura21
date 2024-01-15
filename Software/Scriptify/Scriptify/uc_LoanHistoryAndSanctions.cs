@@ -41,7 +41,15 @@ namespace Scriptify {
             }
             else
             {
-                if(choosedLoan.loan_status ==)
+                if(choosedLoan.loan_status == "Completed")
+                {
+                    MessageBox.Show("Select the loan that is overdue!");
+                }
+                else
+                {
+                    frmIssueSanction frmIssueSanction = new frmIssueSanction(choosedLoan);
+                    frmIssueSanction.ShowDialog();
+                }
             }
         }
     }
