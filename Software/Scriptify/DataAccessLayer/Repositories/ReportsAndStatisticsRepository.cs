@@ -25,29 +25,24 @@ namespace DataAccessLayer.Repositories
         public IQueryable<Book> GetTopBooks(int librarianId)
         {
 
-            var sql = (from loan in Entities
-                       join book in Context.Books on loan.idBook equals book.idBook
-                       join libraryBook in Context.Library_has_Books on book.idBook equals libraryBook.Books_idBook
-                       join library in Context.Librarians on libraryBook.Library_idLibrary equals library.Library_idLibrary
-                       where library.idLibrarians == librarianId
-                       group loan by new { book.idBook, book.book_name, book.overview, book.author, book.genre } into g
-                       select new Book
-                       {
+            var loans = from loan in Entities
+                        join book in Context.Library_has_Books on loan.idBook equals book.Books_idBook
+                        join library in Context.Librarians on book.Library_idLibrary equals library.Library_idLibrary
+                        where library.idLibrarians == librarianId
+                        select loan;
 
-                           idBook = g.Key.idBook,
-                           book_name = g.Key.book_name,
-                           overview = g.Key.overview,
-                           author = g.Key.author,
-                           genre = g.Key.genre,
+            var bookIds = loans.Select(loan => loan.idBook);
 
-                       })
-        .Take(10);
+            var books = (from book in Context.Books
+                         where bookIds.Contains(book.idBook)
+                         select book);
 
-            return sql;
+        
+            return books;
         }
         public void Dispose()
         {
-            throw new NotImplementedException();
+            Context.Dispose();
         }
     }
 }

@@ -46,13 +46,12 @@
             // dgvStatistics
             // 
             this.dgvStatistics.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStatistics.Location = new System.Drawing.Point(30, 81);
+            this.dgvStatistics.Location = new System.Drawing.Point(17, 66);
             this.dgvStatistics.Name = "dgvStatistics";
             this.dgvStatistics.RowHeadersWidth = 51;
             this.dgvStatistics.RowTemplate.Height = 24;
-            this.dgvStatistics.Size = new System.Drawing.Size(543, 260);
+            this.dgvStatistics.Size = new System.Drawing.Size(707, 283);
             this.dgvStatistics.TabIndex = 1;
-            this.dgvStatistics.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStatistics_CellContentClick);
             // 
             // UcReportsAndStatistics
             // 
@@ -62,6 +61,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UcReportsAndStatistics";
             this.Size = new System.Drawing.Size(740, 441);
+            this.Load += new System.EventHandler(this.UcReportsAndStatistics_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStatistics)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

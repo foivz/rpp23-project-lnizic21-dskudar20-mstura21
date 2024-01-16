@@ -25,14 +25,20 @@ namespace Scriptify
 
         }
 
-        private void dgvStatistics_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void UcReportsAndStatistics_Load(object sender, EventArgs e)
         {
             ShowStatistics();
-        }
 
+        }
         private void ShowStatistics()
         {
-            dgvStatistics.DataSource = reportsAndStatisticsService.GetTopBooks(user.idLibrarians);
+            List<Book> topBooks = reportsAndStatisticsService.GetTopBooks(user.idLibrarians);
+            dgvStatistics.DataSource = topBooks;
+
+            dgvStatistics.Columns["Users"].Visible = false;
+            dgvStatistics.Columns["Library_has_Books"].Visible = false;
+            dgvStatistics.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+
     }
 }
