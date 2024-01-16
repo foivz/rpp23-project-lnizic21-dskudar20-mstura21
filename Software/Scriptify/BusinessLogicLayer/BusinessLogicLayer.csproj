@@ -45,6 +45,7 @@
     <Compile Include="BookManagmentService.cs" />
     <Compile Include="LoanHistoryAndSanctionsService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportsAndServicesService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
