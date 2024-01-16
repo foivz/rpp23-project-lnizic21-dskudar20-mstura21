@@ -1,4 +1,5 @@
-﻿using EntityLayer;
+﻿using DataAccessLayer.Iznimke;
+using EntityLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -69,11 +70,28 @@ namespace Scriptify
             }
             else
             {
-                var totalAmount = Convert.ToDouble(txtAmount.Text) * Convert.ToDouble(txtDays.Text);
+                try
+                {
+                    Validation(txtAmount.Text);
+                    var totalAmount = Convert.ToDouble(txtAmount.Text) * Convert.ToDouble(txtDays.Text);
+                    txtTotal.Text = totalAmount.ToString();
+                }
+                catch (IssueSanctionException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
 
-                txtTotal.Text = totalAmount.ToString();
+                
             }
             
+        }
+
+        private void Validation(string text)
+        {
+            if (text.Any(char.IsLetter))
+            {
+                throw new IssueSanctionException("Please enter the number!");
+            }
         }
 
         private void btnSanction_Click(object sender, EventArgs e)
