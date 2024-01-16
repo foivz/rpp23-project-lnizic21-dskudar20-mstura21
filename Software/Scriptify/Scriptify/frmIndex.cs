@@ -90,5 +90,12 @@ namespace Scriptify
             uc_LoanHistoryAndSanctions uc_LoanHistoryAndSanctions = new uc_LoanHistoryAndSanctions(loggedInUser);
             panelControls.Controls.Add(uc_LoanHistoryAndSanctions);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panelControls.Controls.Clear();
+            UcReportsAndStatistics ucReportsAndStatistics = new UcReportsAndStatistics(loggedInUser);
+            panelControls.Controls.Add(ucReportsAndStatistics);
+        }
     }
 }

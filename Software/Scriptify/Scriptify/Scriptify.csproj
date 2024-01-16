@@ -112,6 +112,12 @@
     <Compile Include="UcLoans.Designer.cs">
       <DependentUpon>UcLoans.cs</DependentUpon>
     </Compile>
+    <Compile Include="UcReportsAndStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcReportsAndStatistics.Designer.cs">
+      <DependentUpon>UcReportsAndStatistics.cs</DependentUpon>
+    </Compile>
     <Compile Include="uc_LoanHistoryAndSanctions.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UcLoans.resx">
       <DependentUpon>UcLoans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcReportsAndStatistics.resx">
+      <DependentUpon>UcReportsAndStatistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uc_LoanHistoryAndSanctions.resx">
       <DependentUpon>uc_LoanHistoryAndSanctions.cs</DependentUpon>
@@ -207,6 +216,7 @@
     <Content Include="Images\loansbook.png" />
     <Content Include="Images\loansicon.png" />
     <Content Include="Images\logouticon.png" />
+    <Content Include="Images\statisticsicon.png" />
     <Content Include="Images\usericon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
