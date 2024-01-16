@@ -257,7 +257,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(60, 312);
+            this.button1.Location = new System.Drawing.Point(57, 312);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 32);
             this.button1.TabIndex = 21;
@@ -268,9 +268,9 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(13, 312);
+            this.pictureBox8.Location = new System.Drawing.Point(17, 312);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(41, 42);
+            this.pictureBox8.Size = new System.Drawing.Size(32, 32);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 22;
             this.pictureBox8.TabStop = false;
