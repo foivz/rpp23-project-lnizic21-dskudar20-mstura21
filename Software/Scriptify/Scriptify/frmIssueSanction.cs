@@ -70,10 +70,18 @@ namespace Scriptify
             }
             else
             {
-                Validation(txtAmount.Text);
-                var totalAmount = Convert.ToDouble(txtAmount.Text) * Convert.ToDouble(txtDays.Text);
+                try
+                {
+                    Validation(txtAmount.Text);
+                    var totalAmount = Convert.ToDouble(txtAmount.Text) * Convert.ToDouble(txtDays.Text);
+                    txtTotal.Text = totalAmount.ToString();
+                }
+                catch (IssueSanctionException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
 
-                txtTotal.Text = totalAmount.ToString();
+                
             }
             
         }
