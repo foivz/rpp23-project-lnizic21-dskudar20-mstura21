@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer
 {
-    public class ReportsAndServicesService
+    public class ReportsAndStatisticsService
     {
         public List<Book> GetTopBooks(int librarianId)
         {

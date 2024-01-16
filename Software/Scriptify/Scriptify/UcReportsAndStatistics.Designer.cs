@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.dgvStatistics = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStatistics)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -41,13 +43,26 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Reports and statistics";
             // 
+            // dgvStatistics
+            // 
+            this.dgvStatistics.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStatistics.Location = new System.Drawing.Point(30, 81);
+            this.dgvStatistics.Name = "dgvStatistics";
+            this.dgvStatistics.RowHeadersWidth = 51;
+            this.dgvStatistics.RowTemplate.Height = 24;
+            this.dgvStatistics.Size = new System.Drawing.Size(543, 260);
+            this.dgvStatistics.TabIndex = 1;
+            this.dgvStatistics.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStatistics_CellContentClick);
+            // 
             // UcReportsAndStatistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dgvStatistics);
             this.Controls.Add(this.label1);
             this.Name = "UcReportsAndStatistics";
             this.Size = new System.Drawing.Size(740, 441);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStatistics)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -56,5 +71,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvStatistics;
     }
 }
