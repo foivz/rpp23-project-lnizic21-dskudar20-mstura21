@@ -59,7 +59,6 @@ namespace Scriptify {
         {
             if (e.ColumnIndex == dgvLoanHistoryAndSanctions.Columns["loan_status"].Index && e.RowIndex >= 0)
             {
-
                 string statusValue = dgvLoanHistoryAndSanctions[e.ColumnIndex, e.RowIndex].Value.ToString();
 
                 if (statusValue.Equals("Late", StringComparison.OrdinalIgnoreCase))
