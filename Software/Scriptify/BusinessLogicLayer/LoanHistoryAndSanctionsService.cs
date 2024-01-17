@@ -17,5 +17,16 @@ namespace BusinessLogicLayer
                 return repo.GetAllExpiredLoans(librarianId).ToList();
             }
         }
+        
+        public bool IssueSanction(Loan loan)
+        {
+            bool isSuccessful = false;
+            using (var repo = new LoanHistoryAndSanctionRepository())
+            {
+                int affectedRow = repo.IssueSanction(loan);
+                isSuccessful = affectedRow > 0;
+            }
+            return isSuccessful;
+        }
     }
 }
