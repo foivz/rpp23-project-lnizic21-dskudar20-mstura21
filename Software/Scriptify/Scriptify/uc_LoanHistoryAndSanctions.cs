@@ -30,6 +30,8 @@ namespace Scriptify {
         {
             List<Loan> loans = loanHistoryAndSanctionsService.GetAllExpiredLoans(user.idLibrarians);
             dgvLoanHistoryAndSanctions.DataSource = loans;
+            dgvLoanHistoryAndSanctions.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
         }
 
         private void btnSanction_Click(object sender, EventArgs e)
@@ -49,6 +51,19 @@ namespace Scriptify {
                 {
                     frmIssueSanction frmIssueSanction = new frmIssueSanction(choosedLoan);
                     frmIssueSanction.ShowDialog();
+                }
+            }
+        }
+
+        private void dgvLoanHistoryAndSanctions_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == dgvLoanHistoryAndSanctions.Columns["loan_status"].Index && e.RowIndex >= 0)
+            {
+                string statusValue = dgvLoanHistoryAndSanctions[e.ColumnIndex, e.RowIndex].Value.ToString();
+
+                if (statusValue.Equals("Late", StringComparison.OrdinalIgnoreCase))
+                {
+                    dgvLoanHistoryAndSanctions.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Red;
                 }
             }
         }

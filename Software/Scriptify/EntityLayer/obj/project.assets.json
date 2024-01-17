@@ -152,11 +152,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\David\\source\\repos\\rpp23-projekt\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
+      "projectUniqueName": "C:\\Users\\David\\source\\repos\\RPP-projekt\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
       "projectName": "EntityLayer",
-      "projectPath": "C:\\Users\\David\\source\\repos\\rpp23-projekt\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
+      "projectPath": "C:\\Users\\David\\source\\repos\\RPP-projekt\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
       "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\David\\source\\repos\\rpp23-projekt\\Software\\Scriptify\\EntityLayer\\obj\\",
+      "outputPath": "C:\\Users\\David\\source\\repos\\RPP-projekt\\Software\\Scriptify\\EntityLayer\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
