@@ -51,6 +51,7 @@ namespace Scriptify {
                 {
                     frmIssueSanction frmIssueSanction = new frmIssueSanction(choosedLoan);
                     frmIssueSanction.ShowDialog();
+
                 }
             }
         }
@@ -64,6 +65,10 @@ namespace Scriptify {
                 if (statusValue.Equals("Late", StringComparison.OrdinalIgnoreCase))
                 {
                     dgvLoanHistoryAndSanctions.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Red;
+                }
+                else if (statusValue.Equals("Sanction issued", StringComparison.OrdinalIgnoreCase))
+                {
+                    dgvLoanHistoryAndSanctions.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Yellow;
                 }
             }
         }

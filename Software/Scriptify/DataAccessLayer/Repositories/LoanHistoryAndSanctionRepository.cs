@@ -38,17 +38,19 @@ namespace DataAccessLayer.Repositories
 
         public int IssueSanction(Loan loan, bool saveChanges = true)
         {
-            var sql = from e in Entities
-                      where e == loan
-                      select loan;
-            Loan loanToUpdate = sql.FirstOrDefault();
-            loanToUpdate.loan_status = "Sanction issued";
+            var existingLoan = Entities.FirstOrDefault(e => e.idUser == loan.idUser && e.book_id == loan.book_id);
 
-            if (saveChanges)
+            if (existingLoan != null)
             {
-                return SaveChanges();
+                existingLoan.loan_status = "Sanction issued";
+
+                if (saveChanges)
+                {
+                    return SaveChanges();
+                }
             }
-            else return 0;
+
+            return 0;
         }
         public void Dispose()
         {

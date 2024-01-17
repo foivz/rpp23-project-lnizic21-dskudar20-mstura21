@@ -36,16 +36,12 @@ namespace DataAccessLayer.Repositories
             List<int> bookIds = loans.Select(loan => loan.book_id).ToList();
 
 
-            /* var books = ((from book in Context.Books
-                           where bookIds.Contains(book.idBook)
-                           select book)
+            var books = ((from book in Context.Books
+                          where bookIds.Contains(book.idBook)
+                          select book)
               .AsEnumerable()
               .OrderByDescending(book => bookIds.Count(id => id == book.idBook)))
-             .AsQueryable()*/
-
-            var books = from book in Context.Books
-                        where bookIds.Contains(book.idBook)
-                        select book;
+             .AsQueryable();
 
             return books;
 

@@ -105,8 +105,8 @@ namespace Scriptify
             {
                 var service = new LoanHistoryAndSanctionsService();
                 service.IssueSanction(loan);
-
                 MessageBox.Show("Sanction issued!");
+
                 Close();
             }
         }
