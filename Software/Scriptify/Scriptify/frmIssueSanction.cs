@@ -1,4 +1,5 @@
-﻿using DataAccessLayer.Iznimke;
+﻿using BusinessLogicLayer;
+using DataAccessLayer.Iznimke;
 using EntityLayer;
 using System;
 using System.Collections.Generic;
@@ -102,6 +103,9 @@ namespace Scriptify
             }
             else
             {
+                var service = new LoanHistoryAndSanctionsService();
+                service.IssueSanction(loan);
+
                 MessageBox.Show("Sanction issued!");
                 Close();
             }

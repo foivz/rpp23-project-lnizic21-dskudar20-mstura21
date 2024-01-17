@@ -33,9 +33,22 @@ namespace DataAccessLayer.Repositories
                         where library.idLibrarians == librarianId && loan.planned_return <= today
                         select loan;
 
-
-
             return loans;
+        }
+
+        public int IssueSanction(Loan loan, bool saveChanges = true)
+        {
+            var sql = from e in Entities
+                      where e == loan
+                      select loan;
+            Loan loanToUpdate = sql.FirstOrDefault();
+            loanToUpdate.loan_status = "Sanction issued";
+
+            if (saveChanges)
+            {
+                return SaveChanges();
+            }
+            else return 0;
         }
         public void Dispose()
         {
