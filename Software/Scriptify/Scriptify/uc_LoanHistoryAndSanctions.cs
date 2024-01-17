@@ -43,7 +43,7 @@ namespace Scriptify {
             }
             else
             {
-                if(choosedLoan.loan_status == "Completed")
+                if(choosedLoan.loan_status == "Completed" || choosedLoan.loan_status == "Sanction issued")
                 {
                     MessageBox.Show("Please select the loan that is overdue!");
                 }
@@ -62,13 +62,17 @@ namespace Scriptify {
             {
                 string statusValue = dgvLoanHistoryAndSanctions[e.ColumnIndex, e.RowIndex].Value.ToString();
 
-                if (statusValue.Equals("Late", StringComparison.OrdinalIgnoreCase))
+                if (statusValue.Equals("In progress", StringComparison.OrdinalIgnoreCase))
                 {
                     dgvLoanHistoryAndSanctions.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Red;
                 }
                 else if (statusValue.Equals("Sanction issued", StringComparison.OrdinalIgnoreCase))
                 {
                     dgvLoanHistoryAndSanctions.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Yellow;
+                }
+                else if (statusValue.Equals("Completed", StringComparison.OrdinalIgnoreCase))
+                {
+                    dgvLoanHistoryAndSanctions.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Green;
                 }
             }
         }
