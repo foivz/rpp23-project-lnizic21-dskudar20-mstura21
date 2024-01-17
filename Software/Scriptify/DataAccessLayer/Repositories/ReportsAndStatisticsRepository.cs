@@ -25,20 +25,31 @@ namespace DataAccessLayer.Repositories
         public IQueryable<Book> GetTopBooks(int librarianId)
         {
 
-            var loans = from loan in Entities
-                        join book in Context.Library_has_Books on loan.idBook equals book.Books_idBook
+            DateTime today = DateTime.Now.Date;
+
+            var loans = from loan in Context.Loans
+                        join book in Context.Library_has_Books on loan.book_id equals book.Books_idBook
                         join library in Context.Librarians on book.Library_idLibrary equals library.Library_idLibrary
-                        where library.idLibrarians == librarianId
+                        where library.idLibrarians == librarianId && loan.planned_return <= today
                         select loan;
 
-            var bookIds = loans.Select(loan => loan.idBook);
+            List<int> bookIds = loans.Select(loan => loan.book_id).ToList();
 
-            var books = (from book in Context.Books
-                         where bookIds.Contains(book.idBook)
-                         select book);
 
-        
+            /* var books = ((from book in Context.Books
+                           where bookIds.Contains(book.idBook)
+                           select book)
+              .AsEnumerable()
+              .OrderByDescending(book => bookIds.Count(id => id == book.idBook)))
+             .AsQueryable()*/
+
+            var books = from book in Context.Books
+                        where bookIds.Contains(book.idBook)
+                        select book;
+
             return books;
+
+          
         }
         public void Dispose()
         {
