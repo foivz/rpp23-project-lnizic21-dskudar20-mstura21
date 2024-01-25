@@ -49,8 +49,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,6 +63,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="frmAdd_EditBooks.cs">
@@ -118,6 +122,12 @@
     <Compile Include="UcReportsAndStatistics.Designer.cs">
       <DependentUpon>UcReportsAndStatistics.cs</DependentUpon>
     </Compile>
+    <Compile Include="uc_LoanHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_LoanHistory.Designer.cs">
+      <DependentUpon>uc_LoanHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="uc_LoanHistoryAndSanctions.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -160,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UcReportsAndStatistics.resx">
       <DependentUpon>UcReportsAndStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_LoanHistory.resx">
+      <DependentUpon>uc_LoanHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uc_LoanHistoryAndSanctions.resx">
       <DependentUpon>uc_LoanHistoryAndSanctions.cs</DependentUpon>

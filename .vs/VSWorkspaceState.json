@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Documentation",
+    "\\Software",
+    "\\Software\\Scriptify"
   ],
-  "SelectedNode": "\\Scriptify.sln",
+  "SelectedNode": "\\Software\\Scriptify\\Scriptify.sln",
   "PreviewInSolutionExplorer": false
 }
