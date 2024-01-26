@@ -130,6 +130,12 @@
     <Compile Include="uc_LoanHistoryAndSanctions.Designer.cs">
       <DependentUpon>uc_LoanHistoryAndSanctions.cs</DependentUpon>
     </Compile>
+    <Compile Include="uc_Reservation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Reservation.Designer.cs">
+      <DependentUpon>uc_Reservation.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmAdd_EditBooks.resx">
       <DependentUpon>frmAdd_EditBooks.cs</DependentUpon>
     </EmbeddedResource>
