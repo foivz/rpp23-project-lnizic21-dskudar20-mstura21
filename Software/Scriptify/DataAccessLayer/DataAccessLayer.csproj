@@ -61,6 +61,7 @@
     <Compile Include="Repositories\LoanHistoryAndSanctionRepository.cs" />
     <Compile Include="Repositories\PendingLoansRepository.cs" />
     <Compile Include="Repositories\ReportsAndStatisticsRepository.cs" />
+    <Compile Include="Repositories\ReservationsRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">
