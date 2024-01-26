@@ -49,7 +49,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.txtBookReturn = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -287,15 +287,15 @@
             this.label2.TabIndex = 23;
             this.label2.Text = "Reservations";
             // 
-            // label5
+            // txtBookReturn
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(39, 407);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(143, 29);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Book return";
-           
+            this.txtBookReturn.AutoSize = true;
+            this.txtBookReturn.Location = new System.Drawing.Point(39, 407);
+            this.txtBookReturn.Name = "txtBookReturn";
+            this.txtBookReturn.Size = new System.Drawing.Size(143, 29);
+            this.txtBookReturn.TabIndex = 24;
+            this.txtBookReturn.Text = "Book return";
+            this.txtBookReturn.Click += new System.EventHandler(this.txtBookReturn_Click);
             // 
             // frmIndex
             // 
@@ -303,7 +303,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1350, 720);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtBookReturn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.button1);
@@ -364,6 +364,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label txtBookReturn;
     }
 }

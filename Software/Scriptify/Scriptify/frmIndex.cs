@@ -98,6 +98,12 @@ namespace Scriptify
             panelControls.Controls.Add(ucReportsAndStatistics);
         }
 
-       
+        private void txtBookReturn_Click(object sender, EventArgs e)
+        {
+            panelControls.Controls.Clear();
+            uc_LoanHistory uc_LoanHistory = new uc_LoanHistory(loggedInUser);
+            panelControls.Controls.Add(uc_LoanHistory);
+
+        }
     }
 }
