@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories
 {
-    public class LoanHistory :IDisposable
+    public class LoanHistoryRepository :IDisposable
     {
         public EntityModels Context { get; set; }
         public DbSet<Loan> Entities { get; set; }
 
-        public LoanHistory()
+        public LoanHistoryRepository()
         {
             Context = new EntityModels();
             Entities = Context.Set<Loan>();
