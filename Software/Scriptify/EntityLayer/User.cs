@@ -12,6 +12,7 @@ namespace EntityLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
+            loans_of_books = new HashSet<loans_of_books>();
             Reservations = new HashSet<Reservation>();
             user_has_Library_has_Books = new HashSet<user_has_Library_has_Books>();
             Books = new HashSet<Book>();
@@ -40,6 +41,9 @@ namespace EntityLayer
 
         [StringLength(45)]
         public string Last_Name { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<loans_of_books> loans_of_books { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Reservation> Reservations { get; set; }

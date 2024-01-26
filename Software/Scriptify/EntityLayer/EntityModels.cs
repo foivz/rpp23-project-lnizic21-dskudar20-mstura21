@@ -3,27 +3,24 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 
-namespace EntityLayer
-{
-    public partial class EntityModels : DbContext
-    {
+namespace EntityLayer {
+    public partial class EntityModels : DbContext {
         public EntityModels()
-            : base("name=EntityModels1")
-        {
+            : base("name=EntityModels") {
         }
 
         public virtual DbSet<Book> Books { get; set; }
         public virtual DbSet<Librarian> Librarians { get; set; }
         public virtual DbSet<Library> Libraries { get; set; }
         public virtual DbSet<Library_has_Books> Library_has_Books { get; set; }
+        public virtual DbSet<loans_of_books> loans_of_books { get; set; }
         public virtual DbSet<Reservation> Reservations { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<user_has_Library_has_Books> user_has_Library_has_Books { get; set; }
         public virtual DbSet<Loan> Loans { get; set; }
         public virtual DbSet<Reservation_Projection> Reservation_Projection { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
+        protected override void OnModelCreating(DbModelBuilder modelBuilder) {
             modelBuilder.Entity<Book>()
                 .Property(e => e.book_name)
                 .IsUnicode(false);
@@ -99,6 +96,12 @@ namespace EntityLayer
                 .HasForeignKey(e => e.Library_has_Books_library_has_books_id)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<Library_has_Books>()
+                .HasMany(e => e.loans_of_books)
+                .WithOptional(e => e.Library_has_Books)
+                .HasForeignKey(e => e.library_book_id)
+                .WillCascadeOnDelete();
+
             modelBuilder.Entity<User>()
                 .Property(e => e.username)
                 .IsUnicode(false);
@@ -118,6 +121,12 @@ namespace EntityLayer
             modelBuilder.Entity<User>()
                 .Property(e => e.Last_Name)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.loans_of_books)
+                .WithOptional(e => e.User)
+                .HasForeignKey(e => e.user_id)
+                .WillCascadeOnDelete();
 
             modelBuilder.Entity<User>()
                 .HasMany(e => e.Reservations)

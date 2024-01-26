@@ -33,7 +33,7 @@ namespace DataAccessLayer.Repositories
                         where library.idLibrarians == librarianId && loan.planned_return <= today
                         select loan;
 
-            List<int> bookIds = loans.Select(loan => loan.book_id).ToList();
+            List<int?> bookIds = loans.Select(loan => loan.book_id).ToList();
 
 
             var books = ((from book in Context.Books

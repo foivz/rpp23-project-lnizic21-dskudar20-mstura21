@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLogicLayer;
+using EntityLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +14,18 @@ namespace Scriptify
 {
     public partial class UcLoans : UserControl
     {
-        public UcLoans()
+        private Librarian Lib;
+        public UcLoans(Librarian librarian)
         {
             InitializeComponent();
+            this.Lib = librarian;
         }
 
         private void UcLoans_Load(object sender, EventArgs e)
         {
-
+            var pending = new PendingLoansService();
+            dgvPendingLoans.DataSource = pending.GetAllPendingLoans(Lib.idLibrarians);
+            dgvPendingLoans.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
     }
 }

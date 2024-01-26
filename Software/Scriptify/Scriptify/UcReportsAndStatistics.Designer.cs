@@ -38,41 +38,45 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(267, 0);
+            this.label1.Location = new System.Drawing.Point(200, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(278, 29);
+            this.label1.Size = new System.Drawing.Size(218, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Reports and statistics";
             // 
             // dgvStatistics
             // 
             this.dgvStatistics.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStatistics.Location = new System.Drawing.Point(17, 66);
+            this.dgvStatistics.Location = new System.Drawing.Point(13, 54);
+            this.dgvStatistics.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvStatistics.Name = "dgvStatistics";
             this.dgvStatistics.RowHeadersWidth = 51;
             this.dgvStatistics.RowTemplate.Height = 24;
-            this.dgvStatistics.Size = new System.Drawing.Size(707, 133);
+            this.dgvStatistics.Size = new System.Drawing.Size(405, 121);
             this.dgvStatistics.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(12, 38);
+            this.label2.Location = new System.Drawing.Point(9, 31);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 25);
+            this.label2.Size = new System.Drawing.Size(117, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Top 10 books";
             // 
             // UcReportsAndStatistics
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvStatistics);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UcReportsAndStatistics";
-            this.Size = new System.Drawing.Size(740, 433);
+            this.Size = new System.Drawing.Size(555, 352);
             this.Load += new System.EventHandler(this.UcReportsAndStatistics_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStatistics)).EndInit();
             this.ResumeLayout(false);

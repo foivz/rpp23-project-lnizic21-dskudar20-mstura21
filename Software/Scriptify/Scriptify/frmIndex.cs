@@ -40,7 +40,7 @@ namespace Scriptify
         private void btnLoans_Click(object sender, EventArgs e)
         {
             panelControls.Controls.Clear();
-            UcLoans ucLoans = new UcLoans();
+            UcLoans ucLoans = new UcLoans(loggedInUser);
             panelControls.Controls.Add(ucLoans);
         }
 

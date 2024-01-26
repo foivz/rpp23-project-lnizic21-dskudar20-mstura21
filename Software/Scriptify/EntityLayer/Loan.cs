@@ -34,6 +34,6 @@ namespace EntityLayer
         [StringLength(45)]
         public string loan_status { get; set; }
 
-        public int book_id { get; set; }
+        public int? book_id { get; set; }
     }
 }
