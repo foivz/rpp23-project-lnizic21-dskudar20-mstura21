@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataAccessLayer.Repositories;
+using EntityLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +8,27 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer
 {
-    internal class ReservationService
+    public class ReservationService
     {
+
+        public List<Reservation_Projection> GetReservations(int librarianId)
+        {
+            using (var repo = new ReservationsRepository())
+            {
+                return repo.GetReservations(librarianId).ToList();
+            }
+        }
+
+        public bool AcceptReservation(Reservation_Projection reservation)
+        {
+            bool isAccepted = false;
+            using (var repo = new ReservationsRepository())
+            {
+                int affectedRow = repo.ReservationAccepted(reservation);
+                isAccepted = affectedRow > 0;
+            }
+            return isAccepted;
+        }
+
     }
 }
