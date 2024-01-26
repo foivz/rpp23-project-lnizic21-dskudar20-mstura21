@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Documentation",
+    "\\Software",
+    "\\Software\\Scriptify",
+    "\\Software\\Scriptify\\DataAccessLayer",
+    "\\Software\\Scriptify\\DataAccessLayer\\Repositories",
+    "\\Software\\Scriptify\\Scriptify"
   ],
-  "SelectedNode": "\\Scriptify.sln",
+  "SelectedNode": "\\Software\\Scriptify\\DataAccessLayer",
   "PreviewInSolutionExplorer": false
 }
