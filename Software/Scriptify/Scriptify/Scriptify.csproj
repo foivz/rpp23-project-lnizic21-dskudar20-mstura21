@@ -118,6 +118,12 @@
     <Compile Include="UcReportsAndStatistics.Designer.cs">
       <DependentUpon>UcReportsAndStatistics.cs</DependentUpon>
     </Compile>
+    <Compile Include="uc_LoanHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_LoanHistory.Designer.cs">
+      <DependentUpon>uc_LoanHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="uc_LoanHistoryAndSanctions.cs">
       <SubType>UserControl</SubType>
     </Compile>
