@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories { 
     
-    public class PendingLoansRepository {
+    public class PendingLoansRepository  : IDisposable {
        private EntityModels Context { get; set; }
     private DbSet<Loan> Entities { get; set; }
 public PendingLoansRepository() {
@@ -27,6 +27,10 @@ public PendingLoansRepository() {
 
         return loans;
     }
+
+        public void Dispose() {
+            Context.Dispose();
+        }
     }
    
 }
