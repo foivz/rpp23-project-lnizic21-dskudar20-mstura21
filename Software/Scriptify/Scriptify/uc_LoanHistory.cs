@@ -16,5 +16,10 @@ namespace Scriptify
         {
             InitializeComponent();
         }
+
+        private void btnEvidentiraj_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

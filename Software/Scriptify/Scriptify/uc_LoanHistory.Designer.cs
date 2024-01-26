@@ -28,10 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.dgvLoanHistory = new System.Windows.Forms.DataGridView();
+            this.btnEvidentiraj = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLoanHistory)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgvLoanHistory
+            // 
+            this.dgvLoanHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLoanHistory.Location = new System.Drawing.Point(63, 101);
+            this.dgvLoanHistory.Name = "dgvLoanHistory";
+            this.dgvLoanHistory.RowHeadersWidth = 51;
+            this.dgvLoanHistory.RowTemplate.Height = 24;
+            this.dgvLoanHistory.Size = new System.Drawing.Size(758, 281);
+            this.dgvLoanHistory.TabIndex = 0;
+            // 
+            // btnEvidentiraj
+            // 
+            this.btnEvidentiraj.Location = new System.Drawing.Point(375, 430);
+            this.btnEvidentiraj.Name = "btnEvidentiraj";
+            this.btnEvidentiraj.Size = new System.Drawing.Size(110, 23);
+            this.btnEvidentiraj.TabIndex = 1;
+            this.btnEvidentiraj.Text = "Evidentiraj";
+            this.btnEvidentiraj.UseVisualStyleBackColor = true;
+            this.btnEvidentiraj.Click += new System.EventHandler(this.btnEvidentiraj_Click);
+            // 
+            // uc_LoanHistory
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnEvidentiraj);
+            this.Controls.Add(this.dgvLoanHistory);
+            this.Name = "uc_LoanHistory";
+            this.Size = new System.Drawing.Size(877, 534);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLoanHistory)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgvLoanHistory;
+        private System.Windows.Forms.Button btnEvidentiraj;
     }
 }

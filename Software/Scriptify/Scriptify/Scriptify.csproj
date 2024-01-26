@@ -167,6 +167,9 @@
     <EmbeddedResource Include="UcReportsAndStatistics.resx">
       <DependentUpon>UcReportsAndStatistics.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="uc_LoanHistory.resx">
+      <DependentUpon>uc_LoanHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="uc_LoanHistoryAndSanctions.resx">
       <DependentUpon>uc_LoanHistoryAndSanctions.cs</DependentUpon>
     </EmbeddedResource>
