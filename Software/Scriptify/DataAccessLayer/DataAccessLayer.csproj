@@ -59,6 +59,7 @@
     <Compile Include="Repositories\LibraryRepository.cs" />
     <Compile Include="Repositories\LoanHistoryAndSanctionRepository.cs" />
     <Compile Include="Repositories\ReportsAndStatisticsRepository.cs" />
+    <Compile Include="Repositories\ReservationsRepository.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
