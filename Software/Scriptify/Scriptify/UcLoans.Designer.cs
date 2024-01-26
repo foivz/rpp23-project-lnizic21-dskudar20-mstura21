@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvStatistics = new System.Windows.Forms.DataGridView();
+            this.dgvPendingLoans = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStatistics)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPendingLoans)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -45,16 +45,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Loans";
             // 
-            // dgvStatistics
+            // dgvPendingLoans
             // 
-            this.dgvStatistics.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStatistics.Location = new System.Drawing.Point(12, 60);
-            this.dgvStatistics.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvStatistics.Name = "dgvStatistics";
-            this.dgvStatistics.RowHeadersWidth = 51;
-            this.dgvStatistics.RowTemplate.Height = 24;
-            this.dgvStatistics.Size = new System.Drawing.Size(516, 231);
-            this.dgvStatistics.TabIndex = 2;
+            this.dgvPendingLoans.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPendingLoans.Location = new System.Drawing.Point(12, 60);
+            this.dgvPendingLoans.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvPendingLoans.Name = "dgvPendingLoans";
+            this.dgvPendingLoans.RowHeadersWidth = 51;
+            this.dgvPendingLoans.RowTemplate.Height = 24;
+            this.dgvPendingLoans.Size = new System.Drawing.Size(516, 231);
+            this.dgvPendingLoans.TabIndex = 2;
             // 
             // label2
             // 
@@ -72,13 +72,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgvStatistics);
+            this.Controls.Add(this.dgvPendingLoans);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UcLoans";
             this.Size = new System.Drawing.Size(604, 427);
             this.Load += new System.EventHandler(this.UcLoans_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStatistics)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPendingLoans)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -87,7 +87,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvStatistics;
+        private System.Windows.Forms.DataGridView dgvPendingLoans;
         private System.Windows.Forms.Label label2;
     }
 }

@@ -13,6 +13,7 @@ namespace EntityLayer
         {
             Reservations = new HashSet<Reservation>();
             user_has_Library_has_Books = new HashSet<user_has_Library_has_Books>();
+            loans_of_books = new HashSet<loans_of_books>();
         }
 
         [Key]
@@ -31,5 +32,8 @@ namespace EntityLayer
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<user_has_Library_has_Books> user_has_Library_has_Books { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<loans_of_books> loans_of_books { get; set; }
     }
 }

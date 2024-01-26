@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net48"
+          "net472"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -27,17 +27,17 @@
           "https://packagesource": {}
         },
         "frameworks": {
-          "net48": {
+          "net472": {
             "projectReferences": {}
           }
         }
       },
       "frameworks": {
-        "net48": {
+        "net472": {
           "dependencies": {
             "EntityFramework": {
               "target": "Package",
-              "version": "[6.4.4, )"
+              "version": "[6.2.0, )"
             }
           }
         }

@@ -53,7 +53,7 @@
       <Name>DataAccessLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">
-      <Project>{4847b12c-0654-43e6-b722-ee75f35bfe23}</Project>
+      <Project>{1ce3b6de-af47-4b4a-bcbf-42d2f5a8440c}</Project>
       <Name>EntityLayer</Name>
     </ProjectReference>
   </ItemGroup>
