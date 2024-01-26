@@ -48,7 +48,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtReservation = new System.Windows.Forms.Label();
             this.txtBookReturn = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -278,14 +278,15 @@
             this.pictureBox8.TabIndex = 22;
             this.pictureBox8.TabStop = false;
             // 
-            // label2
+            // txtReservation
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 364);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 29);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Reservations";
+            this.txtReservation.AutoSize = true;
+            this.txtReservation.Location = new System.Drawing.Point(33, 364);
+            this.txtReservation.Name = "txtReservation";
+            this.txtReservation.Size = new System.Drawing.Size(161, 29);
+            this.txtReservation.TabIndex = 23;
+            this.txtReservation.Text = "Reservations";
+            this.txtReservation.Click += new System.EventHandler(this.txtReservation_Click);
             // 
             // txtBookReturn
             // 
@@ -304,7 +305,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1350, 720);
             this.Controls.Add(this.txtBookReturn);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtReservation);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox7);
@@ -363,7 +364,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label txtReservation;
         private System.Windows.Forms.Label txtBookReturn;
     }
 }
