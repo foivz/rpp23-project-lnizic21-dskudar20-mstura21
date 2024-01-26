@@ -97,5 +97,7 @@ namespace Scriptify
             UcReportsAndStatistics ucReportsAndStatistics = new UcReportsAndStatistics(loggedInUser);
             panelControls.Controls.Add(ucReportsAndStatistics);
         }
+
+       
     }
 }

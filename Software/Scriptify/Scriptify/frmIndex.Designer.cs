@@ -48,6 +48,8 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -126,7 +128,7 @@
             this.btnLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnLogOut.Location = new System.Drawing.Point(56, 382);
+            this.btnLogOut.Location = new System.Drawing.Point(79, 468);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(103, 34);
             this.btnLogOut.TabIndex = 7;
@@ -149,7 +151,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 339);
+            this.label4.Location = new System.Drawing.Point(12, 436);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(195, 29);
             this.label4.TabIndex = 11;
@@ -220,7 +222,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(17, 382);
+            this.pictureBox6.Location = new System.Drawing.Point(21, 468);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(33, 34);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -276,12 +278,33 @@
             this.pictureBox8.TabIndex = 22;
             this.pictureBox8.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(33, 364);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(161, 29);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Reservations";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(39, 407);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(143, 29);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Book return";
+           
+            // 
             // frmIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1350, 720);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox7);
@@ -340,5 +363,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
     }
 }
