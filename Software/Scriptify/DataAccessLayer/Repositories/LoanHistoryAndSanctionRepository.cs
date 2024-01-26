@@ -14,8 +14,8 @@ namespace DataAccessLayer.Repositories
         public DbSet<Loan> Entities { get; set; }
         public LoanHistoryAndSanctionRepository()
         {
-            Context = new EntityModels();
-            Entities = Context.Set<Loan>();
+                Context = new EntityModels();
+                Entities = Context.Set<Loan>();
         }
 
         public int SaveChanges()
