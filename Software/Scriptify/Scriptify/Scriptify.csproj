@@ -134,6 +134,12 @@
     <Compile Include="uc_LoanHistoryAndSanctions.Designer.cs">
       <DependentUpon>uc_LoanHistoryAndSanctions.cs</DependentUpon>
     </Compile>
+    <Compile Include="uc_Reservation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Reservation.Designer.cs">
+      <DependentUpon>uc_Reservation.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmAdd_EditBooks.resx">
       <DependentUpon>frmAdd_EditBooks.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uc_LoanHistoryAndSanctions.resx">
       <DependentUpon>uc_LoanHistoryAndSanctions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Reservation.resx">
+      <DependentUpon>uc_Reservation.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

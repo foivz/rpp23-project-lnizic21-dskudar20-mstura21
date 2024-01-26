@@ -49,6 +49,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.txtLoans = new System.Windows.Forms.Label();
+            this.txtReservations = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -287,12 +288,23 @@
             this.txtLoans.Text = "Return Loans";
             this.txtLoans.Click += new System.EventHandler(this.txtLoans_Click);
             // 
+            // txtReservations
+            // 
+            this.txtReservations.AutoSize = true;
+            this.txtReservations.Location = new System.Drawing.Point(15, 490);
+            this.txtReservations.Name = "txtReservations";
+            this.txtReservations.Size = new System.Drawing.Size(161, 29);
+            this.txtReservations.TabIndex = 24;
+            this.txtReservations.Text = "Reservations";
+            this.txtReservations.Click += new System.EventHandler(this.txtReservations_Click);
+            // 
             // frmIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1350, 720);
+            this.Controls.Add(this.txtReservations);
             this.Controls.Add(this.txtLoans);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.button1);
@@ -353,5 +365,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label txtLoans;
+        private System.Windows.Forms.Label txtReservations;
     }
 }

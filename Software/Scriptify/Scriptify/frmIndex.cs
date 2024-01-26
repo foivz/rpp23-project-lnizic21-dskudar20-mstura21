@@ -105,5 +105,14 @@ namespace Scriptify
             panelControls.Controls.Add(uc_LoanHistory);
 
         }
+
+       
+
+        private void txtReservations_Click(object sender, EventArgs e)
+        {
+            panelControls.Controls.Clear();
+           uc_Reservation uc_Reservation = new uc_Reservation(loggedInUser);
+            panelControls.Controls.Add(uc_Reservation);
+        }
     }
 }
