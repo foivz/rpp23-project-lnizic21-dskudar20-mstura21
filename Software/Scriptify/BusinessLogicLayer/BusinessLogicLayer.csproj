@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AuthenticationService.cs" />
     <Compile Include="BookManagmentService.cs" />
+    <Compile Include="LoanHistoryService.cs" />
     <Compile Include="LoanHistoryAndSanctionsService.cs" />
     <Compile Include="PendingLoansService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
