@@ -48,6 +48,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.txtLoans = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -276,12 +277,23 @@
             this.pictureBox8.TabIndex = 22;
             this.pictureBox8.TabStop = false;
             // 
+            // txtLoans
+            // 
+            this.txtLoans.AutoSize = true;
+            this.txtLoans.Location = new System.Drawing.Point(12, 436);
+            this.txtLoans.Name = "txtLoans";
+            this.txtLoans.Size = new System.Drawing.Size(164, 29);
+            this.txtLoans.TabIndex = 23;
+            this.txtLoans.Text = "Return Loans";
+            this.txtLoans.Click += new System.EventHandler(this.txtLoans_Click);
+            // 
             // frmIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1350, 720);
+            this.Controls.Add(this.txtLoans);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox7);
@@ -340,5 +352,6 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label txtLoans;
     }
 }

@@ -56,7 +56,7 @@
             // 
             // btnEvidentiraj
             // 
-            this.btnEvidentiraj.Location = new System.Drawing.Point(360, 382);
+            this.btnEvidentiraj.Location = new System.Drawing.Point(361, 351);
             this.btnEvidentiraj.Name = "btnEvidentiraj";
             this.btnEvidentiraj.Size = new System.Drawing.Size(108, 34);
             this.btnEvidentiraj.TabIndex = 2;

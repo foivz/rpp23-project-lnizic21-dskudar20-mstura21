@@ -3,7 +3,9 @@
     "",
     "\\Documentation",
     "\\Software",
-    "\\Software\\Scriptify"
+    "\\Software\\Scriptify",
+    "\\Software\\Scriptify\\Unit_Tests\\DataAcessLayerTest",
+    "\\Software\\Scriptify\\Unit_Tests\\DataAcessLayerTest\\Repositories"
   ],
   "SelectedNode": "\\Software\\Scriptify\\Scriptify.sln",
   "PreviewInSolutionExplorer": false
