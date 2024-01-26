@@ -25,7 +25,18 @@ namespace Scriptify
 
         private void btnEvidentiraj_Click(object sender, EventArgs e)
         {
+            var choosedLoan = dgvLoanHistory.CurrentRow.DataBoundItem as Loan;
+            if (choosedLoan == null)
+            {
+                MessageBox.Show("Please select a loan that has been returned!");
+            } else
+            {
+                {
+                    loanHistoryAndSanctionsService.ReturnLoan(choosedLoan);
+                    dgvLoanHistory.DataSource =loanHistoryAndSanctionsService.GetLoansInProgress(user.idLibrarians);
 
+                }
+            }
         }
 
         private void uc_LoanHistory_Load(object sender, EventArgs e)
@@ -34,9 +45,9 @@ namespace Scriptify
         }
         private void ShowLoans()
         {
-            List<Loan> loans = loanHistoryAndSanctionsService.GetAllExpiredLoans(user.idLibrarians);
-            dgv = loans;
-            dgvLoanHistoryAndSanctions.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            List<Loan> loans = loanHistoryAndSanctionsService.GetLoansInProgress(user.idLibrarians);
+            dgvLoanHistory.DataSource = loans;
+            dgvLoanHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
         }
     }
