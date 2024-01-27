@@ -26,6 +26,7 @@ namespace BusinessLogicLayer
             {
                 int affectedRow = repo.ReservationAccepted(reservation);
                 isAccepted = affectedRow > 0;
+
             }
             return isAccepted;
         }

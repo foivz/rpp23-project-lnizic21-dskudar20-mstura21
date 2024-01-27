@@ -31,12 +31,21 @@ namespace DataAccessLayer.Repositories
             var reservations = from reservation in Entities
                               join book in Context.Library_has_Books on reservation.id_book equals book.Books_idBook
                               join library in Context.Librarians on book.Library_idLibrary equals library.Library_idLibrary
-                              where library.idLibrarians == librarianId
-                              select reservation;
-
+                               where library.idLibrarians == librarianId
+                               select reservation;
+           
+            foreach (var reservation in reservations)
+            {
+                Console.WriteLine($"Reservation ID: {reservation.id_user}, Book Name: {reservation.book_name}");
+            }
             return reservations;
         }
 
+        public void DeleteReservation(Reservation_Projection reservation)
+        {
+            Entities.Remove(reservation);
+            SaveChanges();
+        }
         public int ReservationAccepted(Reservation_Projection reservation, bool saveChanges = true)
         {
             var existingReservation = Entities.FirstOrDefault(e => e.id_user == reservation.id_user && e.id_book == reservation.id_book);
@@ -61,6 +70,7 @@ namespace DataAccessLayer.Repositories
 
                 Context.Set<Loan>().Add(newLoan);
 
+                DeleteReservation(existingReservation);
 
                 if (saveChanges)
                 {
