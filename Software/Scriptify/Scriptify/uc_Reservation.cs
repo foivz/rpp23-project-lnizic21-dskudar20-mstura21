@@ -24,10 +24,7 @@ namespace Scriptify
             reservationService = new ReservationService();
         }
 
-        private void uc_Reservation_Load(object sender, EventArgs e)
-        {
-            ShowReservations();
-        }
+       
 
         public void ShowReservations()
         {
@@ -56,7 +53,7 @@ namespace Scriptify
         }
 
         private void uc_Reservation_Load_1(object sender, EventArgs e) {
-
+            ShowReservations();
         }
     }
 }

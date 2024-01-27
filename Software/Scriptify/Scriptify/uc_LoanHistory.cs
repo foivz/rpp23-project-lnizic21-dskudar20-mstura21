@@ -39,16 +39,18 @@ namespace Scriptify
             }
         }
 
-        private void uc_LoanHistory_Load(object sender, EventArgs e)
-        {
-            ShowLoans();
-        }
+      
         private void ShowLoans()
         {
             List<Loan> loans = loanHistoryService.GetLoansInProgress(user.idLibrarians);
             dgvLoanHistory.DataSource = loans;
             dgvLoanHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+        }
+
+        private void uc_LoanHistory_Load_1(object sender, EventArgs e)
+        {
+            ShowLoans();
         }
     }
 }
