@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLogicLayer;
 using EntityLayer;
+using Patagames.Pdf;
+using Patagames.Pdf.Enums;
+
+using Patagames.Pdf.Net;
 
 namespace Scriptify
 {
@@ -16,6 +21,8 @@ namespace Scriptify
     {
         private AuthenticationService authenticationService;
         private Librarian loggedInUser = new Librarian();
+        
+
         public frmIndex(Librarian user)
         {
             InitializeComponent();
@@ -31,10 +38,24 @@ namespace Scriptify
             UcHomePage ucHomePage = new UcHomePage();
             panelControls.Controls.Add(ucHomePage);
         }
+        private void PdfLoader() {
+                using (var doc = PdfDocument.Load("sample.pdf")) {
+                var page = doc.Pages[0];
+                int width = (int)page.Width;
+                int height = (int)page.Height;
+
+                using (var bitmap = new PdfBitmap(width, height, true)) {
+                    bitmap.FillRect(0, 0, width, height, FS_COLOR.White);
+                    page.Render(bitmap, 0, 0, width, height, PageRotate.Normal, RenderFlags.FPDF_NONE);
+
+                    bitmap.GetImage().Save("sample.png", ImageFormat.Png);
+                }
+            }
+        }
 
         private void frmIndex_Load(object sender, EventArgs e)
         {
-             
+            PdfLoader();
         }
 
         private void btnLoans_Click(object sender, EventArgs e)
