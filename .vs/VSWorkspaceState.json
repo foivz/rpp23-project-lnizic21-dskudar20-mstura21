@@ -4,6 +4,7 @@
     "\\Documentation",
     "\\Software",
     "\\Software\\Scriptify",
+    "\\Software\\Scriptify\\BusinessLogicLayer",
     "\\Software\\Scriptify\\DataAccessLayer",
     "\\Software\\Scriptify\\DataAccessLayer\\Repositories",
     "\\Software\\Scriptify\\Scriptify"
