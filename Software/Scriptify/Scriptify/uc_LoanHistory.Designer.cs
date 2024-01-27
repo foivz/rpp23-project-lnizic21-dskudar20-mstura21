@@ -36,18 +36,20 @@
             // dgvLoanHistory
             // 
             this.dgvLoanHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLoanHistory.Location = new System.Drawing.Point(63, 101);
+            this.dgvLoanHistory.Location = new System.Drawing.Point(2, 2);
+            this.dgvLoanHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvLoanHistory.Name = "dgvLoanHistory";
             this.dgvLoanHistory.RowHeadersWidth = 51;
             this.dgvLoanHistory.RowTemplate.Height = 24;
-            this.dgvLoanHistory.Size = new System.Drawing.Size(758, 281);
+            this.dgvLoanHistory.Size = new System.Drawing.Size(465, 228);
             this.dgvLoanHistory.TabIndex = 0;
             // 
             // btnEvidentiraj
             // 
-            this.btnEvidentiraj.Location = new System.Drawing.Point(375, 430);
+            this.btnEvidentiraj.Location = new System.Drawing.Point(385, 234);
+            this.btnEvidentiraj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEvidentiraj.Name = "btnEvidentiraj";
-            this.btnEvidentiraj.Size = new System.Drawing.Size(110, 23);
+            this.btnEvidentiraj.Size = new System.Drawing.Size(82, 19);
             this.btnEvidentiraj.TabIndex = 1;
             this.btnEvidentiraj.Text = "Evidentiraj";
             this.btnEvidentiraj.UseVisualStyleBackColor = true;
@@ -55,12 +57,13 @@
             // 
             // uc_LoanHistory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnEvidentiraj);
             this.Controls.Add(this.dgvLoanHistory);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "uc_LoanHistory";
-            this.Size = new System.Drawing.Size(877, 534);
+            this.Size = new System.Drawing.Size(658, 434);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoanHistory)).EndInit();
             this.ResumeLayout(false);
 

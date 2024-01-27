@@ -112,5 +112,11 @@ namespace Scriptify
             uc_Reservation uc_Reservation = new uc_Reservation(loggedInUser);
             panelControls.Controls.Add(uc_Reservation);
         }
+
+        private void btnSAP_Click(object sender, EventArgs e) {
+            panelControls.Controls.Clear();
+            ucSAP ucSAP = new ucSAP(loggedInUser);
+            panelControls.Controls.Add(ucSAP);
+        }
     }
 }

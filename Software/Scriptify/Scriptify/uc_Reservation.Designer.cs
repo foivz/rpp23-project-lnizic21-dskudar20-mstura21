@@ -64,6 +64,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "uc_Reservation";
             this.Size = new System.Drawing.Size(674, 419);
+            this.Load += new System.EventHandler(this.uc_Reservation_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservation)).EndInit();
             this.ResumeLayout(false);
 

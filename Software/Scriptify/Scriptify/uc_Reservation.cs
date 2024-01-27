@@ -54,5 +54,9 @@ namespace Scriptify
                 }
             }
         }
+
+        private void uc_Reservation_Load_1(object sender, EventArgs e) {
+
+        }
     }
 }

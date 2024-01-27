@@ -51,7 +51,7 @@
             this.txtReservation = new System.Windows.Forms.Label();
             this.txtBookReturn = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSAP = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -315,18 +315,19 @@
             this.pictureBox9.TabIndex = 25;
             this.pictureBox9.TabStop = false;
             // 
-            // button2
+            // btnSAP
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(67, 472);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 66);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Scriptify Aprooved Program";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSAP.FlatAppearance.BorderSize = 0;
+            this.btnSAP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnSAP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSAP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnSAP.Location = new System.Drawing.Point(67, 472);
+            this.btnSAP.Name = "btnSAP";
+            this.btnSAP.Size = new System.Drawing.Size(98, 66);
+            this.btnSAP.TabIndex = 26;
+            this.btnSAP.Text = "Scriptify Aprooved Program";
+            this.btnSAP.UseVisualStyleBackColor = true;
+            this.btnSAP.Click += new System.EventHandler(this.btnSAP_Click);
             // 
             // pictureBox10
             // 
@@ -356,7 +357,7 @@
             this.ClientSize = new System.Drawing.Size(1350, 720);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSAP);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.txtBookReturn);
             this.Controls.Add(this.txtReservation);
@@ -424,7 +425,7 @@
         private System.Windows.Forms.Label txtReservation;
         private System.Windows.Forms.Label txtBookReturn;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSAP;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
     }
