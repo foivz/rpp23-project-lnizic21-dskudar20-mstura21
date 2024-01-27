@@ -40,18 +40,24 @@ namespace Scriptify
             panelControls.Controls.Add(ucHomePage);
         }
         private void PdfLoader() {
+            try {
                 using (var doc = PdfDocument.Load("sample.pdf")) {
-                var page = doc.Pages[0];
-                int width = (int)page.Width;
-                int height = (int)page.Height;
+                    var page = doc.Pages[0];
+                    int width = (int)page.Width;
+                    int height = (int)page.Height;
 
-                using (var bitmap = new PdfBitmap(width, height, true)) {
-                    bitmap.FillRect(0, 0, width, height, FS_COLOR.White);
-                    page.Render(bitmap, 0, 0, width, height, PageRotate.Normal, RenderFlags.FPDF_NONE);
+                    using (var bitmap = new PdfBitmap(width, height, true)) {
+                        bitmap.FillRect(0, 0, width, height, FS_COLOR.White);
+                        page.Render(bitmap, 0, 0, width, height, PageRotate.Normal, RenderFlags.FPDF_NONE);
 
-                    bitmap.GetImage().Save("sample.png", ImageFormat.Png);
+                        bitmap.GetImage().Save("sample.png", ImageFormat.Png);
+                    }
                 }
+            } catch (Exception e) {
+                MessageBox.Show("Nije unesen pdf", "Pdf Error", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
             }
+
+
         }
 
         private void frmIndex_Load(object sender, EventArgs e)
