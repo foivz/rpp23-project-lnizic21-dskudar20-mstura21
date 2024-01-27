@@ -150,8 +150,7 @@ namespace Scriptify
 
         private void frmIndex_KeyPress(object sender, KeyPressEventArgs e) {
             MessageBox.Show($"Key pressed: {e.KeyChar}", "KeyPress Event");
-            Help help = new Help();
-                help.ShowDialog();
+           
             
         }
     }
