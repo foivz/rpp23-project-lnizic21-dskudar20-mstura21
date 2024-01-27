@@ -234,7 +234,10 @@
     <Content Include="Images\loansbook.png" />
     <Content Include="Images\loansicon.png" />
     <Content Include="Images\logouticon.png" />
+    <Content Include="Images\reserved.png" />
+    <Content Include="Images\return-delivery.png" />
     <Content Include="Images\statisticsicon.png" />
+    <Content Include="Images\tick-icon.png" />
     <Content Include="Images\usericon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

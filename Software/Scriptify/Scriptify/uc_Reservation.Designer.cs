@@ -36,18 +36,20 @@
             // dgvReservation
             // 
             this.dgvReservation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReservation.Location = new System.Drawing.Point(93, 60);
+            this.dgvReservation.Location = new System.Drawing.Point(2, 2);
+            this.dgvReservation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvReservation.Name = "dgvReservation";
             this.dgvReservation.RowHeadersWidth = 51;
             this.dgvReservation.RowTemplate.Height = 24;
-            this.dgvReservation.Size = new System.Drawing.Size(712, 366);
+            this.dgvReservation.Size = new System.Drawing.Size(449, 180);
             this.dgvReservation.TabIndex = 0;
             // 
             // btnAccept
             // 
-            this.btnAccept.Location = new System.Drawing.Point(390, 450);
+            this.btnAccept.Location = new System.Drawing.Point(395, 186);
+            this.btnAccept.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(75, 23);
+            this.btnAccept.Size = new System.Drawing.Size(56, 19);
             this.btnAccept.TabIndex = 1;
             this.btnAccept.Text = "Accept";
             this.btnAccept.UseVisualStyleBackColor = true;
@@ -55,12 +57,13 @@
             // 
             // uc_Reservation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.dgvReservation);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "uc_Reservation";
-            this.Size = new System.Drawing.Size(898, 516);
+            this.Size = new System.Drawing.Size(674, 419);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservation)).EndInit();
             this.ResumeLayout(false);
 
