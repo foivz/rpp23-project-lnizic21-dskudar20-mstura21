@@ -28,18 +28,18 @@ namespace DataAccessLayer.Repositories
         public IQueryable<Reservation_Projection> GetReservations(int librarianId)
         {
 
-            var reservtions = from reservation in Entities
-                              join book in Context.Library_has_Books on reservation.book_id equals book.Books_idBook
+            var reservations = from reservation in Entities
+                              join book in Context.Library_has_Books on reservation.id_book equals book.Books_idBook
                               join library in Context.Librarians on book.Library_idLibrary equals library.Library_idLibrary
                               where library.idLibrarians == librarianId
                               select reservation;
 
-            return reservtions;
+            return reservations;
         }
 
         public int ReservationAccepted(Reservation_Projection reservation, bool saveChanges = true)
         {
-            var existingReservation = Entities.FirstOrDefault(e => e.id_user == reservation.id_user && e.book_id == reservation.book_id);
+            var existingReservation = Entities.FirstOrDefault(e => e.id_user == reservation.id_user && e.id_book == reservation.id_book);
 
             if (existingReservation != null)
             {
@@ -47,7 +47,7 @@ namespace DataAccessLayer.Repositories
                 Loan newLoan = new Loan
                 {
                     idUser = existingReservation.id_user,
-                    book_id = existingReservation.book_id,
+                    book_id = existingReservation.id_book,
                     date_of_loan = DateTime.Now,
                     loan_status = "In Progress",
                     planned_return = DateTime.Now.AddDays(7),

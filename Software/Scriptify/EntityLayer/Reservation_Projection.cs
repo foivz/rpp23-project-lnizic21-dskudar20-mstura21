@@ -24,6 +24,6 @@ namespace EntityLayer
         [StringLength(45)]
         public string last_name { get; set; }
 
-        public int? book_id { get; set; }
+        public int? id_book { get; set; }
     }
 }
