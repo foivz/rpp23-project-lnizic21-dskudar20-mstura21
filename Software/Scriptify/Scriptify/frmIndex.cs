@@ -30,6 +30,7 @@ namespace Scriptify
             this.loggedInUser = user;
             authenticationService = new AuthenticationService();
             OpenHomePage();
+            this.KeyPress += frmIndex_KeyPress;
         }
         
         private void OpenHomePage()
@@ -55,6 +56,7 @@ namespace Scriptify
 
         private void frmIndex_Load(object sender, EventArgs e)
         {
+            
             PdfLoader();
         }
 
@@ -138,6 +140,13 @@ namespace Scriptify
             panelControls.Controls.Clear();
             ucSAP ucSAP = new ucSAP(loggedInUser);
             panelControls.Controls.Add(ucSAP);
+        }
+
+        private void frmIndex_KeyPress(object sender, KeyPressEventArgs e) {
+            MessageBox.Show($"Key pressed: {e.KeyChar}", "KeyPress Event");
+            Help help = new Help();
+                help.ShowDialog();
+            
         }
     }
 }
