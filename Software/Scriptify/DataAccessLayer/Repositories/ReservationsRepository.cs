@@ -60,7 +60,7 @@ namespace DataAccessLayer.Repositories
                     date_of_loan = DateTime.Now,
                     loan_status = "In Progress",
                     planned_return = DateTime.Now.AddDays(7),
-
+                    book_name = existingReservation.book_name,
                     username = existingReservation.username,
                     first_name = existingReservation.first_name,
                     last_name = existingReservation.last_name,
