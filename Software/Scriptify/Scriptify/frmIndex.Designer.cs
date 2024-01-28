@@ -48,12 +48,12 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.txtReservation = new System.Windows.Forms.Label();
-            this.txtBookReturn = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.btnSAP = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.btnReservations = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -110,7 +110,7 @@
             this.labelUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelUser.Location = new System.Drawing.Point(1160, 22);
             this.labelUser.Name = "labelUser";
-            this.labelUser.Size = new System.Drawing.Size(0, 20);
+            this.labelUser.Size = new System.Drawing.Size(0, 25);
             this.labelUser.TabIndex = 5;
             // 
             // btnHomePage
@@ -150,7 +150,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(62, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 29);
+            this.label3.Size = new System.Drawing.Size(104, 36);
             this.label3.TabIndex = 9;
             this.label3.Text = "Books";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -160,7 +160,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(30, 541);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 25);
+            this.label4.Size = new System.Drawing.Size(195, 29);
             this.label4.TabIndex = 11;
             this.label4.Text = "_____________";
             // 
@@ -191,7 +191,7 @@
             this.label1.ForeColor = System.Drawing.Color.Purple;
             this.label1.Location = new System.Drawing.Point(627, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 30);
+            this.label1.Size = new System.Drawing.Size(156, 37);
             this.label1.TabIndex = 14;
             this.label1.Text = "Scriptify";
             // 
@@ -285,26 +285,6 @@
             this.pictureBox8.TabIndex = 22;
             this.pictureBox8.TabStop = false;
             // 
-            // txtReservation
-            // 
-            this.txtReservation.AutoSize = true;
-            this.txtReservation.Location = new System.Drawing.Point(62, 365);
-            this.txtReservation.Name = "txtReservation";
-            this.txtReservation.Size = new System.Drawing.Size(125, 25);
-            this.txtReservation.TabIndex = 23;
-            this.txtReservation.Text = "Reservations";
-            this.txtReservation.Click += new System.EventHandler(this.txtReservation_Click);
-            // 
-            // txtBookReturn
-            // 
-            this.txtBookReturn.AutoSize = true;
-            this.txtBookReturn.Location = new System.Drawing.Point(62, 423);
-            this.txtBookReturn.Name = "txtBookReturn";
-            this.txtBookReturn.Size = new System.Drawing.Size(112, 25);
-            this.txtBookReturn.TabIndex = 24;
-            this.txtBookReturn.Text = "Book return";
-            this.txtBookReturn.Click += new System.EventHandler(this.txtBookReturn_Click);
-            // 
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
@@ -349,18 +329,46 @@
             this.pictureBox11.TabIndex = 28;
             this.pictureBox11.TabStop = false;
             // 
+            // btnReservations
+            // 
+            this.btnReservations.FlatAppearance.BorderSize = 0;
+            this.btnReservations.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnReservations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReservations.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnReservations.Location = new System.Drawing.Point(67, 365);
+            this.btnReservations.Name = "btnReservations";
+            this.btnReservations.Size = new System.Drawing.Size(118, 32);
+            this.btnReservations.TabIndex = 29;
+            this.btnReservations.Text = "Reservations";
+            this.btnReservations.UseVisualStyleBackColor = true;
+            this.btnReservations.Click += new System.EventHandler(this.btnReservations_Click);
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.FlatAppearance.BorderSize = 0;
+            this.btnReturn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnReturn.Location = new System.Drawing.Point(60, 426);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(118, 32);
+            this.btnReturn.TabIndex = 30;
+            this.btnReturn.Text = "Book return";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
             // frmIndex
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1350, 720);
+            this.Controls.Add(this.btnReturn);
+            this.Controls.Add(this.btnReservations);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.btnSAP);
             this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.txtBookReturn);
-            this.Controls.Add(this.txtReservation);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox7);
@@ -423,11 +431,11 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Label txtReservation;
-        private System.Windows.Forms.Label txtBookReturn;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Button btnSAP;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.Button btnReservations;
+        private System.Windows.Forms.Button btnReturn;
     }
 }

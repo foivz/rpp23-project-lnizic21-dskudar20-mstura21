@@ -127,20 +127,7 @@ namespace Scriptify
             panelControls.Controls.Add(ucReportsAndStatistics);
         }
 
-        private void txtBookReturn_Click(object sender, EventArgs e)
-        {
-            panelControls.Controls.Clear();
-            uc_LoanHistory uc_LoanHistory = new uc_LoanHistory(loggedInUser);
-            panelControls.Controls.Add(uc_LoanHistory);
-
-        }
-
-        private void txtReservation_Click(object sender, EventArgs e)
-        {
-            panelControls.Controls.Clear();
-            uc_Reservation uc_Reservation = new uc_Reservation(loggedInUser);
-            panelControls.Controls.Add(uc_Reservation);
-        }
+        
 
         private void btnSAP_Click(object sender, EventArgs e) {
             panelControls.Controls.Clear();
@@ -152,6 +139,20 @@ namespace Scriptify
             MessageBox.Show($"Key pressed: {e.KeyChar}", "KeyPress Event");
            
             
+        }
+
+        private void btnReservations_Click(object sender, EventArgs e)
+        {
+            panelControls.Controls.Clear();
+            uc_Reservation uc_Reservation = new uc_Reservation(loggedInUser);
+            panelControls.Controls.Add(uc_Reservation);
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            panelControls.Controls.Clear();
+            uc_LoanHistory uc_LoanHistory = new uc_LoanHistory(loggedInUser);
+            panelControls.Controls.Add(uc_LoanHistory);
         }
     }
 }
