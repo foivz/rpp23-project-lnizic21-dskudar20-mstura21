@@ -42,7 +42,7 @@
             this.dgvLoanHistory.Name = "dgvLoanHistory";
             this.dgvLoanHistory.RowHeadersWidth = 51;
             this.dgvLoanHistory.RowTemplate.Height = 24;
-            this.dgvLoanHistory.Size = new System.Drawing.Size(852, 282);
+            this.dgvLoanHistory.Size = new System.Drawing.Size(726, 282);
             this.dgvLoanHistory.TabIndex = 0;
             // 
             // btnEvidentiraj

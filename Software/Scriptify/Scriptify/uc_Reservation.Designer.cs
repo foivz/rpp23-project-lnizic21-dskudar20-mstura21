@@ -42,7 +42,7 @@
             this.dgvReservation.Name = "dgvReservation";
             this.dgvReservation.RowHeadersWidth = 51;
             this.dgvReservation.RowTemplate.Height = 24;
-            this.dgvReservation.Size = new System.Drawing.Size(868, 222);
+            this.dgvReservation.Size = new System.Drawing.Size(716, 222);
             this.dgvReservation.TabIndex = 0;
             // 
             // btnAccept
