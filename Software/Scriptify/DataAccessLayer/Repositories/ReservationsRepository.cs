@@ -36,7 +36,12 @@ namespace DataAccessLayer.Repositories
            
             foreach (var reservation in reservations)
             {
-                Console.WriteLine($"Reservation ID: {reservation.id_user}, Book Name: {reservation.book_name}");
+                Book matchingBook = Context.Books.FirstOrDefault(p => p.idBook == reservation.id_book);
+
+                if (matchingBook != null)
+                {
+                    reservation.book_name = matchingBook.book_name;
+                }
             }
             return reservations;
         }

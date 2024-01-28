@@ -33,6 +33,15 @@ namespace DataAccessLayer.Repositories
                         where library.idLibrarians == librarianId && loan.loan_status == "In progress"
                         select loan;
 
+            foreach (var loan in loans)
+            {
+                Book matchingBook = Context.Books.FirstOrDefault(p => p.idBook == loan.book_id);
+
+                if (matchingBook != null)
+                {
+                    loan.book_name = matchingBook.book_name;
+                }
+            }
             return loans;
         }
 
