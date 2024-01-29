@@ -31,5 +31,16 @@ namespace BusinessLogicLayer
             return isAccepted;
         }
 
+        public bool DeleteReservation(Reservation_Projection reservation)
+        {
+            bool isDeleted = false;
+            using (var repo = new ReservationsRepository())
+            {
+                int affectedRow = repo.DeleteReservation(reservation);
+                isDeleted = affectedRow > 0;
+
+            }
+            return isDeleted;
+        }
     }
 }

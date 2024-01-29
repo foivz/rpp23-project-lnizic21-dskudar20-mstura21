@@ -58,7 +58,19 @@ namespace Scriptify
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            var choosedLoan = dgvReservation.CurrentRow.DataBoundItem as Reservation_Projection;
+            if (choosedLoan == null)
+            {
+                MessageBox.Show("Please select a reservation!");
+            } else
+            {
+                {
+                    reservationService.DeleteReservation(choosedLoan);
+                    List<Reservation_Projection> reservations = reservationService.GetReservations(user.idLibrarians);
+                    dgvReservation.DataSource = reservations;
 
+                }
+            }
         }
     }
-}
+  }
