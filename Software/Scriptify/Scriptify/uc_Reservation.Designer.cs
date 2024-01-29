@@ -33,26 +33,8 @@ namespace Scriptify
         {
             this.dgvReservation = new System.Windows.Forms.DataGridView();
             this.btnAccept = new System.Windows.Forms.Button();
-            btnAccept.FlatStyle = FlatStyle.Flat;
-            btnAccept.BackColor = Color.FromArgb(46, 204, 113); 
-            btnAccept.ForeColor = Color.White;
-            btnAccept.Font = new Font("Segoe UI", 12, FontStyle.Bold);
-            btnAccept.FlatAppearance.BorderSize = 1;
-            btnAccept.Cursor = Cursors.Hand;
-            btnAccept.FlatAppearance.MouseOverBackColor = Color.FromArgb(39, 174, 96); 
-            btnAccept.Size = new Size(150, 40);
-            btnAccept.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             this.label1 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
-            btnDelete.FlatStyle = FlatStyle.Flat;
-            btnDelete.BackColor = Color.FromArgb(231, 76, 60); 
-            btnDelete.ForeColor = Color.White;
-            btnDelete.Font = new Font("Segoe UI", 12, FontStyle.Bold);
-            btnDelete.FlatAppearance.BorderSize = 1;
-            btnDelete.Cursor = Cursors.Hand;
-            btnDelete.FlatAppearance.MouseOverBackColor = Color.FromArgb(192, 57, 43); 
-            btnDelete.Size = new Size(150, 40);
-            btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservation)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,6 +53,13 @@ namespace Scriptify
             // 
             // btnAccept
             // 
+            this.btnAccept.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAccept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.btnAccept.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAccept.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccept.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAccept.ForeColor = System.Drawing.Color.White;
             this.btnAccept.Location = new System.Drawing.Point(519, 298);
             this.btnAccept.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAccept.Name = "btnAccept";
@@ -84,7 +73,7 @@ namespace Scriptify
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(345, 16);
+            this.label1.Location = new System.Drawing.Point(260, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(173, 29);
             this.label1.TabIndex = 3;
@@ -92,6 +81,13 @@ namespace Scriptify
             // 
             // btnDelete
             // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Location = new System.Drawing.Point(617, 298);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";

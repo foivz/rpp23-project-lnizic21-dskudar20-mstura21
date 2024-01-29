@@ -32,29 +32,33 @@
             // 
             this.lblSAP.AutoSize = true;
             this.lblSAP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblSAP.Location = new System.Drawing.Point(106, 12);
-            this.lblSAP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSAP.Location = new System.Drawing.Point(260, 0);
             this.lblSAP.Name = "lblSAP";
-            this.lblSAP.Size = new System.Drawing.Size(276, 25);
+            this.lblSAP.Size = new System.Drawing.Size(349, 29);
             this.lblSAP.TabIndex = 3;
             this.lblSAP.Text = "Scriptify Aprooved Program";
             // 
             // dgvSAP
             // 
+            this.dgvSAP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvSAP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSAP.Location = new System.Drawing.Point(3, 40);
+            this.dgvSAP.Location = new System.Drawing.Point(4, 49);
+            this.dgvSAP.Margin = new System.Windows.Forms.Padding(4);
             this.dgvSAP.Name = "dgvSAP";
-            this.dgvSAP.Size = new System.Drawing.Size(366, 188);
+            this.dgvSAP.RowHeadersWidth = 51;
+            this.dgvSAP.Size = new System.Drawing.Size(612, 229);
             this.dgvSAP.TabIndex = 4;
             // 
             // ucSAP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgvSAP);
             this.Controls.Add(this.lblSAP);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucSAP";
-            this.Size = new System.Drawing.Size(484, 327);
+            this.Size = new System.Drawing.Size(645, 402);
             this.Load += new System.EventHandler(this.ucSAP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSAP)).EndInit();
             this.ResumeLayout(false);

@@ -33,17 +33,6 @@ namespace Scriptify
         {
             this.dgvLoanHistory = new System.Windows.Forms.DataGridView();
             this.btnEvidentiraj = new System.Windows.Forms.Button();
-            btnEvidentiraj.FlatStyle = FlatStyle.Flat;
-            btnEvidentiraj.BackColor = Color.FromArgb(41, 128, 185);
-            btnEvidentiraj.ForeColor = Color.White;
-            btnEvidentiraj.Font = new Font("Segoe UI", 12, FontStyle.Bold);
-            btnEvidentiraj.FlatAppearance.BorderSize = 1;
-            btnEvidentiraj.Cursor = Cursors.Hand;
-            btnEvidentiraj.FlatAppearance.MouseOverBackColor = Color.FromArgb(52, 152, 219);
-            btnEvidentiraj.Size = new Size(150, 40);
-            btnEvidentiraj.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-
-
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoanHistory)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +53,13 @@ namespace Scriptify
             // 
             // btnEvidentiraj
             // 
+            this.btnEvidentiraj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEvidentiraj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnEvidentiraj.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEvidentiraj.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnEvidentiraj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEvidentiraj.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEvidentiraj.ForeColor = System.Drawing.Color.White;
             this.btnEvidentiraj.Location = new System.Drawing.Point(516, 343);
             this.btnEvidentiraj.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEvidentiraj.Name = "btnEvidentiraj";
@@ -77,7 +73,7 @@ namespace Scriptify
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(354, 0);
+            this.label1.Location = new System.Drawing.Point(260, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(234, 29);
             this.label1.TabIndex = 2;
