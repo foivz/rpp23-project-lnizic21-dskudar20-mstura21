@@ -47,6 +47,8 @@ namespace Scriptify
                     reservationService.AcceptReservation(choosedLoan);
                     List<Reservation_Projection> reservations = reservationService.GetReservations(user.idLibrarians);
                     dgvReservation.DataSource = reservations;
+                    MessageBox.Show("Reservation accepted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
                 }
             }
@@ -68,6 +70,7 @@ namespace Scriptify
                     reservationService.DeleteReservation(choosedLoan);
                     List<Reservation_Projection> reservations = reservationService.GetReservations(user.idLibrarians);
                     dgvReservation.DataSource = reservations;
+                    MessageBox.Show("Successful deletion!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
             }
