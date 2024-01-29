@@ -25,8 +25,7 @@ namespace Scriptify {
         private void PdfLoader() {
             try {
                 string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-                string pdfFilePath = Path.Combine(baseDirectory, "sample.pdf");
-                
+                string pdfFilePath = Path.Combine(baseDirectory+"/Help", "sample.pdf");
 
                 if (File.Exists(pdfFilePath)) {
                     using (var doc = PdfDocument.Load(pdfFilePath)) {
@@ -44,7 +43,7 @@ namespace Scriptify {
                         }
                     }
                 } else {
-                    MessageBox.Show(baseDirectory, "Pdf Error", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                    MessageBox.Show(pdfFilePath, "Pdf Error", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
                 }
             } catch (Exception e) {
                 MessageBox.Show("Error loading PDF: " + e.Message, "Pdf Error", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
