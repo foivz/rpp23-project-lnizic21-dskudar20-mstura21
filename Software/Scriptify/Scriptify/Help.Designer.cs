@@ -39,7 +39,7 @@
             // 
             this.pc_help.Location = new System.Drawing.Point(2, 1);
             this.pc_help.Name = "pc_help";
-            this.pc_help.Size = new System.Drawing.Size(1115, 638);
+            this.pc_help.Size = new System.Drawing.Size(911, 979);
             this.pc_help.TabIndex = 0;
             this.pc_help.TabStop = false;
             // 
@@ -47,7 +47,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 639);
+            this.ClientSize = new System.Drawing.Size(914, 979);
             this.Controls.Add(this.pc_help);
             this.MaximizeBox = false;
             this.Name = "Help";

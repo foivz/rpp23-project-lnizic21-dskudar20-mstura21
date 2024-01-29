@@ -136,9 +136,56 @@ namespace Scriptify
         }
 
         private void frmIndex_KeyDown(object sender, KeyEventArgs e) {
+            Help help;
+            
             if (e.KeyCode == Keys.F1) {
-                Help help = new Help();
-                help.ShowDialog();
+                if (panelControls.Controls.Count > 0) {
+                    // Get the type of the first control in the panel
+                    Type currentControlType = panelControls.Controls[0].GetType();
+
+                    
+                    
+                    switch(currentControlType.FullName) {
+                        case "Scriptify.UcHomePage":
+                            help = new Help(0);
+                            help.ShowDialog();
+                            break;
+                        case "Scriptify.UcLoans":
+                            help = new Help(1);
+                            help.ShowDialog();
+                            break;
+                        case "Scriptify.UcCatalogOfBooks":
+                            help = new Help(2);
+                            help.ShowDialog();
+                            break;
+                        case "Scriptify.uc_LoanHistoryAndSanctions":
+                            help = new Help(3);
+                            help.ShowDialog();
+                            break;
+                        case "Scriptify.UcReportsAndStatistics":
+                            help = new Help(4);
+                            help.ShowDialog();
+                            break;
+                        case "Scriptify.ucSAP":
+                            help = new Help(7);
+                            help.ShowDialog();
+                            break;
+                        case "Scriptify.uc_Reservation":
+                            help = new Help(5);
+                            help.ShowDialog();
+                            break;
+                        case "Scriptify.uc_LoanHistory":
+                            help = new Help(6);
+                            help.ShowDialog();
+                            break;
+                        default:
+                            help = new Help(0);
+                            help.ShowDialog();
+                            break;
+                    }   
+                    
+                }
+                
             }
 
         }

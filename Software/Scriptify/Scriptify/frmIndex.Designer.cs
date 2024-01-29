@@ -305,7 +305,7 @@
             this.btnSAP.Name = "btnSAP";
             this.btnSAP.Size = new System.Drawing.Size(98, 66);
             this.btnSAP.TabIndex = 26;
-            this.btnSAP.Text = "Scriptify Aprooved Program";
+            this.btnSAP.Text = "Scriptify Approved Program";
             this.btnSAP.UseVisualStyleBackColor = true;
             this.btnSAP.Click += new System.EventHandler(this.btnSAP_Click);
             // 
