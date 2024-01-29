@@ -47,6 +47,33 @@ namespace DataAccessLayer.Repositories
 
           
         }
+
+        public IQueryable<User> GetTopUsers(int librarianId)
+        {
+
+            DateTime today = DateTime.Now.Date;
+
+            var loans = from loan in Context.Loans
+                        join book in Context.Library_has_Books on loan.book_id equals book.Books_idBook
+                        join library in Context.Librarians on book.Library_idLibrary equals library.Library_idLibrary
+                        where library.idLibrarians == librarianId && loan.planned_return <= today
+                        select loan;
+
+            List<int> userIds = loans.Select(loan => loan.idUser).ToList();
+
+
+            var users = ((from user in Context.Users
+                          where userIds.Contains(user.id_user)
+                          select user)
+              .AsEnumerable()
+              .OrderByDescending(user => userIds.Count(id => id == user.id_user)))
+             .AsQueryable();
+
+            return users;
+
+
+        }
+
         public void Dispose()
         {
             Context.Dispose();

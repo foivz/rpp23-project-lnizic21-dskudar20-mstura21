@@ -17,5 +17,12 @@ namespace BusinessLogicLayer
                 return repo.GetTopBooks(librarianId).ToList();
             }
         }
+        public List<User> GetTopUsers(int librarianId)
+        {
+            using (var repo = new ReportsAndStatisticsRepository())
+            {
+                return repo.GetTopUsers(librarianId).ToList();
+            }
+        }
     }
 }
