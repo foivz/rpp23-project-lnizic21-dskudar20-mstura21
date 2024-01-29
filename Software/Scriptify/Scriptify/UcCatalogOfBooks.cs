@@ -21,6 +21,7 @@ namespace Scriptify
         private string placeholderText = "Search books";
         private BindingSource bindingSource = new BindingSource();
         private Librarian user = new Librarian();
+        private DataGridViewStyler dataGridView = new DataGridViewStyler();
         public UcCatalogOfBooks(Librarian user)
         {
             InitializeComponent();
@@ -89,7 +90,7 @@ namespace Scriptify
 
             dgvBookManagment.Columns["Users"].Visible = false;
             dgvBookManagment.Columns["Library_has_Books"].Visible = false;
-
+            dataGridView.ChangeBooksHeaderUI(dgvBookManagment);
             dgvBookManagment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 

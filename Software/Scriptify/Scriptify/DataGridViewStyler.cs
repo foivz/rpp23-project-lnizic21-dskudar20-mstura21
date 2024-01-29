@@ -47,5 +47,21 @@ namespace Scriptify
             dgvPendingLoans.Columns["last_name"].HeaderText = "Last name";
             dgvPendingLoans.Columns["id_book"].HeaderText = "Book ID";
         }
+
+        public void ChangeBooksHeaderUI(DataGridView dgvPendingLoans)
+        {
+
+            dgvPendingLoans.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
+            dgvPendingLoans.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvPendingLoans.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dgvPendingLoans.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Regular);
+            dgvPendingLoans.EnableHeadersVisualStyles = false;
+
+            dgvPendingLoans.Columns["idBook"].HeaderText = "Book ID";
+            dgvPendingLoans.Columns["book_name"].HeaderText = "Book Name";
+            dgvPendingLoans.Columns["overview"].HeaderText = "Overview";
+            dgvPendingLoans.Columns["author"].HeaderText = "Author";
+            dgvPendingLoans.Columns["genre"].HeaderText = "Genre";
+        }
     }
 }
