@@ -44,7 +44,6 @@ namespace Scriptify
         {
             List<Loan> loans = loanHistoryService.GetLoansInProgress(user.idLibrarians);
             dgvLoanHistory.DataSource = loans;
-            dgvLoanHistory.Columns[1].DefaultCellStyle.SelectionBackColor = Color.Gray;
             ChangeHeaderUI();
             dgvLoanHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 

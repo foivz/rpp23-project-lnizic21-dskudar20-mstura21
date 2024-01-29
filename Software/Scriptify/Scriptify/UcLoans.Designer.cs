@@ -38,45 +38,45 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(265, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(353, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 25);
+            this.label1.Size = new System.Drawing.Size(87, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Loans";
             // 
             // dgvPendingLoans
             // 
+            this.dgvPendingLoans.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPendingLoans.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPendingLoans.Location = new System.Drawing.Point(12, 60);
-            this.dgvPendingLoans.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvPendingLoans.Location = new System.Drawing.Point(16, 74);
+            this.dgvPendingLoans.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvPendingLoans.Name = "dgvPendingLoans";
             this.dgvPendingLoans.RowHeadersWidth = 51;
             this.dgvPendingLoans.RowTemplate.Height = 24;
-            this.dgvPendingLoans.Size = new System.Drawing.Size(516, 231);
+            this.dgvPendingLoans.Size = new System.Drawing.Size(688, 284);
             this.dgvPendingLoans.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(20, 38);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(27, 47);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 20);
+            this.label2.Size = new System.Drawing.Size(149, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Pending loans";
             // 
             // UcLoans
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvPendingLoans);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UcLoans";
-            this.Size = new System.Drawing.Size(604, 427);
+            this.Size = new System.Drawing.Size(805, 526);
             this.Load += new System.EventHandler(this.UcLoans_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPendingLoans)).EndInit();
             this.ResumeLayout(false);
