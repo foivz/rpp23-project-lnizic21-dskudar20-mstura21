@@ -15,8 +15,10 @@ using System.IO;
 
 namespace Scriptify {
     public partial class Help : Form {
-        public Help() {
+        private int page { get; set; }
+        public Help(int page) {
             InitializeComponent();
+            this.page = page;   
         }
 
         private void Help_Load(object sender, EventArgs e) {
@@ -29,7 +31,7 @@ namespace Scriptify {
 
                 if (File.Exists(pdfFilePath)) {
                     using (var doc = PdfDocument.Load(pdfFilePath)) {
-                        var page = doc.Pages[0];
+                        var page = doc.Pages[this.page];
 
                         int width = (int)page.Width;
                         int height = (int)page.Height;
