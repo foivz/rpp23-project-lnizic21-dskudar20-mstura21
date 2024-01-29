@@ -16,6 +16,7 @@ namespace Scriptify
     {
         private Librarian user = new Librarian();
         private ReportsAndStatisticsService reportsAndStatisticsService;
+        private DataGridViewStyler GridViewStyler = new DataGridViewStyler();
 
         public UcReportsAndStatistics(Librarian user)
         {
@@ -61,6 +62,7 @@ namespace Scriptify
         {
             List<Book> topBooks = reportsAndStatisticsService.GetTopBooks(user.idLibrarians);
             dgvStatistics.DataSource = topBooks;
+            GridViewStyler.ChangeBooksHeaderUI(dgvStatistics);
 
             int visinaReda = dgvStatistics.RowTemplate.Height;
 
