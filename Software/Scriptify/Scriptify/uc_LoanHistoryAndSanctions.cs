@@ -15,6 +15,7 @@ namespace Scriptify {
 
         private LoanHistoryAndSanctionsService loanHistoryAndSanctionsService;
         private Librarian user = new Librarian();
+        private DataGridViewStyler dataGridView = new DataGridViewStyler();
         public uc_LoanHistoryAndSanctions(Librarian user) {
             InitializeComponent();
             this.user = user;
@@ -30,9 +31,11 @@ namespace Scriptify {
         {
             List<Loan> loans = loanHistoryAndSanctionsService.GetAllExpiredLoans(user.idLibrarians);
             dgvLoanHistoryAndSanctions.DataSource = loans;
+            dataGridView.ChangeHeaderUI(dgvLoanHistoryAndSanctions);
             dgvLoanHistoryAndSanctions.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
         }
+
 
         private void btnSanction_Click(object sender, EventArgs e)
         {

@@ -16,6 +16,7 @@ namespace Scriptify
     {
         private LoanHistoryService loanHistoryService;
         private Librarian user = new Librarian();
+        private DataGridViewStyler dataGridView = new DataGridViewStyler();
         public uc_LoanHistory(Librarian user)
         {
             InitializeComponent();
@@ -44,30 +45,8 @@ namespace Scriptify
         {
             List<Loan> loans = loanHistoryService.GetLoansInProgress(user.idLibrarians);
             dgvLoanHistory.DataSource = loans;
-            ChangeHeaderUI();
+            dataGridView.ChangeHeaderUI(dgvLoanHistory);
             dgvLoanHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-        }
-        private void ChangeHeaderUI()
-        {
-
-            dgvLoanHistory.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
-            dgvLoanHistory.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvLoanHistory.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dgvLoanHistory.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Regular);
-            dgvLoanHistory.EnableHeadersVisualStyles = false;
-
-            dgvLoanHistory.Columns["idUser"].HeaderText = "User ID";
-            dgvLoanHistory.Columns["username"].HeaderText = "Username";
-            dgvLoanHistory.Columns["username"].HeaderText = "Username";
-            dgvLoanHistory.Columns["book_name"].HeaderText = "Book name";
-            dgvLoanHistory.Columns["date_of_loan"].HeaderText = "Loan date";
-            dgvLoanHistory.Columns["planned_return"].HeaderText = "Return date";
-            dgvLoanHistory.Columns["first_name"].HeaderText = "First name";
-            dgvLoanHistory.Columns["last_name"].HeaderText = "Last name";
-            dgvLoanHistory.Columns["loan_status"].HeaderText = "Status";
-            dgvLoanHistory.Columns["book_id"].HeaderText = "Book ID";
-
 
         }
 

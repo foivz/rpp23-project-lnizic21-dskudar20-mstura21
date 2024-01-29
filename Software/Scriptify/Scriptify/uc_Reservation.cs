@@ -17,6 +17,7 @@ namespace Scriptify
 
         private ReservationService reservationService;
         private Librarian user = new Librarian();
+        private DataGridViewStyler dataGridView = new DataGridViewStyler();
         public uc_Reservation(Librarian user)
         {
             InitializeComponent();
@@ -31,6 +32,7 @@ namespace Scriptify
 
             List<Reservation_Projection> reservations = reservationService.GetReservations(user.idLibrarians);
             dgvReservation.DataSource = reservations;
+            dataGridView.ChangeReservationHeaderUI(dgvReservation);
             dgvReservation.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
