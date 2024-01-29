@@ -220,6 +220,9 @@
       <DependentUpon>uc_Reservation.cs</DependentUpon>
     </EmbeddedResource>
     <Content Include="Images\sample.pdf" />
+    <Content Include="Help\Home.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

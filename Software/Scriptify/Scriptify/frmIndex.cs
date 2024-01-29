@@ -136,7 +136,7 @@ namespace Scriptify
         }
 
         private void frmIndex_KeyDown(object sender, KeyEventArgs e) {
-            Help help
+            Help help;
             
             if (e.KeyCode == Keys.F1) {
                 if (panelControls.Controls.Count > 0) {
@@ -144,7 +144,7 @@ namespace Scriptify
                     Type currentControlType = panelControls.Controls[0].GetType();
 
                     
-                    MessageBox.Show("Current Control Type: " + currentControlType.FullName);
+                    
                     switch(currentControlType.FullName) {
                         case "Scriptify.UcHomePage":
                             help = new Help(0);

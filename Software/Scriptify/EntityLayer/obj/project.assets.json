@@ -160,11 +160,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\budal\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\mustr\\.nuget\\packages\\": {}
+>>>>>>> Dodani dimenzije za ispravni prikaz pdfa
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\budal\\Source\\Repos\\foivz\\rpp23-project-lnizic21-dskudar20-mstura21\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
       "projectName": "EntityLayer",
       "projectPath": "C:\\Users\\budal\\Source\\Repos\\foivz\\rpp23-project-lnizic21-dskudar20-mstura21\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
@@ -174,6 +179,17 @@
       "skipContentFileWrite": true,
       "configFilePaths": [
         "C:\\Users\\budal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\RPP_Projekt\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
+      "projectName": "EntityLayer",
+      "projectPath": "C:\\RPP_Projekt\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
+      "packagesPath": "C:\\Users\\mustr\\.nuget\\packages\\",
+      "outputPath": "C:\\RPP_Projekt\\Software\\Scriptify\\EntityLayer\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\mustr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Dodani dimenzije za ispravni prikaz pdfa
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -181,7 +197,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://packagesource": {}
       },
       "frameworks": {
         "net472": {
