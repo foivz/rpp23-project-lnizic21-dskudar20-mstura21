@@ -29,7 +29,7 @@ namespace Scriptify
 
         public void ShowReservations()
         {
-
+            var deletedReservations = reservationService.DeleteOldReservations(user.idLibrarians);
             List<Reservation_Projection> reservations = reservationService.GetReservations(user.idLibrarians);
             dgvReservation.DataSource = reservations;
             dataGridView.ChangeReservationHeaderUI(dgvReservation);

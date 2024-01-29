@@ -51,6 +51,7 @@ namespace Scriptify
             dgv.Columns["book_name"].HeaderText = "Book name";
             dgv.Columns["first_name"].HeaderText = "First name";
             dgv.Columns["last_name"].HeaderText = "Last name";
+            dgv.Columns["create_date"].HeaderText = "Date of creation";
             dgv.Columns["id_book"].HeaderText = "Book ID";
             dgv.Columns["id_book"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 

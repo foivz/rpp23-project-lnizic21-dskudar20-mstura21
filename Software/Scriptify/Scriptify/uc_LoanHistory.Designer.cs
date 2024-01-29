@@ -65,7 +65,7 @@ namespace Scriptify
             this.btnEvidentiraj.Name = "btnEvidentiraj";
             this.btnEvidentiraj.Size = new System.Drawing.Size(109, 23);
             this.btnEvidentiraj.TabIndex = 1;
-            this.btnEvidentiraj.Text = "Evidentiraj";
+            this.btnEvidentiraj.Text = "Approve";
             this.btnEvidentiraj.UseVisualStyleBackColor = true;
             this.btnEvidentiraj.Click += new System.EventHandler(this.btnEvidentiraj_Click);
             // 

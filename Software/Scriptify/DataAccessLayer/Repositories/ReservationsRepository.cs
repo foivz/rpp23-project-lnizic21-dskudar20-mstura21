@@ -46,6 +46,28 @@ namespace DataAccessLayer.Repositories
             return reservations;
         }
 
+
+        public IQueryable<Reservation_Projection> GetOldReservations(int librarianId)
+        {
+            var cutoffDate = DateTime.Now.AddDays(-30);
+            var reservations = from reservation in Entities
+                               join book in Context.Library_has_Books on reservation.id_book equals book.Books_idBook
+                               join library in Context.Librarians on book.Library_idLibrary equals library.Library_idLibrary
+                               where library.idLibrarians == librarianId && reservation.create_date <= cutoffDate
+                               select reservation;
+
+            foreach (var reservation in reservations)
+            {
+                Book matchingBook = Context.Books.FirstOrDefault(p => p.idBook == reservation.id_book);
+
+                if (matchingBook != null)
+                {
+                    reservation.book_name = matchingBook.book_name;
+                }
+            }
+            return reservations;
+        }
+
         public int DeleteReservation(Reservation_Projection reservation, bool saveChanges = true)
         {
             var existingReservation = Entities.FirstOrDefault(e => e.id_user == reservation.id_user && e.id_book == reservation.id_book);
