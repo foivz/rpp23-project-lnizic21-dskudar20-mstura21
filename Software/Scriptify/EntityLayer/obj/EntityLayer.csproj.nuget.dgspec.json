@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\budal\\Source\\Repos\\foivz\\rpp23-project-lnizic21-dskudar20-mstura21\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj": {}
   },
   "projects": {
@@ -16,6 +17,23 @@
         "skipContentFileWrite": true,
         "configFilePaths": [
           "C:\\Users\\budal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\David\\Source\\Repos\\rpp23-project-lnizic21-dskudar20-mstura21sds\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\David\\Source\\Repos\\rpp23-project-lnizic21-dskudar20-mstura21sds\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\David\\Source\\Repos\\rpp23-project-lnizic21-dskudar20-mstura21sds\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
+        "projectName": "EntityLayer",
+        "projectPath": "C:\\Users\\David\\Source\\Repos\\rpp23-project-lnizic21-dskudar20-mstura21sds\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
+        "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\David\\Source\\Repos\\rpp23-project-lnizic21-dskudar20-mstura21sds\\Software\\Scriptify\\EntityLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> d7186dee9548afb2b01907608b1790cfcef67c16
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,9 +61,6 @@
       },
       "runtimes": {
         "win": {
-          "#import": []
-        },
-        "win-arm64": {
           "#import": []
         },
         "win-x64": {

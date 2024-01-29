@@ -18,3 +18,13 @@ C:\Users\budal\Source\Repos\foivz\rpp23-project-lnizic21-dskudar20-mstura21\Soft
 C:\Users\budal\Source\Repos\foivz\rpp23-project-lnizic21-dskudar20-mstura21\Software\Scriptify\EntityLayer\obj\Debug\EntityLayer.csproj.CopyComplete
 C:\Users\budal\Source\Repos\foivz\rpp23-project-lnizic21-dskudar20-mstura21\Software\Scriptify\EntityLayer\obj\Debug\EntityLayer.dll
 C:\Users\budal\Source\Repos\foivz\rpp23-project-lnizic21-dskudar20-mstura21\Software\Scriptify\EntityLayer\obj\Debug\EntityLayer.pdb
+C:\Users\David\Source\Repos\rpp23-project-lnizic21-dskudar20-mstura21sds\Software\Scriptify\EntityLayer\bin\Debug\EntityLayer.dll.config
+C:\Users\David\Source\Repos\rpp23-project-lnizic21-dskudar20-mstura21sds\Software\Scriptify\EntityLayer\bin\Debug\EntityLayer.dll
+C:\Users\David\Source\Repos\rpp23-project-lnizic21-dskudar20-mstura21sds\Software\Scriptify\EntityLayer\bin\Debug\EntityLayer.pdb
+C:\Users\David\Source\Repos\rpp23-project-lnizic21-dskudar20-mstura21sds\Software\Scriptify\EntityLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\David\Source\Repos\rpp23-project-lnizic21-dskudar20-mstura21sds\Software\Scriptify\EntityLayer\bin\Debug\EntityFramework.dll
+C:\Users\David\Source\Repos\rpp23-project-lnizic21-dskudar20-mstura21sds\Software\Scriptify\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\David\Source\Repos\rpp23-project-lnizic21-dskudar20-mstura21sds\Software\Scriptify\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\David\Source\Repos\rpp23-project-lnizic21-dskudar20-mstura21sds\Software\Scriptify\EntityLayer\obj\Debug\EntityLayer.csproj.CopyComplete
+C:\Users\David\Source\Repos\rpp23-project-lnizic21-dskudar20-mstura21sds\Software\Scriptify\EntityLayer\obj\Debug\EntityLayer.dll
+C:\Users\David\Source\Repos\rpp23-project-lnizic21-dskudar20-mstura21sds\Software\Scriptify\EntityLayer\obj\Debug\EntityLayer.pdb
