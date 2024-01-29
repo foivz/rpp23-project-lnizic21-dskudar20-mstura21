@@ -55,5 +55,10 @@ namespace Scriptify
         private void uc_Reservation_Load_1(object sender, EventArgs e) {
             ShowReservations();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

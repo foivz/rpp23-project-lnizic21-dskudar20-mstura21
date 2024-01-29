@@ -1,4 +1,7 @@
-﻿namespace Scriptify
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace Scriptify
 {
     partial class uc_LoanHistory
     {
@@ -30,6 +33,17 @@
         {
             this.dgvLoanHistory = new System.Windows.Forms.DataGridView();
             this.btnEvidentiraj = new System.Windows.Forms.Button();
+            btnEvidentiraj.FlatStyle = FlatStyle.Flat;
+            btnEvidentiraj.BackColor = Color.FromArgb(41, 128, 185);
+            btnEvidentiraj.ForeColor = Color.White;
+            btnEvidentiraj.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            btnEvidentiraj.FlatAppearance.BorderSize = 1;
+            btnEvidentiraj.Cursor = Cursors.Hand;
+            btnEvidentiraj.FlatAppearance.MouseOverBackColor = Color.FromArgb(52, 152, 219);
+            btnEvidentiraj.Size = new Size(150, 40);
+            btnEvidentiraj.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+
+
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoanHistory)).BeginInit();
             this.SuspendLayout();
