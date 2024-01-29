@@ -26,7 +26,7 @@ namespace DataAccessLayer {
             group new { l2, lhb } by new { l2.idLibrary, l2.name } into grouped
             select new SAPData {
                 IdLibrary = grouped.Key.idLibrary,
-                name = grouped.Key.name,
+                Name = grouped.Key.name,
                 Loans = grouped.Count()
             };
             return query;

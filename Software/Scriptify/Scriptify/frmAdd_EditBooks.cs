@@ -46,6 +46,7 @@ namespace Scriptify {
                 txtGenre.Text = book.genre;
                 
             }
+            
         }
 
         private void btn_save_Click(object sender, EventArgs e) {
@@ -71,6 +72,7 @@ namespace Scriptify {
         }
 
         private void btn_add_Click(object sender, EventArgs e) {
+            if (CheckIfFormIsValid()) {
             BookManagmentService bookManagmentService = new BookManagmentService();
             Book book = new Book {
             book_name = txtBookName.Text,
@@ -88,7 +90,18 @@ namespace Scriptify {
                     Close();
                 }
             }
+            }
+           
 
+        }
+        private Boolean CheckIfFormIsValid() {
+            if (txtBookName.Text == "" || txtAuthor.Text == "" || txtDescription.Text == "" || txtGenre.Text == "") {
+                MessageBox.Show("Please fill all the fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+
+            } else {
+                return true;
+            }
         }
 
         protected virtual void OnBookAddedEvent() {

@@ -30,7 +30,7 @@ namespace DataAccessLayer.Repositories
             var loans = from loan in Entities
                         join book in Context.Library_has_Books on loan.book_id equals book.Books_idBook
                         join library in Context.Librarians on book.Library_idLibrary equals library.Library_idLibrary
-                        where library.idLibrarians == librarianId && loan.loan_status == "In progress"
+                        where library.idLibrarians == librarianId && loan.loan_status == "In Progress"
                         select loan;
 
             foreach (var loan in loans)

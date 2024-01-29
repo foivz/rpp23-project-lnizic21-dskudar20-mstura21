@@ -51,6 +51,7 @@
     <Compile Include="DataAcessLayerTest\Repositories\UserRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServicesTest\PendingLoanServiceTest.cs" />
+    <Compile Include="ServicesTest\SAPServicesTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="EntityFramework">
