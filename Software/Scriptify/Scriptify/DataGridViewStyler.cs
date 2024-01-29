@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace Scriptify
 {
+    //Tu piši stilove za datagridview
     public class DataGridViewStyler
     {
         public void ChangeHeaderUI(DataGridView dgv)
