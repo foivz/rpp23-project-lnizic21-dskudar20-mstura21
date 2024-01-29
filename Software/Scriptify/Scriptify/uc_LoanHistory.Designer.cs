@@ -36,6 +36,9 @@
             // 
             // dgvLoanHistory
             // 
+            this.dgvLoanHistory.AllowDrop = true;
+            this.dgvLoanHistory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvLoanHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLoanHistory.Location = new System.Drawing.Point(3, 43);
             this.dgvLoanHistory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

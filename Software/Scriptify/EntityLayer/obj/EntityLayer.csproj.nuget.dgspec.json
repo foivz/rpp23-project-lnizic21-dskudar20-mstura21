@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\RPP_Projekt\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj": {}
+    "C:\\Users\\budal\\Source\\Repos\\foivz\\rpp23-project-lnizic21-dskudar20-mstura21\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj": {}
   },
   "projects": {
-    "C:\\RPP_Projekt\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\budal\\Source\\Repos\\foivz\\rpp23-project-lnizic21-dskudar20-mstura21\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\RPP_Projekt\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\budal\\Source\\Repos\\foivz\\rpp23-project-lnizic21-dskudar20-mstura21\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\RPP_Projekt\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
-        "packagesPath": "C:\\Users\\mustr\\.nuget\\packages\\",
-        "outputPath": "C:\\RPP_Projekt\\Software\\Scriptify\\EntityLayer\\obj\\",
+        "projectPath": "C:\\Users\\budal\\Source\\Repos\\foivz\\rpp23-project-lnizic21-dskudar20-mstura21\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
+        "packagesPath": "C:\\Users\\budal\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\budal\\Source\\Repos\\foivz\\rpp23-project-lnizic21-dskudar20-mstura21\\Software\\Scriptify\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "C:\\Users\\mustr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\budal\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -23,8 +23,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://packagesource": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net472": {
