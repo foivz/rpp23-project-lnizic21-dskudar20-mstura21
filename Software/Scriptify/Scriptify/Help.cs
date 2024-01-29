@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Scriptify {
     public partial class Help : Form {
@@ -23,24 +24,33 @@ namespace Scriptify {
         }
         private void PdfLoader() {
             try {
-                using (var doc = PdfDocument.Load("sample.pdf")) {
-                    var page = doc.Pages[0];
-                    int width = (int)page.Width;
-                    int height = (int)page.Height;
+                string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+                string pdfFilePath = Path.Combine(baseDirectory, "sample.pdf");
+                
 
-                    using (var bitmap = new PdfBitmap(width, height, true)) {
-                        bitmap.FillRect(0, 0, width, height, FS_COLOR.White);
-                        page.Render(bitmap, 0, 0, width, height, PageRotate.Normal, RenderFlags.FPDF_NONE);
+                if (File.Exists(pdfFilePath)) {
+                    using (var doc = PdfDocument.Load(pdfFilePath)) {
+                        var page = doc.Pages[0];
 
-                        bitmap.GetImage().Save("sample.png", ImageFormat.Png);
-                        pc_help.ImageLocation = "sample.png";
+                        int width = (int)page.Width;
+                        int height = (int)page.Height;
+
+                        using (var bitmap = new PdfBitmap(width, height, true)) {
+                            bitmap.FillRect(0, 0, width, height, FS_COLOR.White);
+                            page.Render(bitmap, 0, 0, width, height, PageRotate.Normal, RenderFlags.FPDF_NONE);
+
+                            bitmap.GetImage().Save("sample.png", ImageFormat.Png);
+                            pc_help.ImageLocation = "sample.png";
+                        }
                     }
+                } else {
+                    MessageBox.Show(baseDirectory, "Pdf Error", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
                 }
             } catch (Exception e) {
-                MessageBox.Show("Nije unesen pdf", "Pdf Error", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                MessageBox.Show("Error loading PDF: " + e.Message, "Pdf Error", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
             }
-
-
         }
+
+
     }
 }
