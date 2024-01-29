@@ -35,6 +35,10 @@ namespace Scriptify
             List<Book> topBooks = reportsAndStatisticsService.GetTopBooks(user.idLibrarians);
             dgvStatistics.DataSource = topBooks;
 
+            int visinaReda = dgvStatistics.RowTemplate.Height;
+
+            dgvStatistics.Height = (dgvStatistics.Rows.Count+2) * visinaReda;
+
             dgvStatistics.Columns["Users"].Visible = false;
             dgvStatistics.Columns["Library_has_Books"].Visible = false;
             dgvStatistics.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
