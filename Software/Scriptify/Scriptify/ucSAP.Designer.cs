@@ -24,8 +24,8 @@
         /// </summary>
         private void InitializeComponent() {
             this.lblSAP = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvSAP = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSAP)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSAP
@@ -39,23 +39,24 @@
             this.lblSAP.TabIndex = 3;
             this.lblSAP.Text = "Scriptify Aprooved Program";
             // 
-            // dataGridView1
+            // dgvSAP
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 40);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(366, 188);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvSAP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSAP.Location = new System.Drawing.Point(3, 40);
+            this.dgvSAP.Name = "dgvSAP";
+            this.dgvSAP.Size = new System.Drawing.Size(366, 188);
+            this.dgvSAP.TabIndex = 4;
             // 
             // ucSAP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvSAP);
             this.Controls.Add(this.lblSAP);
             this.Name = "ucSAP";
             this.Size = new System.Drawing.Size(484, 327);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ucSAP_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSAP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -64,6 +65,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblSAP;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvSAP;
     }
 }

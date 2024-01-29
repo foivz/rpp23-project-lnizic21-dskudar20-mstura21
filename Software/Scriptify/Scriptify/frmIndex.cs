@@ -31,6 +31,7 @@ namespace Scriptify
             authenticationService = new AuthenticationService();
             OpenHomePage();
             this.KeyPress += frmIndex_KeyPress;
+            this.KeyPreview = true;
         }
         
         private void OpenHomePage()
@@ -136,8 +137,6 @@ namespace Scriptify
         }
 
         private void frmIndex_KeyPress(object sender, KeyPressEventArgs e) {
-            MessageBox.Show($"Key pressed: {e.KeyChar}", "KeyPress Event");
-           
             
         }
 
@@ -153,6 +152,14 @@ namespace Scriptify
             panelControls.Controls.Clear();
             uc_LoanHistory uc_LoanHistory = new uc_LoanHistory(loggedInUser);
             panelControls.Controls.Add(uc_LoanHistory);
+        }
+
+        private void frmIndex_KeyDown(object sender, KeyEventArgs e) {
+            if (e.KeyCode == Keys.F1) {
+                Help help = new Help();
+                help.ShowDialog();
+            }
+
         }
     }
 }

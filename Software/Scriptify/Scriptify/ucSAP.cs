@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BusinessLogicLayer;
 namespace Scriptify {
     public partial class ucSAP : UserControl {
 
@@ -16,6 +16,12 @@ namespace Scriptify {
         public ucSAP(Librarian librarian) {
             InitializeComponent();
             this.Librarian = librarian;
+        }
+
+        private void ucSAP_Load(object sender, EventArgs e) {
+            SAPService sAPService = new SAPService();
+            dgvSAP.DataSource = sAPService.getScriptifyAproovedData();
+            dgvSAP.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }

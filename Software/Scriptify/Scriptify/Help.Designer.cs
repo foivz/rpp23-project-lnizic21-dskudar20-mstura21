@@ -32,6 +32,7 @@
             this.ClientSize = new System.Drawing.Size(1119, 639);
             this.Name = "Help";
             this.Text = "Help";
+            this.Load += new System.EventHandler(this.Help_Load);
             this.ResumeLayout(false);
 
         }
