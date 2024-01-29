@@ -19,6 +19,14 @@ namespace BusinessLogicLayer
             }
         }
 
+        public List<Reservation_Projection> GetOldReservations(int librarianId)
+        {
+            using (var repo = new ReservationsRepository())
+            {
+                return repo.GetOldReservations(librarianId).ToList();
+            }
+        }
+
         public bool AcceptReservation(Reservation_Projection reservation)
         {
             bool isAccepted = false;
@@ -30,6 +38,25 @@ namespace BusinessLogicLayer
             }
             return isAccepted;
         }
+
+        public int DeleteOldReservations(int librarianId)
+        {
+            using (var repo = new ReservationsRepository())
+            {
+                
+                var oldReservations = GetOldReservations(librarianId).ToList();
+
+               
+                foreach (var reservation in oldReservations)
+                {
+                    repo.DeleteReservation(reservation);
+                }
+
+                return oldReservations.Count;
+            }
+        }
+
+
 
         public bool DeleteReservation(Reservation_Projection reservation)
         {
