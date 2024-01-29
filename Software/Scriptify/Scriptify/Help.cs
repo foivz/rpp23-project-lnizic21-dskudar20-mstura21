@@ -33,6 +33,7 @@ namespace Scriptify {
                         page.Render(bitmap, 0, 0, width, height, PageRotate.Normal, RenderFlags.FPDF_NONE);
 
                         bitmap.GetImage().Save("sample.png", ImageFormat.Png);
+                        pc_help.ImageLocation = "sample.png";
                     }
                 }
             } catch (Exception e) {
