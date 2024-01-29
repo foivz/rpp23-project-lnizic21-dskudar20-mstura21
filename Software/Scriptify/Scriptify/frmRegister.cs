@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BusinessLogicLayer;
+using DataAccessLayer.Iznimke;
+using EntityLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,44 +17,56 @@ namespace Scriptify
     {
         public frmRegister()
         {
+
             InitializeComponent();
+           
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (txtUserame.Text == "" && txtPassword.Text == "" && txtComPassword.Text == "")
+            int SelectedLibraryId = (int)cmbLibrary.SelectedValue;
+            if (txtUsername.Text == "" || txtPassword.Text == "" || txtComPassword.Text == "")
             {
-                MessageBox.Show("username and Password field are empty", "Registration failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }else
-            {
-                MessageBox.Show("Password does not math, Please re-enter", "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtUserame.Text = "";
-                txtPassword.Text = "";
-                txtComPassword.Text = "";
-                txtIme.Text = "";
-                txtPrezime.Text = "";
-                txtEmail.Text = "";
-                txtPassword.Focus();
-            }
+                if(txtUsername.Text != "" && txtPassword.Text != "" && txtComPassword.Text == "")
+                {
+                    MessageBox.Show("Confirm Password field is required!", "Registration failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Username and Password fields are required!", "Registration failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
             }
+            else
+            {
+                Random random = new Random();
+                Librarian user = new Librarian()
+                {
+                    idLibrarians = random.Next(0,999999999),
+                    username = txtUsername.Text,
+                    email = txtEmail.Text,
+                    password = txtPassword.Text,
+                    first_name = txtIme.Text,
+                    last_name = txtPrezime.Text,
+                    Library_idLibrary = SelectedLibraryId
+                };
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            txtUserame.Text = "";
-            txtPassword.Text = "";
-            txtComPassword.Text = "";
-            txtIme.Text = "";
-            txtPrezime.Text = "";
-            txtEmail.Text = "";
-            txtUserame.Focus();
+                AuthenticationService service = new AuthenticationService();
+                try
+                {
+                    service.CreateUser(user);
+                    MessageBox.Show("Registration succeeded!");
 
-        }
+                    new frmLogin().Show();
+                    this.Hide();
+                }
+                catch (RegistrationException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                
+            }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-            new frmLogin().Show();
-            this.Hide();
         }
 
         private void checkbxShowPass_CheckedChanged(object sender, EventArgs e)
@@ -68,12 +83,39 @@ namespace Scriptify
 
             }
         }
-
-   
-
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+            txtComPassword.Text = "";
+            txtIme.Text = "";
+            txtPrezime.Text = "";
+            txtEmail.Text = "";
+            txtUsername.Focus();
+        }
+        private void labelBackToLogin_Click(object sender, EventArgs e)
+        {
+            new frmLogin().Show();
+            this.Hide();
+        }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+         
+        private void frmRegister_Load(object sender, EventArgs e)
+        {
+            cmbLibrary.DisplayMember = "name";
+            cmbLibrary.ValueMember = "idLibrary";
+            
+            AuthenticationService service = new AuthenticationService();
+            cmbLibrary.DataSource = service.GetAllLibrariesForRegistration();
+        }
+
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+
+            this.Close();
         }
     }
 }

@@ -8,13 +8,15 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Scriptify</RootNamespace>
     <AssemblyName>Scriptify</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\RPP_PUBLISH\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
+    <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
@@ -22,10 +24,11 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <InstallUrl>https://github.com/foivz/rpp23-project-lnizic21-dskudar20-mstura21.git/</InstallUrl>
+    <ApplicationRevision>14</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -37,6 +40,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,6 +50,22 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3B4B57D63EB69E41CA2BA67A8428A7B07F6713C4</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Scriptify_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -61,6 +81,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataGridViewStyler.cs" />
+    <Compile Include="frmAdd_EditBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdd_EditBooks.Designer.cs">
+      <DependentUpon>frmAdd_EditBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIndex.Designer.cs">
+      <DependentUpon>frmIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIssueSanction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIssueSanction.Designer.cs">
+      <DependentUpon>frmIssueSanction.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,13 +112,80 @@
     <Compile Include="frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UcCatalogOfBooks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcCatalogOfBooks.Designer.cs">
+      <DependentUpon>UcCatalogOfBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcHomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcHomePage.Designer.cs">
+      <DependentUpon>UcHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcLoans.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcLoans.Designer.cs">
+      <DependentUpon>UcLoans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcReportsAndStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcReportsAndStatistics.Designer.cs">
+      <DependentUpon>UcReportsAndStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSAP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSAP.Designer.cs">
+      <DependentUpon>ucSAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_LoanHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_LoanHistory.Designer.cs">
+      <DependentUpon>uc_LoanHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_LoanHistoryAndSanctions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_LoanHistoryAndSanctions.Designer.cs">
+      <DependentUpon>uc_LoanHistoryAndSanctions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Reservation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Reservation.Designer.cs">
+      <DependentUpon>uc_Reservation.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmAdd_EditBooks.resx">
+      <DependentUpon>frmAdd_EditBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIndex.resx">
+      <DependentUpon>frmIndex.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIssueSanction.resx">
+      <DependentUpon>frmIssueSanction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -89,7 +195,36 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UcCatalogOfBooks.resx">
+      <DependentUpon>UcCatalogOfBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcHomePage.resx">
+      <DependentUpon>UcHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcLoans.resx">
+      <DependentUpon>UcLoans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcReportsAndStatistics.resx">
+      <DependentUpon>UcReportsAndStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSAP.resx">
+      <DependentUpon>ucSAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_LoanHistory.resx">
+      <DependentUpon>uc_LoanHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_LoanHistoryAndSanctions.resx">
+      <DependentUpon>uc_LoanHistoryAndSanctions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Reservation.resx">
+      <DependentUpon>uc_Reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="Images\sample.pdf" />
+    <Content Include="Help\Home.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -99,6 +234,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Content Include="Help\sample.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Scriptify_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -106,6 +245,9 @@
   <ItemGroup>
     <PackageReference Include="EntityFramework">
       <Version>6.4.4</Version>
+    </PackageReference>
+    <PackageReference Include="Pdfium.Net.SDK">
+      <Version>4.88.2704</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -119,6 +261,34 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">
+      <Project>{24e31211-5516-4681-9620-eeeae7ad6e79}</Project>
+      <Name>BusinessLogicLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{EDB2C02A-4185-4F59-A426-FAE9B08CE79A}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">
+      <Project>{1ce3b6de-af47-4b4a-bcbf-42d2f5a8440c}</Project>
+      <Name>EntityLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\book.png" />
+    <Content Include="Images\bookicon.png" />
+    <Content Include="Images\bookloans.jpg" />
+    <Content Include="Images\homepageicon.png" />
+    <Content Include="Images\loansbook.png" />
+    <Content Include="Images\loansicon.png" />
+    <Content Include="Images\logouticon.png" />
+    <Content Include="Images\reserved.png" />
+    <Content Include="Images\return-delivery.png" />
+    <Content Include="Images\statisticsicon.png" />
+    <Content Include="Images\tick-icon.png" />
+    <Content Include="Images\usericon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

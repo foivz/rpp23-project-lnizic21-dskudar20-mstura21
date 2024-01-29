@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLogicLayer;
+using EntityLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,13 +25,6 @@ namespace Scriptify
         }
 
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            txtUserame.Text = "";
-            txtPassword.Text = "";
-            txtUserame.Focus();
-        }
-
         private void checkbxShowPass_CheckedChanged_1(object sender, EventArgs e)
         {
             if (checkbxShowPass.Checked)
@@ -43,18 +38,55 @@ namespace Scriptify
             }
         }
 
-        private void btnRegister_Click_1(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Invalid Username od Password, Please Try Again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            txtUserame.Text = "";
-            txtPassword.Text = "";
-            txtUserame.Focus();
+            AuthenticationService _authenticationService = new AuthenticationService();
+
+            if (txtUsername.Text == "" || txtPassword.Text == "")
+            {
+                MessageBox.Show("Username and Password fields are required!", "Login failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUsername.Focus();
+            }
+            else
+
+            {
+                bool userIsExists = _authenticationService.AuthenticateUser(txtUsername.Text, txtPassword.Text);
+
+                if (userIsExists)
+                {
+                    Librarian user = _authenticationService.GetUser(txtUsername.Text, txtPassword.Text);
+                    frmIndex frm = new frmIndex(user);
+                    this.Hide();
+                    frm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Username or Password, Please Try Again", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtUsername.Text = "";
+                    txtPassword.Text = "";
+                    txtUsername.Focus();
+                }
+            
+            }
+
+
+        }
+        private void labelCreateAccount_Click(object sender, EventArgs e)
+        {
+            new frmRegister().Show(); 
+            this.Hide();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void btnClearLoginForm_Click(object sender, EventArgs e)
         {
-            new frmRegister().Show();
-            this.Hide();
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+            txtUsername.Focus();
+        }
+
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

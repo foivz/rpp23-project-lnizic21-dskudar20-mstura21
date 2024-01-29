@@ -3,168 +3,177 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 
-namespace EntityLayer
-{
-    public partial class EntityModels : DbContext
-    {
+namespace EntityLayer {
+    public partial class EntityModels : DbContext {
         public EntityModels()
-            : base("name=EntityModels")
-        {
+            : base("name=EntityModels") {
         }
 
-        public virtual DbSet<Knjige> Knjige { get; set; }
-        public virtual DbSet<Knjizara> Knjizara { get; set; }
-        public virtual DbSet<Knjizara_has_Knjige> Knjizara_has_Knjige { get; set; }
-        public virtual DbSet<Knjiznicari> Knjiznicari { get; set; }
-        public virtual DbSet<Rezervacija> Rezervacija { get; set; }
-        public virtual DbSet<User> User { get; set; }
-        public virtual DbSet<user_has_Knjizara_has_Knjige> user_has_Knjizara_has_Knjige { get; set; }
-        public virtual DbSet<Posudba> Posudba { get; set; }
-        public virtual DbSet<Rezervacija_Projection> Rezervacija_Projection { get; set; }
+        public virtual DbSet<Book> Books { get; set; }
+        public virtual DbSet<Librarian> Librarians { get; set; }
+        public virtual DbSet<Library> Libraries { get; set; }
+        public virtual DbSet<Library_has_Books> Library_has_Books { get; set; }
+        public virtual DbSet<loans_of_books> loans_of_books { get; set; }
+        public virtual DbSet<Reservation> Reservations { get; set; }
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<user_has_Library_has_Books> user_has_Library_has_Books { get; set; }
+        public virtual DbSet<Loan> Loans { get; set; }
+        public virtual DbSet<Reservation_Projection> Reservation_Projection { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Knjige>()
-                .Property(e => e.naziv_knjige)
+        protected override void OnModelCreating(DbModelBuilder modelBuilder) {
+            modelBuilder.Entity<Book>()
+                .Property(e => e.book_name)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Knjige>()
-                .Property(e => e.opis)
+            modelBuilder.Entity<Book>()
+                .Property(e => e.overview)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Knjige>()
-                .Property(e => e.autor)
+            modelBuilder.Entity<Book>()
+                .Property(e => e.author)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Knjige>()
-                .Property(e => e.zanr)
+            modelBuilder.Entity<Book>()
+                .Property(e => e.genre)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Knjige>()
-                .HasMany(e => e.Knjizara_has_Knjige)
-                .WithRequired(e => e.Knjige)
-                .HasForeignKey(e => e.Knjige_idKnjige)
+            modelBuilder.Entity<Book>()
+                .HasMany(e => e.Library_has_Books)
+                .WithRequired(e => e.Book)
+                .HasForeignKey(e => e.Books_idBook)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Knjige>()
-                .HasMany(e => e.User)
-                .WithMany(e => e.Knjige)
-                .Map(m => m.ToTable("user_has_Knjige").MapRightKey("user_id_user"));
+            modelBuilder.Entity<Book>()
+                .HasMany(e => e.Users)
+                .WithMany(e => e.Books)
+                .Map(m => m.ToTable("user_has_Books").MapLeftKey("Books_idBook").MapRightKey("user_id_user"));
 
-            modelBuilder.Entity<Knjizara>()
-                .Property(e => e.ime)
+            modelBuilder.Entity<Librarian>()
+                .Property(e => e.first_name)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Knjizara>()
-                .HasMany(e => e.Knjizara_has_Knjige)
-                .WithRequired(e => e.Knjizara)
-                .HasForeignKey(e => e.Knjizara_idKnjizara)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Knjizara>()
-                .HasMany(e => e.Knjiznicari)
-                .WithRequired(e => e.Knjizara)
-                .HasForeignKey(e => e.Knjizara_idKnjizara)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Knjizara_has_Knjige>()
-                .HasMany(e => e.Rezervacija)
-                .WithRequired(e => e.Knjizara_has_Knjige)
-                .HasForeignKey(e => e.Knjizara_has_Knjige_knjizara_has_knjige_id)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Knjizara_has_Knjige>()
-                .HasMany(e => e.user_has_Knjizara_has_Knjige)
-                .WithRequired(e => e.Knjizara_has_Knjige)
-                .HasForeignKey(e => e.Knjizara_has_Knjige_knjizara_has_knjige_id)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Knjiznicari>()
-                .Property(e => e.ime)
+            modelBuilder.Entity<Librarian>()
+                .Property(e => e.last_name)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Knjiznicari>()
-                .Property(e => e.prezime)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Knjiznicari>()
+            modelBuilder.Entity<Librarian>()
                 .Property(e => e.username)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Knjiznicari>()
+            modelBuilder.Entity<Librarian>()
                 .Property(e => e.password)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Knjiznicari>()
+            modelBuilder.Entity<Librarian>()
+                .Property(e => e.email)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Library>()
+                .Property(e => e.name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Library>()
+                .HasMany(e => e.Librarians)
+                .WithRequired(e => e.Library)
+                .HasForeignKey(e => e.Library_idLibrary)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Library>()
+                .HasMany(e => e.Library_has_Books)
+                .WithRequired(e => e.Library)
+                .HasForeignKey(e => e.Library_idLibrary)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Library_has_Books>()
+                .HasMany(e => e.Reservations)
+                .WithRequired(e => e.Library_has_Books)
+                .HasForeignKey(e => e.Library_has_Books_library_has_books_id)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Library_has_Books>()
+                .HasMany(e => e.user_has_Library_has_Books)
+                .WithRequired(e => e.Library_has_Books)
+                .HasForeignKey(e => e.Library_has_Books_library_has_books_id)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Library_has_Books>()
+                .HasMany(e => e.loans_of_books)
+                .WithOptional(e => e.Library_has_Books)
+                .HasForeignKey(e => e.library_book_id)
+                .WillCascadeOnDelete();
+
+            modelBuilder.Entity<User>()
+                .Property(e => e.username)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<User>()
                 .Property(e => e.email)
                 .IsUnicode(false);
 
             modelBuilder.Entity<User>()
-                .Property(e => e.username)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<User>()
-                .Property(e => e.email)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<User>()
                 .Property(e => e.password)
                 .IsUnicode(false);
 
             modelBuilder.Entity<User>()
-                .Property(e => e.Ime)
+                .Property(e => e.First_Name)
                 .IsUnicode(false);
 
             modelBuilder.Entity<User>()
-                .Property(e => e.Prezime)
+                .Property(e => e.Last_Name)
                 .IsUnicode(false);
 
             modelBuilder.Entity<User>()
-                .HasMany(e => e.Rezervacija)
+                .HasMany(e => e.loans_of_books)
+                .WithOptional(e => e.User)
+                .HasForeignKey(e => e.user_id)
+                .WillCascadeOnDelete();
+
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.Reservations)
                 .WithRequired(e => e.User)
                 .HasForeignKey(e => e.User_id_user)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<User>()
-                .HasMany(e => e.user_has_Knjizara_has_Knjige)
+                .HasMany(e => e.user_has_Library_has_Books)
                 .WithRequired(e => e.User)
                 .HasForeignKey(e => e.user_id_user)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Posudba>()
+            modelBuilder.Entity<Loan>()
                 .Property(e => e.username)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Posudba>()
-                .Property(e => e.naziv_knjige)
+            modelBuilder.Entity<Loan>()
+                .Property(e => e.book_name)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Posudba>()
-                .Property(e => e.ime)
+            modelBuilder.Entity<Loan>()
+                .Property(e => e.first_name)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Posudba>()
-                .Property(e => e.prezime)
+            modelBuilder.Entity<Loan>()
+                .Property(e => e.last_name)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Posudba>()
-                .Property(e => e.StatusPosudbe)
+            modelBuilder.Entity<Loan>()
+                .Property(e => e.loan_status)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Rezervacija_Projection>()
+            modelBuilder.Entity<Reservation_Projection>()
                 .Property(e => e.username)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Rezervacija_Projection>()
-                .Property(e => e.naziv_knjige)
+            modelBuilder.Entity<Reservation_Projection>()
+                .Property(e => e.book_name)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Rezervacija_Projection>()
-                .Property(e => e.ime)
+            modelBuilder.Entity<Reservation_Projection>()
+                .Property(e => e.first_name)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Rezervacija_Projection>()
-                .Property(e => e.prezime)
+            modelBuilder.Entity<Reservation_Projection>()
+                .Property(e => e.last_name)
                 .IsUnicode(false);
         }
     }

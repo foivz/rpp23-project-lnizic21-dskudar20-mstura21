@@ -12,9 +12,10 @@ namespace EntityLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
-            Rezervacija = new HashSet<Rezervacija>();
-            user_has_Knjizara_has_Knjige = new HashSet<user_has_Knjizara_has_Knjige>();
-            Knjige = new HashSet<Knjige>();
+            loans_of_books = new HashSet<loans_of_books>();
+            Reservations = new HashSet<Reservation>();
+            user_has_Library_has_Books = new HashSet<user_has_Library_has_Books>();
+            Books = new HashSet<Book>();
         }
 
         [Key]
@@ -36,18 +37,21 @@ namespace EntityLayer
         public int? Money { get; set; }
 
         [StringLength(45)]
-        public string Ime { get; set; }
+        public string First_Name { get; set; }
 
         [StringLength(45)]
-        public string Prezime { get; set; }
+        public string Last_Name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Rezervacija> Rezervacija { get; set; }
+        public virtual ICollection<loans_of_books> loans_of_books { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<user_has_Knjizara_has_Knjige> user_has_Knjizara_has_Knjige { get; set; }
+        public virtual ICollection<Reservation> Reservations { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Knjige> Knjige { get; set; }
+        public virtual ICollection<user_has_Library_has_Books> user_has_Library_has_Books { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Book> Books { get; set; }
     }
 }
