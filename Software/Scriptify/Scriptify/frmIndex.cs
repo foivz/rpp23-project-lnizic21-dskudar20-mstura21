@@ -167,15 +167,15 @@ namespace Scriptify
                             help.ShowDialog();
                             break;
                         case "Scriptify.ucSAP":
-                            help = new Help(5);
+                            help = new Help(7);
                             help.ShowDialog();
                             break;
                         case "Scriptify.uc_Reservation":
-                            help = new Help(6);
+                            help = new Help(5);
                             help.ShowDialog();
                             break;
                         case "Scriptify.uc_LoanHistory":
-                            help = new Help(7);
+                            help = new Help(6);
                             help.ShowDialog();
                             break;
                         default:
