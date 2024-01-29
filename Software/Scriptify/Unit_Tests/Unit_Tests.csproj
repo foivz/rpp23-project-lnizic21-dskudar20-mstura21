@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="DataAcessLayerTest\Repositories\BookManagmentRepositoryTest.cs" />
     <Compile Include="DataAcessLayerTest\Repositories\LibraryRepostoryTest.cs" />
+    <Compile Include="DataAcessLayerTest\Repositories\LoanHistoryAndSanctionRepositoryTest.cs" />
     <Compile Include="DataAcessLayerTest\Repositories\PendingLoansRepositoryTest.cs" />
     <Compile Include="DataAcessLayerTest\Repositories\SAPRepositoryTest.cs" />
     <Compile Include="DataAcessLayerTest\Repositories\UserRepositoryTest.cs" />
