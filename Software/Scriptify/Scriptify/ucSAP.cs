@@ -21,8 +21,12 @@ namespace Scriptify {
 
         private void ucSAP_Load(object sender, EventArgs e) {
             SAPService sAPService = new SAPService();
-            dgvSAP.DataSource = sAPService.getScriptifyAproovedData();
-            DataGridViewStyler.ChangeSPAHeaderUI(dgvSAP);
+            var list = sAPService.getScriptifyAproovedData();
+            list = list.OrderByDescending(r => r.Loans).ToList();
+            dgvSAP.DataSource = list;
+           DataGridViewStyler.ChangeSPAHeaderUI(dgvSAP);
+            DataGridViewColumn loansColumn = dgvSAP.Columns["Loans"];
+         
             dgvSAP.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
