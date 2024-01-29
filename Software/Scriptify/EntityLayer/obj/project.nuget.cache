@@ -1,18 +1,10 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "d8M6H06jBPkP24bOpXyqxqnPD9GTTXcwZZ5NhslyIFh2dta+hZetLa2a0usJLU7/6EXAgj86TY5qlnc4YF/Mxw==",
   "success": true,
   "projectFilePath": "C:\\Users\\budal\\Source\\Repos\\foivz\\rpp23-project-lnizic21-dskudar20-mstura21\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\budal\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512"
-=======
-  "dgSpecHash": "stLElI15XT9oYHoILOhHxGDOjsaZg15qMd8VXnbEDWeA9gYU3YPYGXGVVcLQwhtzKHZQk8mddW9its8v6HnjOA==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\David\\Source\\Repos\\rpp23-project-lnizic21-dskudar20-mstura21sds\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\David\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512"
->>>>>>> d7186dee9548afb2b01907608b1790cfcef67c16
   ],
   "logs": []
 }

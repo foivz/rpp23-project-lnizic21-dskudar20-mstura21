@@ -44,14 +44,19 @@ namespace Scriptify
         {
             List<Loan> loans = loanHistoryService.GetLoansInProgress(user.idLibrarians);
             dgvLoanHistory.DataSource = loans;
-            
-            ChangeHeaderText();
+            dgvLoanHistory.Columns[1].DefaultCellStyle.SelectionBackColor = Color.Gray;
+            ChangeHeaderUI();
             dgvLoanHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
         }
-        private void ChangeHeaderText()
+        private void ChangeHeaderUI()
         {
-            dgvLoanHistory.Columns[0].Visible = false;
+
+            dgvLoanHistory.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
+            dgvLoanHistory.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvLoanHistory.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dgvLoanHistory.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Regular);
+            dgvLoanHistory.EnableHeadersVisualStyles = false;
 
             dgvLoanHistory.Columns["idUser"].HeaderText = "User ID";
             dgvLoanHistory.Columns["username"].HeaderText = "Username";
