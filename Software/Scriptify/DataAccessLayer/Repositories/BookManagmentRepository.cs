@@ -10,6 +10,7 @@ namespace DataAccessLayer.Repositories {
     public class BookManagmentRepository : IDisposable {
         protected EntityModels Context { get; set; }
         public DbSet<Library_has_Books> Entities { get; set; }
+        public DbSet<Authors> EntitiesAuthor { get; set; }
         public BookManagmentRepository() {
             Context = new EntityModels();
             Entities = Context.Set<Library_has_Books>();
@@ -28,6 +29,48 @@ namespace DataAccessLayer.Repositories {
                       select book.idBook;
             return sql.FirstOrDefault();
         }
+        public IQueryable<Genre> GetSpecificGenre(string genre) {
+            var sql = from g in Context.Genres
+                      where g.genre.Contains(genre)
+                      select g;
+            return sql;
+        }
+        public IQueryable<Genre> GetGenres() {
+            var sql = from genre in Context.Genres
+                      select genre;
+            return sql;
+        }
+        public bool DoesAuthorExist(string name) {
+            var sql = from author in Context.Authors
+                      where author.name == name
+                      select author;
+            if (sql.FirstOrDefault() == null) {
+                return true;
+            }
+            return false;
+        }
+        public bool InsertAuthor(string Full_Name) {
+            if(DoesAuthorExist(Full_Name)) {
+                Authors author = new Authors() {
+                name = Full_Name
+            };
+            Context.Authors.Add(author);
+            Context.SaveChanges();
+                return true;
+            }
+            return false;
+        }   
+        public IQueryable<Authors> GetSpecificAuthor(string name) {
+            var sql = from author in Context.Authors
+                      where author.name.Contains(name)
+                      select author;
+            return sql;
+        }
+        public IQueryable<Authors> GetAuthors() {
+            var sql = from author in Context.Authors
+                      select author;
+            return sql;
+        }
         public bool AddBookToLibrary(int idLibrary,string bookName) {
             int idBook = GetBookIdByName(bookName);
             Library_has_Books library_has_Books = new Library_has_Books() {
@@ -43,6 +86,7 @@ namespace DataAccessLayer.Repositories {
             Context.SaveChanges();
             return true; 
         }
+        
         public Book GetBookByID(int Id) {
             var sql = from book in Context.Books
                       where book.idBook == Id

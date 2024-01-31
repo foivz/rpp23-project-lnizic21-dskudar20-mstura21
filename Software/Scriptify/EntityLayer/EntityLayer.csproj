@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authors.cs" />
     <Compile Include="Book.cs" />
     <Compile Include="EntityModels.cs" />
+    <Compile Include="Genre.cs" />
     <Compile Include="Librarian.cs" />
     <Compile Include="Library.cs" />
     <Compile Include="Library_has_Books.cs" />

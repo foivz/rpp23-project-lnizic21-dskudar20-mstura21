@@ -61,6 +61,13 @@ namespace Unit_Tests.DataAcessLayerTest.Repositories {
                 Assert.IsTrue(sucess);
             }
         }
+        [TestMethod]
+        public void DuplicateAuthorsTest() {
+            using(BookManagmentRepository repo = new BookManagmentRepository()) {
+                bool sucess = repo.InsertAuthor("William Shakespeare");
+                Assert.IsFalse(sucess);
+            }
+        }
 
     }
 }

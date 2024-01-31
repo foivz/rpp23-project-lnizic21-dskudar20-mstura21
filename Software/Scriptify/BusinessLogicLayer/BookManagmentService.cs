@@ -52,6 +52,36 @@ namespace BusinessLogicLayer {
                 
             }
         }
+        public List<Genre> GetGenres() {
+            using (var repo = new BookManagmentRepository()) {
+                return repo.GetGenres().ToList();
+            }
+        }
+        public List<Authors> GetAuthors() {
+            using(var repo = new BookManagmentRepository()) {
+                return repo.GetAuthors().ToList();
+            }
+        }
+        public List<Authors> GetSpecificAuthor(string name) {
+            using(var repo = new BookManagmentRepository()) {
+                return repo.GetSpecificAuthor(name).ToList();
+            }
+        }
+        public bool AddAuthor(string name) {
+            using(var repo = new BookManagmentRepository()) {
+                try {
+                    return repo.InsertAuthor(name);
+                }catch(DbUpdateException ex) {
+                    return false;
+                }
+                
+            }   
+        }
+        public List<Genre> GetSpecificGenre(string genre) {
+            using(var repo = new BookManagmentRepository()) {
+                return repo.GetSpecificGenre(genre).ToList();
+            }
+        }
         public bool DeleteBook(int id) {
             using (var repo = new BookManagmentRepository()) {
                 try {

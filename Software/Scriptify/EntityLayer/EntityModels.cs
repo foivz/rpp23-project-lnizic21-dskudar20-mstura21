@@ -17,7 +17,10 @@ namespace EntityLayer {
         public virtual DbSet<Reservation> Reservations { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<user_has_Library_has_Books> user_has_Library_has_Books { get; set; }
+        public virtual DbSet<Genre> Genres { get; set; }
         public virtual DbSet<Loan> Loans { get; set; }
+
+        public virtual DbSet<Authors> Authors { get; set; }
         public virtual DbSet<Reservation_Projection> Reservation_Projection { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder) {
@@ -139,6 +142,14 @@ namespace EntityLayer {
                 .WithRequired(e => e.User)
                 .HasForeignKey(e => e.user_id_user)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Genre>()
+                .Property(e => e.genre)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Authors>()
+                .Property(e => e.name)
+                .IsUnicode(false);
 
             modelBuilder.Entity<Loan>()
                 .Property(e => e.username)

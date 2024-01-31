@@ -27,13 +27,19 @@
             this.txtBookName = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtAuthor = new System.Windows.Forms.TextBox();
-            this.txtGenre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_add = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
+            this.cmbGenre = new System.Windows.Forms.ComboBox();
+            this.cmbAuthors = new System.Windows.Forms.ComboBox();
+            this.btnDeselect = new System.Windows.Forms.Button();
+            this.txtAuthorSearch = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtGenreSearch = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtTitle
@@ -64,17 +70,10 @@
             // 
             // txtAuthor
             // 
-            this.txtAuthor.Location = new System.Drawing.Point(242, 339);
+            this.txtAuthor.Location = new System.Drawing.Point(413, 341);
             this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(305, 20);
+            this.txtAuthor.Size = new System.Drawing.Size(251, 20);
             this.txtAuthor.TabIndex = 4;
-            // 
-            // txtGenre
-            // 
-            this.txtGenre.Location = new System.Drawing.Point(242, 389);
-            this.txtGenre.Name = "txtGenre";
-            this.txtGenre.Size = new System.Drawing.Size(305, 20);
-            this.txtGenre.TabIndex = 5;
             // 
             // label1
             // 
@@ -97,7 +96,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(242, 320);
+            this.label3.Location = new System.Drawing.Point(242, 324);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 8;
@@ -134,19 +133,87 @@
             this.btn_save.UseVisualStyleBackColor = false;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
+            // cmbGenre
+            // 
+            this.cmbGenre.FormattingEnabled = true;
+            this.cmbGenre.Location = new System.Drawing.Point(245, 386);
+            this.cmbGenre.Name = "cmbGenre";
+            this.cmbGenre.Size = new System.Drawing.Size(302, 21);
+            this.cmbGenre.TabIndex = 12;
+            this.cmbGenre.SelectedIndexChanged += new System.EventHandler(this.cmbGenre_SelectedIndexChanged);
+            // 
+            // cmbAuthors
+            // 
+            this.cmbAuthors.FormattingEnabled = true;
+            this.cmbAuthors.Location = new System.Drawing.Point(157, 340);
+            this.cmbAuthors.Name = "cmbAuthors";
+            this.cmbAuthors.Size = new System.Drawing.Size(227, 21);
+            this.cmbAuthors.TabIndex = 13;
+            this.cmbAuthors.SelectedIndexChanged += new System.EventHandler(this.cmbAuthors_SelectedIndexChanged);
+            // 
+            // btnDeselect
+            // 
+            this.btnDeselect.Location = new System.Drawing.Point(690, 341);
+            this.btnDeselect.Name = "btnDeselect";
+            this.btnDeselect.Size = new System.Drawing.Size(75, 23);
+            this.btnDeselect.TabIndex = 14;
+            this.btnDeselect.Text = "Deselect";
+            this.btnDeselect.UseVisualStyleBackColor = true;
+            this.btnDeselect.Click += new System.EventHandler(this.btnDeselect_Click);
+            // 
+            // txtAuthorSearch
+            // 
+            this.txtAuthorSearch.Location = new System.Drawing.Point(12, 340);
+            this.txtAuthorSearch.Name = "txtAuthorSearch";
+            this.txtAuthorSearch.Size = new System.Drawing.Size(108, 20);
+            this.txtAuthorSearch.TabIndex = 15;
+            this.txtAuthorSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 324);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 13);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Search for an Author";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(15, 370);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(93, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Search for Genres";
+            // 
+            // txtGenreSearch
+            // 
+            this.txtGenreSearch.Location = new System.Drawing.Point(18, 387);
+            this.txtGenreSearch.Name = "txtGenreSearch";
+            this.txtGenreSearch.Size = new System.Drawing.Size(108, 20);
+            this.txtGenreSearch.TabIndex = 18;
+            this.txtGenreSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGenreSearch_KeyPress);
+            // 
             // frmAdd_EditBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 490);
+            this.Controls.Add(this.txtGenreSearch);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtAuthorSearch);
+            this.Controls.Add(this.btnDeselect);
+            this.Controls.Add(this.cmbAuthors);
+            this.Controls.Add(this.cmbGenre);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtGenre);
             this.Controls.Add(this.txtAuthor);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.txtBookName);
@@ -170,12 +237,18 @@
         private System.Windows.Forms.TextBox txtBookName;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.TextBox txtAuthor;
-        private System.Windows.Forms.TextBox txtGenre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.ComboBox cmbGenre;
+        private System.Windows.Forms.ComboBox cmbAuthors;
+        private System.Windows.Forms.Button btnDeselect;
+        private System.Windows.Forms.TextBox txtAuthorSearch;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtGenreSearch;
     }
 }

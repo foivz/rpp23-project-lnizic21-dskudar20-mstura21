@@ -22,12 +22,13 @@ namespace EntityLayer {
         }
         public int Loans {
             get { return _loans; }
-            set { _loans = value; if (value > 30) {
+            set {
+                _loans = value; if (value > 30) {
                     Status = "Scriptify Aprooved";
                 } else {
                     Status = "Scriptify not Aprooved";
-                } }
                 }
             }
         }
-
+    }
+}
