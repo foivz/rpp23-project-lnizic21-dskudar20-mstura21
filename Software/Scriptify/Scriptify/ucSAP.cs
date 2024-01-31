@@ -26,7 +26,24 @@ namespace Scriptify {
             dgvSAP.DataSource = list;
            DataGridViewStyler.ChangeSPAHeaderUI(dgvSAP);
             DataGridViewColumn loansColumn = dgvSAP.Columns["Loans"];
-         
+            dgvSAP.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void btnScaling_Click(object sender, EventArgs e) {
+            SAPService sAPService = new SAPService();
+            var list = sAPService.SAPDataFairAlgorithm();
+            dgvSAP.DataSource = list;
+            DataGridViewStyler.ChangeSPAHeaderUISCALE(dgvSAP);
+            dgvSAP.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void btnAlltime_Click(object sender, EventArgs e) {
+            SAPService sAPService = new SAPService();
+            var list = sAPService.getScriptifyAproovedData();
+            list = list.OrderByDescending(r => r.Loans).ToList();
+            dgvSAP.DataSource = list;
+            DataGridViewStyler.ChangeSPAHeaderUI(dgvSAP);
+            DataGridViewColumn loansColumn = dgvSAP.Columns["Loans"];
             dgvSAP.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }

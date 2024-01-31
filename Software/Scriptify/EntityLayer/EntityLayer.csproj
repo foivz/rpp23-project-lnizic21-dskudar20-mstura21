@@ -56,6 +56,8 @@
     <Compile Include="Reservation.cs" />
     <Compile Include="Reservation_Projection.cs" />
     <Compile Include="SAPData.cs" />
+    <Compile Include="SAPLibrary.cs" />
+    <Compile Include="SAPScore.cs" />
     <Compile Include="User.cs" />
     <Compile Include="user_has_Library_has_Books.cs" />
   </ItemGroup>

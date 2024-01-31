@@ -31,6 +31,15 @@ namespace DataAccessLayer {
             };
             return query;
         }
+        public IQueryable<SAPLibrary> getLibraryBookCounts() {
+            var result = from libraryBook in Context.Library_has_Books
+                         group libraryBook by libraryBook.Library_idLibrary into grouped
+                         select new SAPLibrary{
+                             Library_idLibrary = grouped.Key,
+                             BookCount = grouped.Count()
+                         };
+            return result;
+        }
 
         public void Dispose() {
             Context.Dispose();

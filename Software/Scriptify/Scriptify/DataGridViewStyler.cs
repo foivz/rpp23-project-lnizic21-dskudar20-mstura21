@@ -89,5 +89,18 @@ namespace Scriptify
             dgv.Columns["Name"].HeaderText = "Library name";
 
         }
+        public void ChangeSPAHeaderUISCALE(DataGridView dgv) {
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Regular);
+            dgv.EnableHeadersVisualStyles = false;
+
+            dgv.Columns["name"].HeaderText = "Name";
+            dgv.Columns["BookCount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.Columns["Loans"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.Columns["Score"].HeaderText = "Score";
+
+        }
     }
 }
