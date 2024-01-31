@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Book.cs" />
+    <Compile Include="BookWithCount.cs" />
     <Compile Include="EntityModels.cs" />
     <Compile Include="Librarian.cs" />
     <Compile Include="Library.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="Reservation_Projection.cs" />
     <Compile Include="SAPData.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="UserWithCount.cs" />
     <Compile Include="user_has_Library_has_Books.cs" />
   </ItemGroup>
   <ItemGroup>

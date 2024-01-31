@@ -8,7 +8,12 @@ namespace EntityLayer
 {
     public class BookWithCount
     {
-        public Book Book { get; set; }
+        public int idBook {  get; set; }
+        public string book_name { get; set; }
+        public string overview { get; set; }
+        public string author { get; set; }
+        public string genre { get; set;}
+
         public int LoanCount { get; set; }
 
     }
