@@ -78,7 +78,7 @@
             // 
             this.txtSearchLoans.Location = new System.Drawing.Point(3, 45);
             this.txtSearchLoans.Name = "txtSearchLoans";
-            this.txtSearchLoans.Size = new System.Drawing.Size(166, 22);
+            this.txtSearchLoans.Size = new System.Drawing.Size(206, 22);
             this.txtSearchLoans.TabIndex = 6;
             this.txtSearchLoans.TextChanged += new System.EventHandler(this.txtSearchLoans_TextChanged);
             // 

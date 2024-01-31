@@ -214,14 +214,14 @@
             // 
             // btnSanction
             // 
-            this.btnSanction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSanction.BackColor = System.Drawing.Color.Green;
             this.btnSanction.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnSanction.ForeColor = System.Drawing.Color.Black;
-            this.btnSanction.Location = new System.Drawing.Point(308, 312);
+            this.btnSanction.Location = new System.Drawing.Point(179, 317);
             this.btnSanction.Name = "btnSanction";
-            this.btnSanction.Size = new System.Drawing.Size(236, 57);
+            this.btnSanction.Size = new System.Drawing.Size(531, 57);
             this.btnSanction.TabIndex = 14;
-            this.btnSanction.Text = "Issue a sanction";
+            this.btnSanction.Text = "Issue the sanction and complete the loan";
             this.btnSanction.UseVisualStyleBackColor = false;
             this.btnSanction.Click += new System.EventHandler(this.btnSanction_Click);
             // 

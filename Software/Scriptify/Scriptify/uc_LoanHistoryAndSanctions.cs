@@ -14,7 +14,7 @@ namespace Scriptify {
     public partial class uc_LoanHistoryAndSanctions : UserControl {
 
         private LoanHistoryAndSanctionsService loanHistoryAndSanctionsService;
-        private string placeholderText = "Search loans by ";
+        private string placeholderText = "Search loans by book name";
         private BindingSource bindingSource = new BindingSource();
         private Librarian user = new Librarian();
         private DataGridViewStyler dataGridView = new DataGridViewStyler();
