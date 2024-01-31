@@ -124,6 +124,7 @@ namespace Scriptify {
         }
 
         private void btn_add_Click(object sender, EventArgs e) {
+
             if (CheckIfFormIsValid()) {
             BookManagmentService bookManagmentService = new BookManagmentService();
                 Book book;
@@ -159,6 +160,12 @@ namespace Scriptify {
 
         }
         private Boolean CheckIfFormIsValid() {
+            var BMS = new BookManagmentService();
+            var books = BMS.GetBooksForLibrary(LibraryId);
+            if(books.Any(x => x.book_name == txtBookName.Text)) {
+                MessageBox.Show("Book with that name already exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
             if (cmbAuthors.SelectedIndex == -1) {
                 
             if (txtBookName.Text == "" || txtAuthor.Text == "" || txtDescription.Text == "" || cmbGenre.Text == "") {
