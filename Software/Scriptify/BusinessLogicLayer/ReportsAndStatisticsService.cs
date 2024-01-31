@@ -25,6 +25,14 @@ namespace BusinessLogicLayer
             }
         }
 
+        public List<UserWithCount> GetTop10Users(int librarianId)
+        {
+            using (var repo = new ReportsAndStatisticsRepository())
+            {
+                return repo.GetTop10Users(librarianId).ToList();
+            }
+        }
+
         public List<BookWithCount> GetTop10Books(int librarianId)
         {
             using (var repo = new ReportsAndStatisticsRepository())

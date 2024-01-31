@@ -16,6 +16,7 @@ namespace Scriptify
     {
         private Librarian user = new Librarian();
         private ReportsAndStatisticsService reportsAndStatisticsService;
+        private DataGridViewStyler dataGridView = new DataGridViewStyler();
 
         public UcReportsAndStatistics(Librarian user)
         {
@@ -36,18 +37,19 @@ namespace Scriptify
 
         private void ShowTopUsers()
         {
-            List<User> topUsers = reportsAndStatisticsService.GetTopUsers(user.idLibrarians);
+            List<UserWithCount> topUsers = reportsAndStatisticsService.GetTop10Users(user.idLibrarians);
             dgvTopUsers.DataSource = topUsers;
 
             int visinaReda = dgvTopUsers.RowTemplate.Height;
 
             dgvTopUsers.Height = (dgvTopUsers.Rows.Count + 2) * visinaReda;
 
-            dgvTopUsers.Columns["loans_of_books"].Visible = false;
-            dgvTopUsers.Columns["Reservations"].Visible = false;
-            dgvTopUsers.Columns["user_has_Library_has_Books"].Visible = false;
-            dgvTopUsers.Columns["Books"].Visible = false;
-            dgvTopUsers.Columns["Money"].Visible = false;
+            //dgvTopUsers.Columns["loans_of_books"].Visible = false;
+            //dgvTopUsers.Columns["Reservations"].Visible = false;
+            //dgvTopUsers.Columns["user_has_Library_has_Books"].Visible = false;
+            //dgvTopUsers.Columns["Books"].Visible = false;
+            //dgvTopUsers.Columns["Money"].Visible = false;
+            dataGridView.ChangeUsersWithCountHeaderUI(dgvTopUsers);
             dgvTopUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             dgvTopUsers.Visible = true;
@@ -69,6 +71,9 @@ namespace Scriptify
             //dgvStatistics.Columns["Users"].Visible = false;
             //dgvStatistics.Columns["Library_has_Books"].Visible = false;
             //dgvStatistics.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dataGridView.ChangeBooksHeaderUI(dgvStatistics);
+            dgvStatistics.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             dgvTopUsers.Visible = false;
             labelTopUsers.Visible = false;
