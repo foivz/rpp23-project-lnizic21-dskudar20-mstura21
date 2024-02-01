@@ -23,9 +23,9 @@ namespace DataAccessLayer.Repositories {
                       select book;
             return sql.Include("Users").Include("Library_has_Books");
         }
-        public int GetBookIdByName(string name) {
+        public int GetBookId(int id) {
             var sql = from book in Context.Books
-                      where book.book_name == name
+                      where book.idBook == id
                       select book.idBook;
             return sql.FirstOrDefault();
         }
@@ -71,8 +71,8 @@ namespace DataAccessLayer.Repositories {
                       select author;
             return sql;
         }
-        public bool AddBookToLibrary(int idLibrary,string bookName) {
-            int idBook = GetBookIdByName(bookName);
+        public bool AddBookToLibrary(int idLibrary,string bookName,int bookId) {
+            int idBook = GetBookId( bookId);
             Library_has_Books library_has_Books = new Library_has_Books() {
                 Books_idBook = idBook,
                 Library_idLibrary = idLibrary

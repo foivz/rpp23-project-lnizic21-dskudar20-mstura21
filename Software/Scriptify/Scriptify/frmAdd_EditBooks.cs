@@ -68,57 +68,58 @@ namespace Scriptify {
         }
 
         private void btn_save_Click(object sender, EventArgs e) {
-           
-            BookManagmentService bookManagmentService = new BookManagmentService();
-            try {
-                Book book;
-                bool bookUpdated;
-                if (cmbAuthors.SelectedIndex == -1 && txtAuthor.Text == "") {
-                    MessageBox.Show("Autor selection error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                if (txtAuthor.Enabled == true) {
-                    bool isAuthorIS = bookManagmentService.AddAuthor(txtAuthor.Text);
-                    book = new Book {
-                        idBook = BookId,
-                        book_name = txtBookName.Text,
-                        author = txtAuthor.Text,
-                        overview = txtDescription.Text,
-                        genre = cmbGenre.Text
-                    };
-                    bookUpdated = bookManagmentService.UpdateBook(book);
-                } else if (txtAuthor.Text == "" && cmbAuthors.SelectedIndex != -1) {
-                    book = new Book {
-                        idBook = BookId,
-                        book_name = txtBookName.Text,
-                        author = cmbAuthors.Text,
-                        overview = txtDescription.Text,
-                        genre = cmbGenre.Text
-                    };
-                    bookUpdated = bookManagmentService.UpdateBook(book);
-                } else if (txtAuthor.Text != "" && cmbAuthors.Text == "") {
-                    book = new Book {
+            if (CheckIfFormIsValid()) {
+                BookManagmentService bookManagmentService = new BookManagmentService();
+                try {
+                    Book book;
+                    bool bookUpdated;
+                    if (cmbAuthors.SelectedIndex == -1 && txtAuthor.Text == "") {
+                        MessageBox.Show("Autor selection error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    if (txtAuthor.Enabled == true) {
+                        bool isAuthorIS = bookManagmentService.AddAuthor(txtAuthor.Text);
+                        book = new Book {
+                            idBook = BookId,
+                            book_name = txtBookName.Text,
+                            author = txtAuthor.Text,
+                            overview = txtDescription.Text,
+                            genre = cmbGenre.Text
+                        };
+                        bookUpdated = bookManagmentService.UpdateBook(book);
+                    } else if (txtAuthor.Text == "" && cmbAuthors.SelectedIndex != -1) {
+                        book = new Book {
+                            idBook = BookId,
+                            book_name = txtBookName.Text,
+                            author = cmbAuthors.Text,
+                            overview = txtDescription.Text,
+                            genre = cmbGenre.Text
+                        };
+                        bookUpdated = bookManagmentService.UpdateBook(book);
+                    } else if (txtAuthor.Text != "" && cmbAuthors.Text == "") {
+                        book = new Book {
 
-                        book_name = txtBookName.Text,
-                        author = txtAuthor.Text,
-                        overview = txtDescription.Text,
-                        genre = cmbGenre.Text
-                    };
-                    bookUpdated = bookManagmentService.UpdateBook(book);
-                } else {
-                    MessageBox.Show("Autor selection error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    bookUpdated = false;
-                }
+                            book_name = txtBookName.Text,
+                            author = txtAuthor.Text,
+                            overview = txtDescription.Text,
+                            genre = cmbGenre.Text
+                        };
+                        bookUpdated = bookManagmentService.UpdateBook(book);
+                    } else {
+                        MessageBox.Show("Autor selection error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        bookUpdated = false;
+                    }
 
-                if (bookUpdated) {
+                    if (bookUpdated) {
 
-                    OnBookAddedEvent();
-                    Close();
-                } else {
-                    MessageBox.Show("Book could not be updated", "Book not updated", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        OnBookAddedEvent();
+                        Close();
+                    } else {
+                        MessageBox.Show("Book could not be updated", "Book not updated", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                } catch (DbUpdateException err) {
+                    MessageBox.Show("Error updating database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }catch(DbUpdateException err) {
-                MessageBox.Show("Error updating database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
@@ -128,27 +129,31 @@ namespace Scriptify {
             if (CheckIfFormIsValid()) {
             BookManagmentService bookManagmentService = new BookManagmentService();
                 Book book;
+          
                 if (txtAuthor.Enabled == true) {
                     bool isAuthorIS = bookManagmentService.AddAuthor(txtAuthor.Text);
-                     book = new Book {
+                    book = new Book {
+                       
                         book_name = txtBookName.Text,
                         author = txtAuthor.Text,
                         overview = txtDescription.Text,
                         genre = cmbGenre.Text
             };
                 } else {
-                     book = new Book {
+                    book = new Book {
+                    
                         book_name = txtBookName.Text,
                         author = cmbAuthors.Text,
                         overview = txtDescription.Text,
                         genre = cmbGenre.Text
                     };
+
                 }
             
             var bookAdded = bookManagmentService.AddBook(book);
             if (bookAdded) {
                 
-                var bookAddedToLibrary = bookManagmentService.AddBookToLibrary(LibraryId, book.book_name);
+                var bookAddedToLibrary = bookManagmentService.AddBookToLibrary(LibraryId, book.book_name,book.idBook);
                 if (bookAddedToLibrary) {
                   
                     OnBookAddedEvent();
@@ -162,8 +167,8 @@ namespace Scriptify {
         private Boolean CheckIfFormIsValid() {
             var BMS = new BookManagmentService();
             var books = BMS.GetBooksForLibrary(LibraryId);
-            if(books.Any(x => x.book_name == txtBookName.Text)) {
-                MessageBox.Show("Book with that name already exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if(books.Any(x => x.book_name == txtBookName.Text && x.overview == txtDescription.Text)) {
+                MessageBox.Show("Book with that name and description already exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             if (cmbAuthors.SelectedIndex == -1) {

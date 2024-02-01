@@ -15,10 +15,10 @@ namespace BusinessLogicLayer {
                 return repo.GetBooksForLibrary(id).ToList();
             }   
         }
-        public bool AddBookToLibrary(int idLibrary,string bookName) {
+        public bool AddBookToLibrary(int idLibrary,string bookName,int bookId) {
             using(var repo = new BookManagmentRepository()) {
                 try {
-                    repo.AddBookToLibrary(idLibrary,bookName);
+                    repo.AddBookToLibrary(idLibrary,bookName, bookId);
                     return true;
                 }catch(DbUpdateException ex) {
                     return false;
