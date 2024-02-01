@@ -68,7 +68,7 @@ namespace Scriptify {
         }
 
         private void btn_save_Click(object sender, EventArgs e) {
-            if (CheckIfFormIsValid()) {
+            
                 BookManagmentService bookManagmentService = new BookManagmentService();
                 try {
                     Book book;
@@ -120,7 +120,7 @@ namespace Scriptify {
                 } catch (DbUpdateException err) {
                     MessageBox.Show("Error updating database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
+            
             
         }
 

@@ -111,9 +111,15 @@ namespace Scriptify
             frmAdd_EditBooks.ShowDialog();
         }
         private int SelectedBookId() {
-         
-           Book book =  dgvBookManagment.SelectedRows[0].DataBoundItem as Book;
-            return book.idBook;
+            try {
+                Book book =  dgvBookManagment.SelectedRows[0].DataBoundItem as Book;
+                   return book.idBook;
+            }catch(Exception e) {
+                MessageBox.Show("Error deleting, select the whole row", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+
+           
         }
         
         private void LoadOnSucces(object sender, EventArgs e) {
@@ -125,6 +131,10 @@ namespace Scriptify
         }
 
         private void btnDeleteBook_Click(object sender, EventArgs e) {
+            if (dgvBookManagment.SelectedRows.Count == 0) {
+                MessageBox.Show("Please select a book to edit", "No book is selected", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                return;
+            }
             int bookID = SelectedBookId();
             var sucess =  bookManagmentService.DeleteBook(bookID);
             if (sucess) {

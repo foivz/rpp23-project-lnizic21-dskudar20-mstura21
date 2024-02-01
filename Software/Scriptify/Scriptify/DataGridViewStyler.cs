@@ -100,6 +100,7 @@ namespace Scriptify
             dgv.Columns["BookCount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgv.Columns["Loans"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgv.Columns["Score"].HeaderText = "Score";
+            dgv.Columns["Users"].HeaderText = "Users";
 
         }
     }

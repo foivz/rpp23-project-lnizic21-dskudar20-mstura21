@@ -20,14 +20,17 @@ namespace BusinessLogicLayer {
             using (SAPRepository repo = new SAPRepository()) {
                 var sapData = repo.getScriptifyAproovedData().ToList();
                 var libraryData = repo.getLibraryBookCounts().ToList();
+                var userData = repo.getScriptifyAlgoData().ToList();
 
                 var exitData = (from sapItem in sapData
                                 join libraryItem in libraryData on sapItem.IdLibrary equals libraryItem.Library_idLibrary
+                                join userItem in userData on sapItem.IdLibrary equals userItem.IdLibrary
                                 select new SAPScore {
                                     name = sapItem.Name,
                                     Loans = sapItem.Loans,
                                     BookCount = libraryItem.BookCount,
-                                    Score = (sapItem.Loans / (decimal)libraryItem.BookCount)
+                                    Users = userItem.Loans,
+                                    Score = (sapItem.Loans / (decimal)libraryItem.BookCount) * userItem.Loans
                                 }).OrderByDescending(x => x.Score).ToList();
 
                 return exitData;

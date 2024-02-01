@@ -9,6 +9,8 @@ namespace EntityLayer {
         public string name { get; set; }
         public int BookCount { get; set; }
         public int Loans { get; set; }
+
+        public int Users { get; set;}
         public decimal Score { get; set; }
     }
 }
