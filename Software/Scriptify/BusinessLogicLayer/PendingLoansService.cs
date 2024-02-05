@@ -10,8 +10,8 @@ namespace BusinessLogicLayer {
     public class PendingLoansService {
         public List<Loan> GetAllPendingLoans(int librarianId) {
             using (var pending = new PendingLoansRepository()) {
-                var loans = pending.GetAllPendingLoans(librarianId);
-                return loans.ToList();
+                var loans = pending.GetAllPendingLoans(librarianId).ToList();
+                return loans;
             }
         }
     }

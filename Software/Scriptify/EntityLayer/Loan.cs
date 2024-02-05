@@ -11,6 +11,8 @@ namespace EntityLayer
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int idLoan { get; set; }
+
         public int idUser { get; set; }
 
         [StringLength(45)]
