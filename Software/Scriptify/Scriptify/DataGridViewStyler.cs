@@ -75,6 +75,46 @@ namespace Scriptify
             dgv.Columns["genre"].HeaderText = "Genre";
         }
 
+        public void ChangeBooksWithCountHeaderUI(DataGridView dgv)
+        {
+
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Regular);
+            dgv.EnableHeadersVisualStyles = false;
+
+            dgv.Columns["idBook"].HeaderText = "Book ID";
+            dgv.Columns["idBook"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dgv.Columns["book_name"].HeaderText = "Book Name";
+            dgv.Columns["overview"].HeaderText = "Overview";
+            dgv.Columns["author"].HeaderText = "Author";
+            dgv.Columns["genre"].HeaderText = "Genre";
+            dgv.Columns["LoanCount"].HeaderText = "Loan count";
+
+        }
+
+        public void ChangeUsersWithCountHeaderUI(DataGridView dgv)
+        {
+
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Regular);
+            dgv.EnableHeadersVisualStyles = false;
+
+            dgv.Columns["id_user"].HeaderText = "User ID";
+            dgv.Columns["id_user"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dgv.Columns["username"].HeaderText = "Username";
+            dgv.Columns["email"].HeaderText = "E-mail";
+            dgv.Columns["create_time"].HeaderText = "Create time";
+            dgv.Columns["first_name"].HeaderText = "First name";
+            dgv.Columns["last_name"].HeaderText = "Last name";
+
+        }
+
         public void ChangeSPAHeaderUI(DataGridView dgv)
         {
             dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;

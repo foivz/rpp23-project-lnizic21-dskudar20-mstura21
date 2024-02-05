@@ -42,7 +42,7 @@ namespace DataAccessLayer.Repositories
 
             if (existingLoan != null)
             {
-                existingLoan.loan_status = "Sanction issued";
+                existingLoan.loan_status = "Completed";
 
                 if (saveChanges)
                 {

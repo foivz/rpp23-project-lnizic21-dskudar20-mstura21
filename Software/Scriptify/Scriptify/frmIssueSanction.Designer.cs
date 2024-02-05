@@ -42,12 +42,12 @@
             this.txtAmount = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnCalculateDays = new System.Windows.Forms.Button();
-            this.txtDays = new System.Windows.Forms.TextBox();
-            this.btnCalculateAmount = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtDays = new System.Windows.Forms.TextBox();
             this.btnSanction = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -156,6 +156,7 @@
             // 
             this.txtAmount.Location = new System.Drawing.Point(217, 35);
             this.txtAmount.Name = "txtAmount";
+            this.txtAmount.ReadOnly = true;
             this.txtAmount.Size = new System.Drawing.Size(74, 27);
             this.txtAmount.TabIndex = 11;
             // 
@@ -171,31 +172,37 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtTotal);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.btnCalculateAmount);
             this.groupBox1.Controls.Add(this.txtDays);
-            this.groupBox1.Controls.Add(this.btnCalculateDays);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtAmount);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.groupBox1.Location = new System.Drawing.Point(456, 54);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(396, 237);
+            this.groupBox1.Size = new System.Drawing.Size(396, 195);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Calculate the amount";
             // 
-            // btnCalculateDays
+            // txtTotal
             // 
-            this.btnCalculateDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnCalculateDays.Location = new System.Drawing.Point(10, 74);
-            this.btnCalculateDays.Name = "btnCalculateDays";
-            this.btnCalculateDays.Size = new System.Drawing.Size(133, 40);
-            this.btnCalculateDays.TabIndex = 13;
-            this.btnCalculateDays.Text = "Count the days";
-            this.btnCalculateDays.UseVisualStyleBackColor = true;
-            this.btnCalculateDays.Click += new System.EventHandler(this.btnCalculateDays_Click);
+            this.txtTotal.Location = new System.Drawing.Point(191, 145);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(100, 27);
+            this.txtTotal.TabIndex = 17;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(38, 148);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(134, 20);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Total sanction:";
             // 
             // txtDays
             // 
@@ -205,45 +212,38 @@
             this.txtDays.Size = new System.Drawing.Size(74, 27);
             this.txtDays.TabIndex = 14;
             // 
-            // btnCalculateAmount
-            // 
-            this.btnCalculateAmount.Location = new System.Drawing.Point(130, 137);
-            this.btnCalculateAmount.Name = "btnCalculateAmount";
-            this.btnCalculateAmount.Size = new System.Drawing.Size(114, 37);
-            this.btnCalculateAmount.TabIndex = 15;
-            this.btnCalculateAmount.Text = "Calculate";
-            this.btnCalculateAmount.UseVisualStyleBackColor = true;
-            this.btnCalculateAmount.Click += new System.EventHandler(this.btnCalculateAmount_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 196);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(134, 20);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Total sanction:";
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.Location = new System.Drawing.Point(162, 193);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(100, 27);
-            this.txtTotal.TabIndex = 17;
-            // 
             // btnSanction
             // 
-            this.btnSanction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSanction.BackColor = System.Drawing.Color.Green;
             this.btnSanction.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnSanction.ForeColor = System.Drawing.Color.Black;
-            this.btnSanction.Location = new System.Drawing.Point(308, 312);
+            this.btnSanction.Location = new System.Drawing.Point(179, 317);
             this.btnSanction.Name = "btnSanction";
-            this.btnSanction.Size = new System.Drawing.Size(236, 57);
+            this.btnSanction.Size = new System.Drawing.Size(531, 57);
             this.btnSanction.TabIndex = 14;
-            this.btnSanction.Text = "Issue a sanction";
+            this.btnSanction.Text = "Issue the sanction and complete the loan";
             this.btnSanction.UseVisualStyleBackColor = false;
             this.btnSanction.Click += new System.EventHandler(this.btnSanction_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(42, 83);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(130, 20);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Days of delay:";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(-4, 110);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(409, 20);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "________________________________________";
             // 
             // frmIssueSanction
             // 
@@ -292,9 +292,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnCalculateAmount;
         private System.Windows.Forms.TextBox txtDays;
-        private System.Windows.Forms.Button btnCalculateDays;
         private System.Windows.Forms.Button btnSanction;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

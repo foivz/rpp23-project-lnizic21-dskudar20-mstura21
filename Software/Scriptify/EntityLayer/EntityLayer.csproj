@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Authors.cs" />
     <Compile Include="Book.cs" />
+    <Compile Include="BookWithCount.cs" />
     <Compile Include="EntityModels.cs" />
     <Compile Include="Genre.cs" />
     <Compile Include="Librarian.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="SAPLibrary.cs" />
     <Compile Include="SAPScore.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="UserWithCount.cs" />
     <Compile Include="user_has_Library_has_Books.cs" />
   </ItemGroup>
   <ItemGroup>
