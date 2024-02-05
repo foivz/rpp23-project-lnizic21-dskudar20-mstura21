@@ -242,5 +242,10 @@ namespace Scriptify {
         private void cmbGenre_SelectedIndexChanged(object sender, EventArgs e) {
             
         }
+
+        private void btnFC_Click(object sender, EventArgs e) {
+            var replaced = txtFC.Text.Replace(" ", "%20");
+            System.Diagnostics.Process.Start("https://z-lib.io/s/"+replaced);
+        }
     }
 }

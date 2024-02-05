@@ -40,6 +40,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtGenreSearch = new System.Windows.Forms.TextBox();
+            this.btnFC = new System.Windows.Forms.Button();
+            this.txtFC = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtTitle
@@ -195,12 +197,31 @@
             this.txtGenreSearch.TabIndex = 18;
             this.txtGenreSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGenreSearch_KeyPress);
             // 
+            // btnFC
+            // 
+            this.btnFC.Location = new System.Drawing.Point(690, 9);
+            this.btnFC.Name = "btnFC";
+            this.btnFC.Size = new System.Drawing.Size(98, 23);
+            this.btnFC.TabIndex = 19;
+            this.btnFC.Text = "Fact check";
+            this.btnFC.UseVisualStyleBackColor = true;
+            this.btnFC.Click += new System.EventHandler(this.btnFC_Click);
+            // 
+            // txtFC
+            // 
+            this.txtFC.Location = new System.Drawing.Point(544, 11);
+            this.txtFC.Name = "txtFC";
+            this.txtFC.Size = new System.Drawing.Size(139, 20);
+            this.txtFC.TabIndex = 20;
+            // 
             // frmAdd_EditBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 490);
+            this.Controls.Add(this.txtFC);
+            this.Controls.Add(this.btnFC);
             this.Controls.Add(this.txtGenreSearch);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -250,5 +271,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtGenreSearch;
+        private System.Windows.Forms.Button btnFC;
+        private System.Windows.Forms.TextBox txtFC;
     }
 }
