@@ -95,7 +95,7 @@ namespace Scriptify
         {
             if (text.Any(char.IsLetter))
             {
-                throw new IssueSanctionException("Please enter the number!");
+                throw new IssueSanctionException("A number must be entered!");
             }
         }
 
@@ -103,14 +103,12 @@ namespace Scriptify
         {
             if(txtTotal.Text == "")
             {
-                MessageBox.Show("Please caluclate the amount of sanction!");
+                MessageBox.Show("A problem with calculating the amount of the sanction!");
             }
             else
             {
                 var service = new LoanHistoryAndSanctionsService();
                 service.IssueSanction(loan);
-                MessageBox.Show("Sanction issued!");
-
                 Close();
             }
         }

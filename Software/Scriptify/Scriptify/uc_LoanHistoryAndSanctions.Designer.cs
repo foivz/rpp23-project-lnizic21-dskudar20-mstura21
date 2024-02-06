@@ -67,18 +67,19 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(3, 80);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(3, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(424, 20);
+            this.label2.Size = new System.Drawing.Size(492, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "To issue a sanction, select a loan and press \"Sanction\".";
             // 
             // txtSearchLoans
             // 
+            this.txtSearchLoans.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtSearchLoans.Location = new System.Drawing.Point(3, 45);
             this.txtSearchLoans.Name = "txtSearchLoans";
-            this.txtSearchLoans.Size = new System.Drawing.Size(206, 22);
+            this.txtSearchLoans.Size = new System.Drawing.Size(206, 19);
             this.txtSearchLoans.TabIndex = 6;
             this.txtSearchLoans.TextChanged += new System.EventHandler(this.txtSearchLoans_TextChanged);
             // 
