@@ -10,7 +10,7 @@
     public partial class Sanction
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id_sanction { get; set; }
 
         public int id_librarian { get; set; }

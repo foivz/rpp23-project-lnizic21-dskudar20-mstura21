@@ -56,7 +56,7 @@
             // 
             this.btnSanction.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnSanction.ForeColor = System.Drawing.Color.Red;
-            this.btnSanction.Location = new System.Drawing.Point(295, 397);
+            this.btnSanction.Location = new System.Drawing.Point(299, 380);
             this.btnSanction.Name = "btnSanction";
             this.btnSanction.Size = new System.Drawing.Size(215, 32);
             this.btnSanction.TabIndex = 4;
@@ -76,10 +76,10 @@
             // 
             // txtSearchLoans
             // 
-            this.txtSearchLoans.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtSearchLoans.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtSearchLoans.Location = new System.Drawing.Point(3, 45);
             this.txtSearchLoans.Name = "txtSearchLoans";
-            this.txtSearchLoans.Size = new System.Drawing.Size(206, 19);
+            this.txtSearchLoans.Size = new System.Drawing.Size(206, 26);
             this.txtSearchLoans.TabIndex = 6;
             this.txtSearchLoans.TextChanged += new System.EventHandler(this.txtSearchLoans_TextChanged);
             // 

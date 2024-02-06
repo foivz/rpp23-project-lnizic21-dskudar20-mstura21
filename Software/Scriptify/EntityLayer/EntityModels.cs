@@ -18,6 +18,7 @@ namespace EntityLayer {
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<user_has_Library_has_Books> user_has_Library_has_Books { get; set; }
         public virtual DbSet<Genre> Genres { get; set; }
+        public virtual DbSet<Sanction> Sanctions { get; set; }
         public virtual DbSet<Loan> Loans { get; set; }
 
         public virtual DbSet<Authors> Authors { get; set; }
@@ -146,6 +147,30 @@ namespace EntityLayer {
             modelBuilder.Entity<Genre>()
                 .Property(e => e.genre)
                 .IsUnicode(false);
+
+
+            modelBuilder.Entity<Sanction>()
+                .Property(e => e.id_librarian);
+
+            modelBuilder.Entity<Sanction>()
+                .Property(e => e.id_user);
+
+            modelBuilder.Entity<Sanction>()
+                .Property(e => e.user_first_name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Sanction>()
+                .Property(e => e.user_last_name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Sanction>()
+                .Property(e => e.date_of_loan);
+
+            modelBuilder.Entity<Sanction>()
+                .Property(e => e.returned);
+
+            modelBuilder.Entity<Sanction>()
+                .Property(e => e.planned_return);
 
             modelBuilder.Entity<Authors>()
                 .Property(e => e.name)
