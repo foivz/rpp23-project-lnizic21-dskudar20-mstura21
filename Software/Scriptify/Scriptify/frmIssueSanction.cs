@@ -16,10 +16,12 @@ namespace Scriptify
     public partial class frmIssueSanction : Form
     {
         private Loan loan = new Loan();
-        public frmIssueSanction(Loan loan)
+        private Librarian librarian = new Librarian();
+        public frmIssueSanction(Loan loan, Librarian librarian)
         {
             InitializeComponent();
             this.loan = loan;
+            this.librarian = librarian;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -109,8 +111,29 @@ namespace Scriptify
             {
                 var service = new LoanHistoryAndSanctionsService();
                 service.IssueSanction(loan);
+                SaveSanction();
                 Close();
             }
+        }
+
+        private void SaveSanction()
+        {
+            var service = new SanctionServices();
+
+            DateTime today = DateTime.Now.Date;
+
+            Sanction sanction = new Sanction()
+            {
+                id_librarian = librarian.idLibrarians,
+                id_user = loan.idUser,
+                user_first_name = loan.first_name,
+                user_last_name = loan.last_name,
+                date_of_loan = loan.date_of_loan,
+                planned_return = loan.planned_return,
+                returned = today,
+            };
+
+            service.SaveSanction(sanction);
         }
 
         private void label9_Click(object sender, EventArgs e)

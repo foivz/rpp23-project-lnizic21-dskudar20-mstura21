@@ -73,7 +73,7 @@ namespace Scriptify {
                 }
                 else
                 {
-                    frmIssueSanction frmIssueSanction = new frmIssueSanction(choosedLoan);
+                    frmIssueSanction frmIssueSanction = new frmIssueSanction(choosedLoan, user);
                     frmIssueSanction.ShowDialog();
 
                 }
