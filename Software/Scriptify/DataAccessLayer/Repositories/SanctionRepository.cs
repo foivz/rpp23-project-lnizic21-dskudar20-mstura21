@@ -35,6 +35,12 @@ namespace DataAccessLayer.Repositories
                 return 0;
             }
         }
+
+        public IQueryable<Sanction> GetAllSanctions()
+        {
+            var sql = from e in Entities select e;
+            return sql;
+        }
         public void Dispose()
         {
             Context.Dispose();

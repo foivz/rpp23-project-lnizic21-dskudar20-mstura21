@@ -21,5 +21,13 @@ namespace BusinessLogicLayer
             }
             return isSuccessful;
         }
+
+        public List<Sanction> GetAllSanctions()
+        {
+            using (var repo = new SanctionRepository())
+            {
+                return repo.GetAllSanctions().ToList();
+            }
+        }
     }
 }
