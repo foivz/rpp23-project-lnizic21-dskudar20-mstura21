@@ -55,6 +55,8 @@ namespace Scriptify {
             var service = new SanctionServices();
             List<Sanction> sanctions = service.GetAllSanctions();
             dgvSanctions.DataSource = sanctions;
+            dataGridView.ChangeHeaderSanctionsUI(dgvSanctions);
+            dgvSanctions.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
         }
 

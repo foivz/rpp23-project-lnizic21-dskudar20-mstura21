@@ -6,7 +6,7 @@
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Sanction")]
+    [Table("Sanctions")]
     public partial class Sanction
     {
         [Key]

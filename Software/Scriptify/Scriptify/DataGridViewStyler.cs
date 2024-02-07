@@ -35,6 +35,28 @@ namespace Scriptify
 
         }
 
+        public void ChangeHeaderSanctionsUI(DataGridView dgv)
+        {
+
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Regular);
+            dgv.EnableHeadersVisualStyles = false;
+
+            dgv.Columns["id_sanction"].HeaderText = "Sanction ID";
+            dgv.Columns["id_sanction"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dgv.Columns["id_librarian"].HeaderText = "Librarian ID";
+            dgv.Columns["id_user"].HeaderText = "User ID";
+            dgv.Columns["user_first_name"].HeaderText = "User first name";
+            dgv.Columns["user_last_name"].HeaderText = "User last name";
+            dgv.Columns["date_of_loan"].HeaderText = "Loan date";
+            dgv.Columns["planned_return"].HeaderText = "Planned return";
+            dgv.Columns["returned"].HeaderText = "Returned date";
+
+        }
+
 
         public void ChangeReservationHeaderUI(DataGridView dgv)
         {
