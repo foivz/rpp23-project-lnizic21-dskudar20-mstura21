@@ -31,6 +31,7 @@
             this.btnLoanHistory = new System.Windows.Forms.Button();
             this.btnSanctions = new System.Windows.Forms.Button();
             this.dgvSanctions = new System.Windows.Forms.DataGridView();
+            this.txtSearchSanctions = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoanHistoryAndSanctions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanctions)).BeginInit();
             this.SuspendLayout();
@@ -117,10 +118,20 @@
             this.dgvSanctions.Size = new System.Drawing.Size(742, 241);
             this.dgvSanctions.TabIndex = 9;
             // 
+            // txtSearchSanctions
+            // 
+            this.txtSearchSanctions.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtSearchSanctions.Location = new System.Drawing.Point(3, 61);
+            this.txtSearchSanctions.Name = "txtSearchSanctions";
+            this.txtSearchSanctions.Size = new System.Drawing.Size(206, 26);
+            this.txtSearchSanctions.TabIndex = 10;
+            this.txtSearchSanctions.TextChanged += new System.EventHandler(this.txtSearchSanctions_TextChanged);
+            // 
             // uc_LoanHistoryAndSanctions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtSearchSanctions);
             this.Controls.Add(this.dgvSanctions);
             this.Controls.Add(this.btnSanctions);
             this.Controls.Add(this.btnLoanHistory);
@@ -150,5 +161,6 @@
         private System.Windows.Forms.Button btnLoanHistory;
         private System.Windows.Forms.Button btnSanctions;
         private System.Windows.Forms.DataGridView dgvSanctions;
+        private System.Windows.Forms.TextBox txtSearchSanctions;
     }
 }

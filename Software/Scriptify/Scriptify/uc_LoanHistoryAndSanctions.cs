@@ -15,7 +15,9 @@ namespace Scriptify {
 
         private LoanHistoryAndSanctionsService loanHistoryAndSanctionsService;
         private string placeholderText = "Search loans by book name";
+        private string placeholderTextSanctions = "Search sanctions by first name or last name";
         private BindingSource bindingSource = new BindingSource();
+        private BindingSource bindingSource2 = new BindingSource();
         private Librarian user = new Librarian();
         private DataGridViewStyler dataGridView = new DataGridViewStyler();
         public uc_LoanHistoryAndSanctions(Librarian user) {
@@ -25,6 +27,10 @@ namespace Scriptify {
             txtSearchLoans.Text = placeholderText;
             txtSearchLoans.Enter += TextBoxSearch_Enter;
             txtSearchLoans.Leave += TextBoxSearch_Leave;
+
+            txtSearchSanctions.Text = placeholderTextSanctions;
+            txtSearchSanctions.Enter += TextBoxSearchS_Enter;
+            txtSearchSanctions.Leave += TextBoxSearchS_Leave;
         }
 
         private void TextBoxSearch_Enter(object sender, EventArgs e)
@@ -42,12 +48,28 @@ namespace Scriptify {
                 txtSearchLoans.Text = placeholderText;
             }
         }
+        private void TextBoxSearchS_Enter(object sender, EventArgs e)
+        {
+            if (txtSearchSanctions.Text == placeholderTextSanctions)
+            {
+                txtSearchSanctions.Text = "";
+            }
+        }
+
+        private void TextBoxSearchS_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSearchSanctions.Text))
+            {
+                txtSearchSanctions.Text = placeholderTextSanctions;
+            }
+        }
         private void uc_LoanHistoryAndSanctions_Load(object sender, EventArgs e)
         {
             ShowLoans();
             ShowSanctions();
             btnLoanHistory.Visible = false;
             dgvSanctions.Visible = false;
+            txtSearchSanctions.Visible = false;
         }
 
         private void ShowSanctions()
@@ -142,6 +164,7 @@ namespace Scriptify {
             btnSanction.Visible = false;
             dgvLoanHistoryAndSanctions.Visible = false;
             txtSearchLoans.Visible = false;
+            txtSearchSanctions.Visible = true;
             label2.Visible = false;
             btnLoanHistory.Visible = true;
             dgvSanctions.Visible = true;
@@ -154,10 +177,28 @@ namespace Scriptify {
             btnSanction.Visible = true;
             dgvLoanHistoryAndSanctions.Visible = true;
             txtSearchLoans.Visible = true;
+            txtSearchSanctions.Visible = false;
             label2.Visible = true;
             dgvLoanHistoryAndSanctions.Visible = true;
             dgvSanctions.Visible = false;
 
+        }
+
+        private void txtSearchSanctions_TextChanged(object sender, EventArgs e)
+        {
+            var service = new SanctionServices();
+            string searchText = txtSearchSanctions.Text.Trim().ToLowerInvariant();
+            if (string.IsNullOrWhiteSpace(searchText) || searchText == placeholderTextSanctions.ToLowerInvariant())
+            {
+                ShowSanctions();
+            }
+            else
+            {
+                List<Sanction> listOfSanctions = service.GetAllSanctions();
+                List<Sanction> filteredSanctions = listOfSanctions.Where(sanction => (sanction.user_last_name.ToLowerInvariant().Contains(searchText)) || (sanction.user_first_name.ToLowerInvariant().Contains(searchText))).ToList();
+                bindingSource2.DataSource = filteredSanctions;
+                dgvSanctions.DataSource = bindingSource2;
+            }
         }
     }
 }
