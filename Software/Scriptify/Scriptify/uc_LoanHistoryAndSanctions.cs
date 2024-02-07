@@ -45,6 +45,8 @@ namespace Scriptify {
         private void uc_LoanHistoryAndSanctions_Load(object sender, EventArgs e)
         {
             ShowLoans();
+            btnLoanHistory.Visible = false;
+            dgvSanctions.Visible = false;
         }
 
         private void ShowLoans()
@@ -121,6 +123,30 @@ namespace Scriptify {
                 bindingSource.DataSource = filteredLoans;
                 dgvLoanHistoryAndSanctions.DataSource = bindingSource;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            btnSanctions.Visible = false;
+            btnSanction.Visible = false;
+            dgvLoanHistoryAndSanctions.Visible = false;
+            txtSearchLoans.Visible = false;
+            label2.Visible = false;
+            btnLoanHistory.Visible = true;
+            dgvSanctions.Visible = true;
+        }
+
+        private void btnLoanHistory_Click(object sender, EventArgs e)
+        {
+            btnLoanHistory.Visible = false;
+            btnSanctions.Visible = true;
+            btnSanction.Visible = true;
+            dgvLoanHistoryAndSanctions.Visible = true;
+            txtSearchLoans.Visible = true;
+            label2.Visible = true;
+            dgvLoanHistoryAndSanctions.Visible = true;
+            dgvSanctions.Visible = false;
+
         }
     }
 }
