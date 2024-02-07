@@ -14,7 +14,7 @@ namespace Scriptify {
     public partial class uc_LoanHistoryAndSanctions : UserControl {
 
         private LoanHistoryAndSanctionsService loanHistoryAndSanctionsService;
-        private string placeholderText = "Search loans by book name";
+        private string placeholderText = "Search loans by book name or username";
         private string placeholderTextSanctions = "Search sanctions by first name or last name";
         private BindingSource bindingSource = new BindingSource();
         private BindingSource bindingSource2 = new BindingSource();
@@ -152,7 +152,7 @@ namespace Scriptify {
             else
             {
                 List<Loan> listOfLoans = loanHistoryAndSanctionsService.GetAllExpiredLoans(user.idLibrarians);
-                List<Loan> filteredLoans = listOfLoans.Where(loan => loan.book_name.ToLowerInvariant().Contains(searchText)).ToList();
+                List<Loan> filteredLoans = listOfLoans.Where(loan => (loan.book_name.ToLowerInvariant().Contains(searchText)) || (loan.username.ToLowerInvariant().Contains(searchText))).ToList();
                 bindingSource.DataSource = filteredLoans;
                 dgvLoanHistoryAndSanctions.DataSource = bindingSource;
             }
