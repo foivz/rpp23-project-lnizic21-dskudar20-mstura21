@@ -45,8 +45,17 @@ namespace Scriptify {
         private void uc_LoanHistoryAndSanctions_Load(object sender, EventArgs e)
         {
             ShowLoans();
+            ShowSanctions();
             btnLoanHistory.Visible = false;
             dgvSanctions.Visible = false;
+        }
+
+        private void ShowSanctions()
+        {
+            var service = new SanctionServices();
+            List<Sanction> sanctions = service.GetAllSanctions();
+            dgvSanctions.DataSource = sanctions;
+
         }
 
         private void ShowLoans()

@@ -89,7 +89,7 @@
             // 
             // btnLoanHistory
             // 
-            this.btnLoanHistory.Location = new System.Drawing.Point(560, 61);
+            this.btnLoanHistory.Location = new System.Drawing.Point(645, 61);
             this.btnLoanHistory.Name = "btnLoanHistory";
             this.btnLoanHistory.Size = new System.Drawing.Size(100, 34);
             this.btnLoanHistory.TabIndex = 7;
