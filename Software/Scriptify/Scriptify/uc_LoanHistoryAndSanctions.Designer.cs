@@ -32,6 +32,8 @@
             this.btnSanctions = new System.Windows.Forms.Button();
             this.dgvSanctions = new System.Windows.Forms.DataGridView();
             this.txtSearchSanctions = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbFiltering = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoanHistoryAndSanctions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanctions)).BeginInit();
             this.SuspendLayout();
@@ -127,10 +129,32 @@
             this.txtSearchSanctions.TabIndex = 10;
             this.txtSearchSanctions.TextChanged += new System.EventHandler(this.txtSearchSanctions_TextChanged);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(402, 64);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 20);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Sort by:";
+            // 
+            // cmbFiltering
+            // 
+            this.cmbFiltering.BackColor = System.Drawing.Color.White;
+            this.cmbFiltering.FormattingEnabled = true;
+            this.cmbFiltering.Location = new System.Drawing.Point(475, 62);
+            this.cmbFiltering.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbFiltering.Name = "cmbFiltering";
+            this.cmbFiltering.Size = new System.Drawing.Size(139, 24);
+            this.cmbFiltering.TabIndex = 11;
+            // 
             // uc_LoanHistoryAndSanctions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cmbFiltering);
             this.Controls.Add(this.txtSearchSanctions);
             this.Controls.Add(this.dgvSanctions);
             this.Controls.Add(this.btnSanctions);
@@ -162,5 +186,7 @@
         private System.Windows.Forms.Button btnSanctions;
         private System.Windows.Forms.DataGridView dgvSanctions;
         private System.Windows.Forms.TextBox txtSearchSanctions;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmbFiltering;
     }
 }

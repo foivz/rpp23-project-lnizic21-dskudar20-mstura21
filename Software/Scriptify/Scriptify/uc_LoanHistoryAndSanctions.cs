@@ -31,6 +31,10 @@ namespace Scriptify {
             txtSearchSanctions.Text = placeholderTextSanctions;
             txtSearchSanctions.Enter += TextBoxSearchS_Enter;
             txtSearchSanctions.Leave += TextBoxSearchS_Leave;
+
+            cmbFiltering.Items.Add("All loans");
+            cmbFiltering.Items.Add("Completed loans");
+            cmbFiltering.Items.Add("In progress loans");
         }
 
         private void TextBoxSearch_Enter(object sender, EventArgs e)
@@ -85,6 +89,23 @@ namespace Scriptify {
         private void ShowLoans()
         {
             List<Loan> loans = loanHistoryAndSanctionsService.GetAllExpiredLoans(user.idLibrarians);
+
+
+            string sortOrder = cmbFiltering?.SelectedItem?.ToString();
+
+            if (sortOrder == "All loans")
+            {
+                loans = loans;
+            }
+            else if (sortOrder == "Completed loans")
+            {
+                loans = loans.Where(l => l.loan_status == "Completed").ToList();
+            }
+            else if (sortOrder == "In progress loans")
+            {
+                loans = loans.Where(l => l.loan_status == "In progress").ToList();
+            }
+            
             bindingSource.DataSource = loans;
             dgvLoanHistoryAndSanctions.DataSource = bindingSource;
             dataGridView.ChangeHeaderUI(dgvLoanHistoryAndSanctions);
