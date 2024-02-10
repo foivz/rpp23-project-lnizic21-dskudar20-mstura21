@@ -173,6 +173,22 @@ namespace Scriptify {
             else
             {
                 List<Loan> listOfLoans = loanHistoryAndSanctionsService.GetAllExpiredLoans(user.idLibrarians);
+
+                string sortOrder = cmbFiltering?.SelectedItem?.ToString();
+
+                if (sortOrder == "All loans")
+                {
+                    listOfLoans = listOfLoans;
+                }
+                else if (sortOrder == "Completed loans")
+                {
+                    listOfLoans = listOfLoans.Where(l => l.loan_status == "Completed").ToList();
+                }
+                else if (sortOrder == "In progress loans")
+                {
+                    listOfLoans = listOfLoans.Where(l => l.loan_status == "In progress").ToList();
+                }
+
                 List<Loan> filteredLoans = listOfLoans.Where(loan => (loan.book_name.ToLowerInvariant().Contains(searchText)) || (loan.username.ToLowerInvariant().Contains(searchText))).ToList();
                 bindingSource.DataSource = filteredLoans;
                 dgvLoanHistoryAndSanctions.DataSource = bindingSource;
