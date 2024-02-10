@@ -121,7 +121,7 @@ namespace Scriptify
             var service = new SanctionServices();
 
             DateTime today = DateTime.Now.Date;
-           
+
             Sanction sanction = new Sanction()
             {
                 id_librarian = librarian.idLibrarians,
@@ -131,6 +131,7 @@ namespace Scriptify
                 date_of_loan = loan.date_of_loan,
                 planned_return = loan.planned_return,
                 returned = today,
+                sanction_amount = Convert.ToInt16(txtTotal.Text),
             };
 
             service.SaveSanction(sanction);

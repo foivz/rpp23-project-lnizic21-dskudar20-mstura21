@@ -189,6 +189,8 @@ namespace Scriptify {
             label2.Visible = false;
             btnLoanHistory.Visible = true;
             dgvSanctions.Visible = true;
+            cmbFiltering.Visible = false;
+            label3.Visible = false;
         }
 
         private void btnLoanHistory_Click(object sender, EventArgs e)
@@ -202,6 +204,8 @@ namespace Scriptify {
             label2.Visible = true;
             dgvLoanHistoryAndSanctions.Visible = true;
             dgvSanctions.Visible = false;
+            cmbFiltering.Visible = true;
+            label3.Visible = true;
 
         }
 

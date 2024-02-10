@@ -54,6 +54,7 @@ namespace Scriptify
             dgv.Columns["date_of_loan"].HeaderText = "Loan date";
             dgv.Columns["planned_return"].HeaderText = "Planned return";
             dgv.Columns["returned"].HeaderText = "Returned date";
+            dgv.Columns["sanction_amount"].HeaderText = "Sanction amount";
 
         }
 
