@@ -221,5 +221,10 @@ namespace Scriptify {
                 dgvSanctions.DataSource = bindingSource2;
             }
         }
+
+        private void cmbFiltering_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShowLoans();
+        }
     }
 }
