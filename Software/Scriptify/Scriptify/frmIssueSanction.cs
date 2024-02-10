@@ -54,7 +54,7 @@ namespace Scriptify
                 try
                 {
                     Validation(txtAmount.Text);
-                    var totalAmount = Convert.ToDouble(txtAmount.Text) * Convert.ToDouble(txtDays.Text);
+                    var totalAmount = Convert.ToDecimal(txtAmount.Text) * Convert.ToDecimal(txtDays.Text);
                     txtTotal.Text = totalAmount.ToString();
                 }
                 catch (IssueSanctionException ex)
@@ -131,7 +131,7 @@ namespace Scriptify
                 date_of_loan = loan.date_of_loan,
                 planned_return = loan.planned_return,
                 returned = today,
-                sanction_amount = Convert.ToInt16(txtTotal.Text),
+                sanction_amount = Convert.ToDecimal(txtTotal.Text),
             };
 
             service.SaveSanction(sanction);

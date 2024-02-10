@@ -32,7 +32,7 @@
         [Column(TypeName = "date")]
         public DateTime? returned { get; set; }
 
-        public int sanction_amount { get; set; }
+        public decimal sanction_amount { get; set; }
 
     }
 }

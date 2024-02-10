@@ -48,13 +48,29 @@ namespace Scriptify
             dgv.Columns["id_sanction"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             dgv.Columns["id_librarian"].HeaderText = "Librarian ID";
+            dgv.Columns["id_librarian"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             dgv.Columns["id_user"].HeaderText = "User ID";
+            dgv.Columns["id_user"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             dgv.Columns["user_first_name"].HeaderText = "User first name";
+            dgv.Columns["user_first_name"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             dgv.Columns["user_last_name"].HeaderText = "User last name";
+            dgv.Columns["user_last_name"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             dgv.Columns["date_of_loan"].HeaderText = "Loan date";
+            dgv.Columns["date_of_loan"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             dgv.Columns["planned_return"].HeaderText = "Planned return";
+            dgv.Columns["planned_return"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             dgv.Columns["returned"].HeaderText = "Returned date";
+            dgv.Columns["returned"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             dgv.Columns["sanction_amount"].HeaderText = "Sanction amount";
+            dgv.Columns["sanction_amount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
 
         }
 

@@ -172,6 +172,9 @@ namespace EntityLayer {
             modelBuilder.Entity<Sanction>()
                 .Property(e => e.planned_return);
 
+            modelBuilder.Entity<Sanction>()
+               .Property(e => e.sanction_amount);
+
             modelBuilder.Entity<Authors>()
                 .Property(e => e.name)
                 .IsUnicode(false);
