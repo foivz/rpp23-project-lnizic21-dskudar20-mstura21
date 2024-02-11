@@ -145,7 +145,19 @@ namespace DataAccessLayer.Repositories
 
         }
 
-        public IQueryable<>
+        public IQueryable<ChartData> GetChartData(DateTime start, DateTime end)
+        {
+            var loans = from loan in Context.Loans
+                        where loan.date_of_loan >= start && loan.date_of_loan <= end
+                        group loan by loan.date_of_loan into grouped
+                        select new ChartData
+                        {
+                            Date = grouped.Key,
+                            Count = grouped.Count()
+                        };
+
+            return loans;
+        }
 
         public void Dispose()
         {
