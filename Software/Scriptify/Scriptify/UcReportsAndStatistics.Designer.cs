@@ -57,7 +57,7 @@
             this.dgvStatistics.Name = "dgvStatistics";
             this.dgvStatistics.RowHeadersWidth = 51;
             this.dgvStatistics.RowTemplate.Height = 24;
-            this.dgvStatistics.Size = new System.Drawing.Size(540, 149);
+            this.dgvStatistics.Size = new System.Drawing.Size(681, 149);
             this.dgvStatistics.TabIndex = 1;
             // 
             // labelTopBooks
@@ -83,11 +83,11 @@
             // dgvTopUsers
             // 
             this.dgvTopUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTopUsers.Location = new System.Drawing.Point(21, 117);
+            this.dgvTopUsers.Location = new System.Drawing.Point(21, 119);
             this.dgvTopUsers.Name = "dgvTopUsers";
             this.dgvTopUsers.RowHeadersWidth = 51;
             this.dgvTopUsers.RowTemplate.Height = 24;
-            this.dgvTopUsers.Size = new System.Drawing.Size(540, 151);
+            this.dgvTopUsers.Size = new System.Drawing.Size(681, 151);
             this.dgvTopUsers.TabIndex = 4;
             // 
             // btnTopBooks

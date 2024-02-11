@@ -44,11 +44,8 @@ namespace Scriptify
 
             dgvTopUsers.Height = (dgvTopUsers.Rows.Count + 2) * visinaReda;
 
-            //dgvTopUsers.Columns["loans_of_books"].Visible = false;
-            //dgvTopUsers.Columns["Reservations"].Visible = false;
-            //dgvTopUsers.Columns["user_has_Library_has_Books"].Visible = false;
-            //dgvTopUsers.Columns["Books"].Visible = false;
-            //dgvTopUsers.Columns["Money"].Visible = false;
+            dgvTopUsers.Columns["password"].Visible = false;
+            dgvTopUsers.Columns["Money"].Visible = false;
             dataGridView.ChangeUsersWithCountHeaderUI(dgvTopUsers);
             dgvTopUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
@@ -72,7 +69,7 @@ namespace Scriptify
             //dgvStatistics.Columns["Library_has_Books"].Visible = false;
             //dgvStatistics.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            dataGridView.ChangeBooksHeaderUI(dgvStatistics);
+            dataGridView.ChangeBooksWithCountHeaderUI(dgvStatistics);
             dgvStatistics.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             dgvTopUsers.Visible = false;

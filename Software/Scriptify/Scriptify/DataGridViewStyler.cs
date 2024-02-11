@@ -127,10 +127,20 @@ namespace Scriptify
             dgv.Columns["idBook"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             dgv.Columns["book_name"].HeaderText = "Book Name";
+            dgv.Columns["book_name"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             dgv.Columns["overview"].HeaderText = "Overview";
+            dgv.Columns["overview"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             dgv.Columns["author"].HeaderText = "Author";
+            dgv.Columns["author"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             dgv.Columns["genre"].HeaderText = "Genre";
+            dgv.Columns["genre"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             dgv.Columns["LoanCount"].HeaderText = "Loan count";
+            dgv.Columns["LoanCount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
 
         }
 
@@ -147,10 +157,23 @@ namespace Scriptify
             dgv.Columns["id_user"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             dgv.Columns["username"].HeaderText = "Username";
+            dgv.Columns["username"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             dgv.Columns["email"].HeaderText = "E-mail";
+            dgv.Columns["email"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             dgv.Columns["create_time"].HeaderText = "Create time";
-            dgv.Columns["first_name"].HeaderText = "First name";
-            dgv.Columns["last_name"].HeaderText = "Last name";
+            dgv.Columns["create_time"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dgv.Columns["First_Name"].HeaderText = "First name";
+            dgv.Columns["First_Name"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dgv.Columns["Last_Name"].HeaderText = "Last name";
+            dgv.Columns["Last_Name"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dgv.Columns["LoanCount"].HeaderText = "Loan count";
+            dgv.Columns["LoanCount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
 
         }
 
