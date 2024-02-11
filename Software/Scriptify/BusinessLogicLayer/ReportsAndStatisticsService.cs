@@ -41,5 +41,13 @@ namespace BusinessLogicLayer
             }
         }
 
+        public List<ChartData> GetChartDatas(DateTime start, DateTime end)
+        {
+            using (var repo = new ReportsAndStatisticsRepository())
+            {
+                return repo.GetChartData(start, end).ToList();
+            }
+        }
+
     }
 }
