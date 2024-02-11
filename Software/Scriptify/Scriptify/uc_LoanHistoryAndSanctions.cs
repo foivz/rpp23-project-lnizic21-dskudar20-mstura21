@@ -79,7 +79,7 @@ namespace Scriptify {
         private void ShowSanctions()
         {
             var service = new SanctionServices();
-            List<Sanction> sanctions = service.GetAllSanctions();
+            List<Sanction> sanctions = service.GetAllSanctions(user);
             dgvSanctions.DataSource = sanctions;
             dataGridView.ChangeHeaderSanctionsUI(dgvSanctions);
             dgvSanctions.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -249,7 +249,7 @@ namespace Scriptify {
             }
             else
             {
-                List<Sanction> listOfSanctions = service.GetAllSanctions();
+                List<Sanction> listOfSanctions = service.GetAllSanctions(user);
                 List<Sanction> filteredSanctions = listOfSanctions.Where(sanction => (sanction.user_last_name.ToLowerInvariant().Contains(searchText)) || (sanction.user_first_name.ToLowerInvariant().Contains(searchText))).ToList();
                 bindingSource2.DataSource = filteredSanctions;
                 dgvSanctions.DataSource = bindingSource2;

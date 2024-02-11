@@ -40,6 +40,7 @@
             this.btnTopUsers = new System.Windows.Forms.Button();
             this.btnChart = new System.Windows.Forms.Button();
             this.chActivitiy = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.labelChart = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTopUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chActivitiy)).BeginInit();
@@ -150,14 +151,25 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chActivitiy.Series.Add(series1);
-            this.chActivitiy.Size = new System.Drawing.Size(681, 298);
+            this.chActivitiy.Size = new System.Drawing.Size(681, 249);
             this.chActivitiy.TabIndex = 8;
             this.chActivitiy.Text = "chart1";
+            // 
+            // labelChart
+            // 
+            this.labelChart.AutoSize = true;
+            this.labelChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelChart.Location = new System.Drawing.Point(21, 91);
+            this.labelChart.Name = "labelChart";
+            this.labelChart.Size = new System.Drawing.Size(274, 25);
+            this.labelChart.TabIndex = 9;
+            this.labelChart.Text = "Number of loans last month";
             // 
             // UcReportsAndStatistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelChart);
             this.Controls.Add(this.chActivitiy);
             this.Controls.Add(this.btnChart);
             this.Controls.Add(this.btnTopUsers);
@@ -190,5 +202,6 @@
         private System.Windows.Forms.Button btnTopUsers;
         private System.Windows.Forms.Button btnChart;
         private System.Windows.Forms.DataVisualization.Charting.Chart chActivitiy;
+        private System.Windows.Forms.Label labelChart;
     }
 }

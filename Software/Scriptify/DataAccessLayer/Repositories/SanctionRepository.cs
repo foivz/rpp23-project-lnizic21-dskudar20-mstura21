@@ -36,9 +36,11 @@ namespace DataAccessLayer.Repositories
             }
         }
 
-        public IQueryable<Sanction> GetAllSanctions()
+        public IQueryable<Sanction> GetAllSanctions(Librarian user)
         {
-            var sql = from e in Entities select e;
+            var sql = from e in Entities
+                      where e.id_librarian == user.idLibrarians
+                      select e;
             return sql;
         }
         public void Dispose()

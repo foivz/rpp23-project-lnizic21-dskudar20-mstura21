@@ -22,11 +22,11 @@ namespace BusinessLogicLayer
             return isSuccessful;
         }
 
-        public List<Sanction> GetAllSanctions()
+        public List<Sanction> GetAllSanctions(Librarian user)
         {
             using (var repo = new SanctionRepository())
             {
-                return repo.GetAllSanctions().ToList();
+                return repo.GetAllSanctions(user).ToList();
             }
         }
     }

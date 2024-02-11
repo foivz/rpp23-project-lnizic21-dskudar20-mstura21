@@ -34,6 +34,7 @@ namespace Scriptify
             dgvStatistics.Visible = false;
             labelTopBooks.Visible = false;
             chActivitiy.Visible = false;
+            labelChart.Visible = false;
 
         }
 
@@ -56,6 +57,7 @@ namespace Scriptify
             dgvStatistics.Visible = false;
             labelTopBooks.Visible = false;
             chActivitiy.Visible = false;
+            labelChart.Visible = false;
 
         }
 
@@ -80,6 +82,8 @@ namespace Scriptify
             dgvStatistics.Visible = true;
             labelTopBooks.Visible = true;
             chActivitiy.Visible = false;
+            labelChart.Visible = false;
+
         }
 
         private void btnTopBooks_Click(object sender, EventArgs e)
@@ -104,6 +108,7 @@ namespace Scriptify
             dgvTopUsers.Visible = false;
             labelTopUsers.Visible = false;
             chActivitiy.Visible = true;
+            labelChart.Visible = true;
 
             DateTime endDate = DateTime.Now;
             DateTime startDate = endDate.AddMonths(-1);
