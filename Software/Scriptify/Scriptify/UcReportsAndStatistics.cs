@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Scriptify
 {
@@ -32,6 +33,7 @@ namespace Scriptify
             labelTopUsers.Visible = false;
             dgvStatistics.Visible = false;
             labelTopBooks.Visible = false;
+            chActivitiy.Visible = false;
 
         }
 
@@ -53,6 +55,7 @@ namespace Scriptify
             labelTopUsers.Visible = true;
             dgvStatistics.Visible = false;
             labelTopBooks.Visible = false;
+            chActivitiy.Visible = false;
 
         }
 
@@ -76,6 +79,7 @@ namespace Scriptify
             labelTopUsers.Visible = false;
             dgvStatistics.Visible = true;
             labelTopBooks.Visible = true;
+            chActivitiy.Visible = false;
         }
 
         private void btnTopBooks_Click(object sender, EventArgs e)
@@ -99,11 +103,32 @@ namespace Scriptify
             labelTopBooks.Visible = false;
             dgvTopUsers.Visible = false;
             labelTopUsers.Visible = false;
+            chActivitiy.Visible = true;
 
             DateTime endDate = DateTime.Now;
             DateTime startDate = endDate.AddMonths(-1);
 
+            var loansInLastMonth = reportsAndStatisticsService.GetChartDatas(startDate, endDate);
 
+            chActivitiy.Series.Clear();
+            chActivitiy.ChartAreas[0].AxisX.Interval = 1;
+
+            chActivitiy.ChartAreas[0].AxisX.Title = "Date";
+            chActivitiy.ChartAreas[0].AxisY.Title = "Number of loans";
+            chActivitiy.BackColor = Color.LightGray;
+            chActivitiy.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.Black;
+            chActivitiy.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.Black;
+
+            Series series = new Series("Loans");
+            series.ChartType = SeriesChartType.Line;
+            series.Color = Color.Blue;
+
+            foreach (var item in loansInLastMonth)
+            {
+                series.Points.AddXY(item.Date, item.Count);
+            }
+
+            chActivitiy.Series.Add(series);
 
         }
     }

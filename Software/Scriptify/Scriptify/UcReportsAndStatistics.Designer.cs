@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvStatistics = new System.Windows.Forms.DataGridView();
             this.labelTopBooks = new System.Windows.Forms.Label();
@@ -36,8 +39,10 @@
             this.btnTopBooks = new System.Windows.Forms.Button();
             this.btnTopUsers = new System.Windows.Forms.Button();
             this.btnChart = new System.Windows.Forms.Button();
+            this.chActivitiy = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTopUsers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chActivitiy)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -133,10 +138,27 @@
             this.btnChart.UseVisualStyleBackColor = true;
             this.btnChart.Click += new System.EventHandler(this.btnChart_Click);
             // 
+            // chActivitiy
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chActivitiy.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chActivitiy.Legends.Add(legend1);
+            this.chActivitiy.Location = new System.Drawing.Point(21, 119);
+            this.chActivitiy.Name = "chActivitiy";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chActivitiy.Series.Add(series1);
+            this.chActivitiy.Size = new System.Drawing.Size(681, 298);
+            this.chActivitiy.TabIndex = 8;
+            this.chActivitiy.Text = "chart1";
+            // 
             // UcReportsAndStatistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.chActivitiy);
             this.Controls.Add(this.btnChart);
             this.Controls.Add(this.btnTopUsers);
             this.Controls.Add(this.btnTopBooks);
@@ -151,6 +173,7 @@
             this.Load += new System.EventHandler(this.UcReportsAndStatistics_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStatistics)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTopUsers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chActivitiy)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,5 +189,6 @@
         private System.Windows.Forms.Button btnTopBooks;
         private System.Windows.Forms.Button btnTopUsers;
         private System.Windows.Forms.Button btnChart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chActivitiy;
     }
 }
