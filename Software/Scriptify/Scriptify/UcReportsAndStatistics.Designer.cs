@@ -35,6 +35,7 @@
             this.dgvTopUsers = new System.Windows.Forms.DataGridView();
             this.btnTopBooks = new System.Windows.Forms.Button();
             this.btnTopUsers = new System.Windows.Forms.Button();
+            this.btnChart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTopUsers)).BeginInit();
             this.SuspendLayout();
@@ -118,10 +119,25 @@
             this.btnTopUsers.UseVisualStyleBackColor = true;
             this.btnTopUsers.Click += new System.EventHandler(this.btnTopUsers_Click);
             // 
+            // btnChart
+            // 
+            this.btnChart.FlatAppearance.BorderSize = 2;
+            this.btnChart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnChart.Location = new System.Drawing.Point(308, 48);
+            this.btnChart.Name = "btnChart";
+            this.btnChart.Size = new System.Drawing.Size(122, 30);
+            this.btnChart.TabIndex = 7;
+            this.btnChart.Text = "Activity graph";
+            this.btnChart.UseVisualStyleBackColor = true;
+            this.btnChart.Click += new System.EventHandler(this.btnChart_Click);
+            // 
             // UcReportsAndStatistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnChart);
             this.Controls.Add(this.btnTopUsers);
             this.Controls.Add(this.btnTopBooks);
             this.Controls.Add(this.dgvTopUsers);
@@ -149,5 +165,6 @@
         private System.Windows.Forms.DataGridView dgvTopUsers;
         private System.Windows.Forms.Button btnTopBooks;
         private System.Windows.Forms.Button btnTopUsers;
+        private System.Windows.Forms.Button btnChart;
     }
 }

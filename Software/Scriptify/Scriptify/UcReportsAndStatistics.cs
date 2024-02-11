@@ -87,5 +87,24 @@ namespace Scriptify
         {
             ShowTopUsers();
         }
+
+        private void btnChart_Click(object sender, EventArgs e)
+        {
+            ShopActivityChart();
+        }
+
+        private void ShopActivityChart()
+        {
+            dgvStatistics.Visible = false;
+            labelTopBooks.Visible = false;
+            dgvTopUsers.Visible = false;
+            labelTopUsers.Visible = false;
+
+            DateTime endDate = DateTime.Now;
+            DateTime startDate = endDate.AddMonths(-1);
+
+
+
+        }
     }
 }
