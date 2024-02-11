@@ -17,6 +17,7 @@ namespace Scriptify
     {
         private Loan loan = new Loan();
         private Librarian librarian = new Librarian();
+        public event EventHandler FormClosed;
         public frmIssueSanction(Loan loan, Librarian librarian)
         {
             InitializeComponent();
@@ -112,6 +113,7 @@ namespace Scriptify
                 var service = new LoanHistoryAndSanctionsService();
                 service.IssueSanction(loan);
                 SaveSanction();
+                FormClosed?.Invoke(this, EventArgs.Empty);
                 Close();
             }
         }

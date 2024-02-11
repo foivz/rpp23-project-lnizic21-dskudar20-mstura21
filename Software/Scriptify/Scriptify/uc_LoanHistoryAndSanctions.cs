@@ -130,10 +130,24 @@ namespace Scriptify {
                 else
                 {
                     frmIssueSanction frmIssueSanction = new frmIssueSanction(choosedLoan, user);
+                    frmIssueSanction.FormClosed += frmIssueSanction_FormClosed;
+
                     frmIssueSanction.ShowDialog();
 
                 }
             }
+        }
+
+        private void frmIssueSanction_FormClosed(object sender, EventArgs e)
+        {
+            ReloadLoanHistoryAndSanctions();
+        }
+
+        private void ReloadLoanHistoryAndSanctions()
+        {
+            this.Controls.Clear();
+            uc_LoanHistoryAndSanctions uc_LoanHistoryAndSanctions = new uc_LoanHistoryAndSanctions(user);
+            this.Controls.Add(uc_LoanHistoryAndSanctions);
         }
 
         private void dgvLoanHistoryAndSanctions_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
