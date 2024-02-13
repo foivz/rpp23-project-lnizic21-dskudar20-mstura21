@@ -29,5 +29,16 @@ namespace BusinessLogicLayer
                 return repo.GetAllSanctions(user).ToList();
             }
         }
+
+        public bool UpdateSanction(Sanction sanction)
+        {
+            bool isSuccessful = false;
+            using (var repo = new SanctionRepository())
+            {
+                int affectedRows = repo.UpdateSanction(sanction);
+                isSuccessful = affectedRows > 0;
+            }
+            return isSuccessful;
+        }
     }
 }

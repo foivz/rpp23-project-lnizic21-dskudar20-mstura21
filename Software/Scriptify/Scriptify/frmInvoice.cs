@@ -67,5 +67,10 @@ namespace Scriptify
 
             
         }
+
+        private void btnPaid_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

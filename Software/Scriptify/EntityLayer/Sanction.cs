@@ -34,5 +34,8 @@
 
         public decimal sanction_amount { get; set; }
 
+        [StringLength(45)]
+        public string sanction_status { get; set; }
+
     }
 }

@@ -62,6 +62,7 @@
             this.btnPaid.TabIndex = 2;
             this.btnPaid.Text = "Confirm payment";
             this.btnPaid.UseVisualStyleBackColor = true;
+            this.btnPaid.Click += new System.EventHandler(this.btnPaid_Click);
             // 
             // frmInvoice
             // 

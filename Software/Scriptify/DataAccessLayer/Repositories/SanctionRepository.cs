@@ -43,6 +43,22 @@ namespace DataAccessLayer.Repositories
                       select e;
             return sql;
         }
+
+        public int UpdateSanction(Sanction sanction, bool saveChanges = true)
+        {
+            Sanction choosedSanction = Entities.FirstOrDefault(s => s.id_sanction == sanction.id_sanction);
+            choosedSanction.sanction_status = "Paid";
+
+            if (saveChanges)
+            {
+                return SaveChanges();
+            }
+            else
+            {
+                return 0;
+            }
+
+        }
         public void Dispose()
         {
             Context.Dispose();
