@@ -151,6 +151,11 @@ namespace Scriptify {
             this.Controls.Add(uc_LoanHistoryAndSanctions);
         }
 
+        private void frmInvoice_FormFinish(object sender, EventArgs e)
+        {
+            ReloadLoanHistoryAndSanctions();
+        }
+
         private void dgvLoanHistoryAndSanctions_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (e.ColumnIndex == dgvLoanHistoryAndSanctions.Columns["loan_status"].Index && e.RowIndex >= 0)
@@ -275,6 +280,7 @@ namespace Scriptify {
             } 
             else
             {
+                frmInvoice.FormFinish += frmInvoice_FormFinish;
                 frmInvoice.ShowDialog();
             }
 

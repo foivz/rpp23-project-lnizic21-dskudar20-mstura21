@@ -31,6 +31,7 @@
             this.rtxtInvoice = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnPaid = new System.Windows.Forms.Button();
+            this.labelStatusPayed = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // rtxtInvoice
@@ -64,11 +65,23 @@
             this.btnPaid.UseVisualStyleBackColor = true;
             this.btnPaid.Click += new System.EventHandler(this.btnPaid_Click);
             // 
+            // labelStatusPayed
+            // 
+            this.labelStatusPayed.AutoSize = true;
+            this.labelStatusPayed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelStatusPayed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.labelStatusPayed.Location = new System.Drawing.Point(209, 309);
+            this.labelStatusPayed.Name = "labelStatusPayed";
+            this.labelStatusPayed.Size = new System.Drawing.Size(55, 25);
+            this.labelStatusPayed.TabIndex = 3;
+            this.labelStatusPayed.Text = "Paid";
+            // 
             // frmInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(477, 367);
+            this.Controls.Add(this.labelStatusPayed);
             this.Controls.Add(this.btnPaid);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.rtxtInvoice);
@@ -76,6 +89,7 @@
             this.Text = "frmInvoice";
             this.Load += new System.EventHandler(this.frmInvoice_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -84,5 +98,6 @@
         private System.Windows.Forms.RichTextBox rtxtInvoice;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnPaid;
+        private System.Windows.Forms.Label labelStatusPayed;
     }
 }
