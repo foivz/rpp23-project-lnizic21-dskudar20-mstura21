@@ -74,6 +74,7 @@ namespace Scriptify {
             btnLoanHistory.Visible = false;
             dgvSanctions.Visible = false;
             txtSearchSanctions.Visible = false;
+            btnOpenInvoice.Visible = false;
         }
 
         private void ShowSanctions()
@@ -221,6 +222,8 @@ namespace Scriptify {
             dgvSanctions.Visible = true;
             cmbFiltering.Visible = false;
             label3.Visible = false;
+            btnOpenInvoice.Visible = true;
+
         }
 
         private void btnLoanHistory_Click(object sender, EventArgs e)
@@ -236,7 +239,7 @@ namespace Scriptify {
             dgvSanctions.Visible = false;
             cmbFiltering.Visible = true;
             label3.Visible = true;
-
+            btnOpenInvoice.Visible = false;
         }
 
         private void txtSearchSanctions_TextChanged(object sender, EventArgs e)
@@ -259,6 +262,23 @@ namespace Scriptify {
         private void cmbFiltering_SelectedIndexChanged(object sender, EventArgs e)
         {
             ShowLoans();
+        }
+
+        private void btnOpenInvoice_Click(object sender, EventArgs e)
+        {
+            var choosedSanction = dgvSanctions.CurrentRow.DataBoundItem as Sanction;
+            frmInvoice frmInvoice = new frmInvoice(choosedSanction);
+
+            if(choosedSanction == null)
+            {
+                MessageBox.Show("Please select a sanction!");
+            } 
+            else
+            {
+                frmInvoice.ShowDialog();
+            }
+
+
         }
     }
 }

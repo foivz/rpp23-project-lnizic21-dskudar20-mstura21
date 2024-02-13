@@ -34,6 +34,7 @@
             this.txtSearchSanctions = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbFiltering = new System.Windows.Forms.ComboBox();
+            this.btnOpenInvoice = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoanHistoryAndSanctions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanctions)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +64,7 @@
             // 
             this.btnSanction.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnSanction.ForeColor = System.Drawing.Color.Red;
-            this.btnSanction.Location = new System.Drawing.Point(299, 379);
+            this.btnSanction.Location = new System.Drawing.Point(289, 379);
             this.btnSanction.Name = "btnSanction";
             this.btnSanction.Size = new System.Drawing.Size(215, 32);
             this.btnSanction.TabIndex = 4;
@@ -150,10 +151,23 @@
             this.cmbFiltering.TabIndex = 11;
             this.cmbFiltering.SelectedIndexChanged += new System.EventHandler(this.cmbFiltering_SelectedIndexChanged);
             // 
+            // btnOpenInvoice
+            // 
+            this.btnOpenInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnOpenInvoice.ForeColor = System.Drawing.Color.Black;
+            this.btnOpenInvoice.Location = new System.Drawing.Point(336, 379);
+            this.btnOpenInvoice.Name = "btnOpenInvoice";
+            this.btnOpenInvoice.Size = new System.Drawing.Size(125, 32);
+            this.btnOpenInvoice.TabIndex = 13;
+            this.btnOpenInvoice.Text = "Invoice";
+            this.btnOpenInvoice.UseVisualStyleBackColor = true;
+            this.btnOpenInvoice.Click += new System.EventHandler(this.btnOpenInvoice_Click);
+            // 
             // uc_LoanHistoryAndSanctions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnOpenInvoice);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbFiltering);
             this.Controls.Add(this.txtSearchSanctions);
@@ -189,5 +203,6 @@
         private System.Windows.Forms.TextBox txtSearchSanctions;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbFiltering;
+        private System.Windows.Forms.Button btnOpenInvoice;
     }
 }
