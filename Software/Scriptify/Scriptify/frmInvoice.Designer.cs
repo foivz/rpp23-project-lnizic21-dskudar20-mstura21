@@ -28,12 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.rtxtInvoice = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnPaid = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // rtxtInvoice
+            // 
+            this.rtxtInvoice.Location = new System.Drawing.Point(-2, -4);
+            this.rtxtInvoice.Name = "rtxtInvoice";
+            this.rtxtInvoice.Size = new System.Drawing.Size(478, 374);
+            this.rtxtInvoice.TabIndex = 0;
+            this.rtxtInvoice.Text = "";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(358, 548);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnPaid
+            // 
+            this.btnPaid.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnPaid.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnPaid.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnPaid.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnPaid.Location = new System.Drawing.Point(147, 305);
+            this.btnPaid.Name = "btnPaid";
+            this.btnPaid.Size = new System.Drawing.Size(183, 38);
+            this.btnPaid.TabIndex = 2;
+            this.btnPaid.Text = "Confirm payment";
+            this.btnPaid.UseVisualStyleBackColor = true;
+            // 
+            // frmInvoice
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(477, 367);
+            this.Controls.Add(this.btnPaid);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.rtxtInvoice);
+            this.Name = "frmInvoice";
             this.Text = "frmInvoice";
+            this.Load += new System.EventHandler(this.frmInvoice_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.RichTextBox rtxtInvoice;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPaid;
     }
 }
