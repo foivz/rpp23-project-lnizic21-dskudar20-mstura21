@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Printing;
+
 
 namespace Scriptify
 {
@@ -40,7 +42,7 @@ namespace Scriptify
             rtxtInvoice.SelectionFont = new Font(rtxtInvoice.Font, FontStyle.Bold);
             rtxtInvoice.SelectionAlignment = HorizontalAlignment.Center;
 
-            string invoiceText = "Invoice " + sanction.id_sanction + "/2024\n\n\n";
+            string invoiceText = "\n Invoice " + sanction.id_sanction + "/2024\n\n\n";
 
             rtxtInvoice.AppendText(invoiceText);
 
@@ -87,6 +89,26 @@ namespace Scriptify
             service.UpdateSanction(sanction);
             FormFinish?.Invoke(this, EventArgs.Empty);
             this.Close();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            PrintInvoice();
+        }
+
+        private void PrintInvoice()
+        {
+            PrintDocument pd = new PrintDocument();
+            pd.PrintPage += Pd_PrintPage;
+            pd.Print();
+        }
+
+        private void Pd_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            string invoiceText = rtxtInvoice.Text;
+            Font font = new Font("Arial", 12);
+            Brush brush = Brushes.Black;
+            e.Graphics.DrawString(invoiceText, font, brush, new PointF(100, 100));
         }
     }
 }

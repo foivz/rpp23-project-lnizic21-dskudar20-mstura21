@@ -32,6 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnPaid = new System.Windows.Forms.Button();
             this.labelStatusPayed = new System.Windows.Forms.Label();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // rtxtInvoice
@@ -76,11 +77,22 @@
             this.labelStatusPayed.TabIndex = 3;
             this.labelStatusPayed.Text = "Paid";
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Location = new System.Drawing.Point(406, 12);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(59, 26);
+            this.btnPrint.TabIndex = 4;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
             // frmInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(477, 367);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.labelStatusPayed);
             this.Controls.Add(this.btnPaid);
             this.Controls.Add(this.button1);
@@ -99,5 +111,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnPaid;
         private System.Windows.Forms.Label labelStatusPayed;
+        private System.Windows.Forms.Button btnPrint;
     }
 }
