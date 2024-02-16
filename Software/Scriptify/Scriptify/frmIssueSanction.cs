@@ -134,6 +134,7 @@ namespace Scriptify
                 planned_return = loan.planned_return,
                 returned = today,
                 sanction_amount = Convert.ToDecimal(txtTotal.Text),
+                sanction_status = "Waiting",
             };
 
             service.SaveSanction(sanction);
