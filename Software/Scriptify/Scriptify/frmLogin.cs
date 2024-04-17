@@ -56,8 +56,9 @@ namespace Scriptify
                 {
                     Librarian user = _authenticationService.GetUser(txtUsername.Text, txtPassword.Text);
                     frmIndex frm = new frmIndex(user);
+                    frm.FormClosed += (arg,s)=> this.Close(); // Close current form when frmIndex is closed
                     this.Hide();
-                    frm.ShowDialog();
+                    frm.Show();
                 }
                 else
                 {
@@ -73,8 +74,15 @@ namespace Scriptify
         }
         private void labelCreateAccount_Click(object sender, EventArgs e)
         {
-            new frmRegister().Show(); 
+           var frm = new frmRegister();
+
+
+        
+            frm.Show();
+            frm.FormClosed += (arg, s) => this.Close(); // Close current form when frmIndex is closed
             this.Hide();
+
+
         }
 
         private void btnClearLoginForm_Click(object sender, EventArgs e)
@@ -87,6 +95,7 @@ namespace Scriptify
         private void labelClose_Click(object sender, EventArgs e)
         {
             this.Close();
+           
         }
     }
 }

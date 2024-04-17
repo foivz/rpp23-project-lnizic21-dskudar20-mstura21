@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "C8n7+xQ9Abc8GaYzHFRzd6wlFaPaw+D1ytHSkHksmPevLbC0wIVWEVslW6hN782Z1LUPq0/O9Fv+CjcNhEVwow==",
+  "dgSpecHash": "uDylTz4I8JM4Udl17VNx5Mx8s/1T87El/Ws9Or3qjbCMvYoJinFqfgThosALWVdMnyyAkQwSgV/ZOb/L8Na1HQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\David\\source\\repos\\rpp23-project-lnizic21-dskudar20-mstura21-ispit\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
+  "projectFilePath": "C:\\Rpp_Projekt\\Software\\Scriptify\\EntityLayer\\EntityLayer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\David\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512"
+    "C:\\Users\\mustr\\.nuget\\packages\\entityframework\\6.2.0\\entityframework.6.2.0.nupkg.sha512"
   ],
   "logs": []
 }

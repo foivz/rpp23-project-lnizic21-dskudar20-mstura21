@@ -57,7 +57,9 @@ namespace Scriptify
                     service.CreateUser(user);
                     MessageBox.Show("Registration succeeded!");
 
-                    new frmLogin().Show();
+                    var frm = new frmLogin();
+                    frm.Show();
+                    frm.FormClosed += (arg, s) => this.Close(); // Close current form when frmIndex is closed
                     this.Hide();
                 }
                 catch (RegistrationException ex)
@@ -95,7 +97,9 @@ namespace Scriptify
         }
         private void labelBackToLogin_Click(object sender, EventArgs e)
         {
-            new frmLogin().Show();
+           var frm =  new frmLogin();
+            frm.Show();
+            frm.FormClosed += (arg, s) => this.Close(); // Close current form when frmIndex is closed
             this.Hide();
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
