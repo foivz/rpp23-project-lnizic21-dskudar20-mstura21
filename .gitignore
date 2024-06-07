@@ -13,4 +13,21 @@
 >>>>>>> slave
 *.wsuo
 *.json
+*\bin\Debug
 /Software/Scriptify/EntityLayer/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Software/Scriptify/EntityLayer/bin/Debug/EntityFramework.dll
+/Software/Scriptify/EntityLayer/bin/Debug/EntityFramework.SqlServer.dll
+/Software/Scriptify/EntityLayer/bin/Debug/EntityLayer.dll
+/Software/Scriptify/EntityLayer/bin/Debug/EntityLayer.pdb
+/Software/Scriptify/EntityLayer/obj/Debug/EntityLayer.csproj.CoreCompileInputs.cache
+/Software/Scriptify/EntityLayer/obj/Debug/EntityLayer.csproj.FileListAbsolute.txt
+/Software/Scriptify/EntityLayer/obj/Debug/EntityLayer.dll
+/Software/Scriptify/EntityLayer/obj/Debug/EntityLayer.pdb
+/Software/Scriptify/EntityLayer/obj/EntityLayer.csproj.nuget.dgspec.json
+/Software/Scriptify/EntityLayer/obj/EntityLayer.csproj.nuget.g.props
+/Software/Scriptify/EntityLayer/obj/EntityLayer.csproj.nuget.g.targets
+/Software/Scriptify/EntityLayer/obj/project.assets.json
+/Software/Scriptify/EntityLayer/obj/project.nuget.cache
+/.vs/rpp23-project-lnizic21-dskudar20-mstura21_TKIPP/FileContentIndex/830db7c2-e2d6-41a4-abe0-6076b047071d.vsidx
+/.vs/rpp23-project-lnizic21-dskudar20-mstura21_TKIPP/v17/TestStore/0/000.testlog
+/.vs/rpp23-project-lnizic21-dskudar20-mstura21_TKIPP/v17/TestStore/0/testlog.manifest
