@@ -11,3 +11,6 @@
 /.vs/slnx.sqlite
 /.vs/rpp23-project-lnizic21-dskudar20-mstura21/FileContentIndex
 >>>>>>> slave
+*.wsuo
+*.json
+/Software/Scriptify/EntityLayer/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
