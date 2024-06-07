@@ -24,30 +24,37 @@ namespace DataAccessLayer.Repositories
 
         public IQueryable<Book> GetTopBooks(int librarianId)
         {
-
             DateTime today = DateTime.Now.Date;
 
-            var loans = from loan in Context.Loans
-                        join book in Context.Library_has_Books on loan.book_id equals book.Books_idBook
-                        join library in Context.Librarians on book.Library_idLibrary equals library.Library_idLibrary
-                        where library.idLibrarians == librarianId && loan.planned_return <= today
-                        select loan;
+            var loans = GetLoansForLibrarian(librarianId, today);
 
             List<int?> bookIds = loans.Select(loan => loan.book_id).ToList();
 
+            var topBooks = GetTopBooksByLoanCount(bookIds);
 
-            var books = ((from book in Context.Books
-                          where bookIds.Contains(book.idBook)
-                          select book)
-              .AsEnumerable()
-              .OrderByDescending(book => bookIds.Count(id => id == book.idBook))
-              .Take(10))
-             .AsQueryable();
-
-            return books;
-
-          
+            return topBooks;
         }
+
+        private IQueryable<Loan> GetLoansForLibrarian(int librarianId, DateTime today)
+        {
+            return from loan in Context.Loans
+                   join book in Context.Library_has_Books on loan.book_id equals book.Books_idBook
+                   join library in Context.Librarians on book.Library_idLibrary equals library.Library_idLibrary
+                   where library.idLibrarians == librarianId && loan.planned_return <= today
+                   select loan;
+        }
+
+        private IQueryable<Book> GetTopBooksByLoanCount(List<int?> bookIds)
+        {
+            return (from book in Context.Books
+                    where bookIds.Contains(book.idBook)
+                    select book)
+                   .AsEnumerable()
+                   .OrderByDescending(book => bookIds.Count(id => id == book.idBook))
+                   .Take(10)
+                   .AsQueryable();
+        }
+
 
         public IQueryable<BookWithCount> GetTop10Books(int librarianId)
         {
