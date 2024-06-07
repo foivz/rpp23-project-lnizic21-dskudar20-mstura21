@@ -139,10 +139,5 @@ namespace Scriptify
 
             service.SaveSanction(sanction);
         }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

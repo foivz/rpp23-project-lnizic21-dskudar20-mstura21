@@ -47,7 +47,10 @@ namespace DataAccessLayer.Repositories
         public int UpdateSanction(Sanction sanction, bool saveChanges = true)
         {
             Sanction choosedSanction = Entities.FirstOrDefault(s => s.id_sanction == sanction.id_sanction);
-            choosedSanction.sanction_status = "Paid";
+            if(choosedSanction != null)
+            {
+                choosedSanction.sanction_status = "Paid";
+            }
 
             if (saveChanges)
             {
